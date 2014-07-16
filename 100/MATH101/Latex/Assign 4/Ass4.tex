@@ -1,0 +1,299 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{a4wide, amsxtra}
+
+\usepackage{hyperref} 
+
+\usepackage{url} 
+
+ \title{MATH101 Assignment 4}
+
+ \author{Mark Villar}
+
+\begin{document} 
+
+\maketitle 
+
+\begin{enumerate}
+	
+	\item 
+	
+		\begin{enumerate}
+		
+			\item 
+				\begin{eqnarray}
+				\lim_{x \rightarrow \infty} \frac{x^3+2x-1}{2x^3+x^2} \text{ }=\text{ }\lim_{x \rightarrow \infty}
+				\frac{1+\frac{2}{x^2}-\frac{1}{x^3}}{2+\frac{1}{x}}\text{ }=\text{ }\frac{1+0-0}{2+0}=\frac{1}{2}
+				\nonumber
+				\end{eqnarray}
+			
+			\item  
+				\begin{eqnarray}
+				\lim_{x \rightarrow 1} \frac{\sqrt{2x+1}-\sqrt{x+1}}{x}=\frac{\sqrt{2\cdot1+1}-\sqrt{1+1}}{1}
+				=\sqrt{3}-\sqrt{2} \nonumber
+				\end{eqnarray}
+			
+			\item 
+				\begin{eqnarray}
+				\lim_{x \rightarrow 0} \frac{\tan{x}}{x}\text{ } = \text{ } \lim_{x \rightarrow 0} 
+				\text{ }\frac{\sin{x}}{x\cos{x}}\text{ } & = & \text{ }\lim_{x \rightarrow 0} \frac{\sin{x}}{x}
+				\text{ } \cdot \text{ } \lim_{x \rightarrow 0} \frac{1}{\cos{x}} \nonumber \\
+				& = & \text{ }1\cdot\frac{1}{\cos{0}}\text{ } = \text{ } \frac{1}{1} \text{ } = \text{ } 1 \nonumber 
+				\end{eqnarray}
+								
+			\item
+				\begin{eqnarray}
+				\lim_{x \rightarrow 0} \frac{\cos^2{x}-\cos{x}}{x} \text{ } & = & \text{ } \lim_{x \rightarrow 0} 
+				\frac{\cos{x}(\cos{x}-1)}{x} \nonumber \\
+				& = &  \text{ } \lim_{x \rightarrow 0} \frac{-\cos{x}(1-\cos{x})}{x} \nonumber \\
+				& = & \text{ } -\lim_{x \rightarrow 0} \cos{x} \text{ } \cdot \text{ } \lim_{x \rightarrow 0}
+				\frac{	1-\cos{x}}{x} \nonumber \\
+				& = & \text{ } -1 \cdot 0 \text{ } = \text{ } 0 \nonumber
+				\end{eqnarray}
+
+		\end{enumerate}
+		\bigskip
+	\item 
+		Let $\varepsilon>0$ be given.  Then we must find a number, $\delta>0$, such that 
+		$|\sqrt{x}-1|<\varepsilon$ whenever $|x-1|<\delta$.\\
+		\\
+		We know the domain of $\sqrt{x} \text{ is } \{x \in \mathbb{R} \mid x \ge 0\}$.\\
+		\\
+		By definition of absolute values, we also know
+			\begin{eqnarray}
+				|x-1| & = & \hspace{0.5cm} x-1 \text{ } < \delta \hspace{0.5cm} \Longrightarrow 							\hspace{0.5cm} x < 1 + \delta \nonumber \\
+				|x-1| & = & -(x-1) < \delta \hspace{0.5cm} \Longrightarrow \hspace{0.5cm} 
+				1 - x < \delta \hspace{0.5cm} \Longrightarrow \hspace{0.5cm} 
+				x > 1- \delta \nonumber
+			\end{eqnarray}\\
+		\\
+		Moreover
+			\begin{eqnarray}
+				|\sqrt{x}-1| & = & \sqrt{x}-1 \hspace{0.5cm} \text{ if } \text { } x > 1\nonumber \\
+				|\sqrt{x}-1| & = & 1- \sqrt{x} \hspace{0.5cm} \text{ if } \text { } 0 < x < 1\nonumber
+			\end{eqnarray}\\
+		Algebraic steps yield\\
+			\begin{eqnarray}
+				\sqrt{x}-1 < \varepsilon \hspace{0.5cm} \text{ whenever } \text{ } 1<  x < 1+\delta
+				\hspace{1cm} \text { (i) } \nonumber \\
+				1- \sqrt{x} < \varepsilon \hspace{0.5cm} \text{ whenever } \text{ } 1- \delta < x < 1 
+				\hspace{1cm} \text { (ii) } \nonumber
+			\end{eqnarray}\\
+		However we observe that\\
+		 	\begin{eqnarray}
+				\sqrt{x} -1 < \varepsilon \hspace{0.5cm}  \text{ if } \text{ } x < (\varepsilon + 1)^2  
+				\hspace{1cm} \text { (iii) } \nonumber \\
+				1- \sqrt{x} < \varepsilon \hspace{0.5cm}  \text{ if } \text{ } x > (1 - \varepsilon)^2  
+				\hspace{1cm} \text { (iv) } \nonumber
+			\end{eqnarray}\\
+		Equating (i) and (iii) gives\\
+			\begin{eqnarray}
+				1+ \delta & = &  (\varepsilon + 1)^2 \nonumber \\
+					       & = & \varepsilon^2 + 2\varepsilon + 1 \nonumber \\
+				\delta & = & \varepsilon^2 + 2\varepsilon \nonumber
+			\end{eqnarray}\\
+		Equating (ii) and (iv) gives\\
+			\begin{eqnarray}
+				1- \delta & = &   (1 - \varepsilon)^2 \nonumber \\
+					       & = & 1- 2\varepsilon + \varepsilon^2 \nonumber \\
+				\delta & = & 2\varepsilon - \varepsilon^2 \nonumber 
+			\end{eqnarray}\\
+		So given $\varepsilon>0$ there is a $\delta>0$ such that $|\sqrt{x}-1| < \varepsilon$ 
+		\text{ whenever } $|x-1|<\delta$,\\
+		\begin{eqnarray}
+			& \delta & = \text{ }\varepsilon^2 + 2\varepsilon \hspace{0.5cm} \text{ whenever } \text{ } x > 1 				\nonumber \\
+			& \delta & = \text{ }2\varepsilon - \varepsilon^2  \hspace{0.5cm} \text{ whenever }  \text{ }
+			0< x < 1 \nonumber
+		\end{eqnarray}\\
+		thereby completing the proof of \\
+			\begin{eqnarray}
+				\lim_{x \rightarrow 1} \sqrt{x} =1 \nonumber
+			\end{eqnarray}
+			
+	\item 
+	
+		\begin{enumerate}
+		
+			\item 
+				For continuity of $f$ at $x=1$ we require\\
+				\begin{eqnarray}
+					\lim_{x \rightarrow 1} f(x) = f(1) = 2\cdot1+k=2+k \nonumber			
+				\end{eqnarray}
+				\begin{eqnarray}
+					\lim_{x \rightarrow 1} f(x) =\lim_{x \rightarrow 1} \text{ } \frac{1}{1+x^2} =  								\frac{1}{1+1^2} = \frac{1}{2} \nonumber
+				\end{eqnarray}
+				\begin{eqnarray}
+					2 + k  =  \frac{1}{2} \nonumber
+				\end{eqnarray}
+				\begin{eqnarray}
+					\hspace{0.4cm} k  =  -\frac{3}{2} \nonumber
+				\end{eqnarray}
+				
+			\item  
+				To show $f$ is continuous on $(0,\infty)$ we must consider the limits of the piecewise 					function at the following points.\\
+				
+				{$\mathbf{x=0:}$}
+				\begin{eqnarray}
+					\lim_{x \rightarrow 0} f(x) \text{ } = \text{ } \lim_{x \rightarrow 0} \text{ } \frac{1}{1+x^2} 						\text{ } = \text{ } \frac{1}{1+0^2} \text{ } = \text{ } 1 \text{ } = \text{ } f(0) \nonumber
+				\end{eqnarray}\\
+				$\mathbf{x=1:}$
+				\begin{eqnarray}
+					\lim_{x \rightarrow 1} \text{ } 2x - \frac{3}{2} \text{ } = \text{ } 2 \cdot 1 - \frac{3}{2} 
+					\text{ } = \text{ } \frac{1}{2} \text{ } = \text{ } f(1) \nonumber
+				\end{eqnarray}\\
+				$\mathbf{x=+\infty:}$
+				\begin{eqnarray}
+					\lim_{x \rightarrow +\infty} \text{ } 2x - \frac{3}{2} \text{ } = +\infty \hspace{0.5cm}
+					\text{ (limit does not exist) } \nonumber
+				\end{eqnarray}\\
+				The equality of the one-sided limits also show there is no discontinuity at $x=1$. \\
+				\begin{eqnarray}
+					\lim_{x \rightarrow 1^-} f(x) & = &\lim_{x \rightarrow 1^-} \text{ } \frac{1}{1+x^2} \text{ } 					= \text{ } \frac{1}{2} \text{ } \nonumber \\
+					\lim_{x \rightarrow 1^+} f(x) & = & \lim_{x \rightarrow 1^+} \text{ } 2x - \frac{3}{2} 
+					\text{ } = \text{ } \frac{1}{2} \nonumber
+				\end{eqnarray}\\
+				We now consider the intervals $(0,1)$ and $[1,\infty)$.
+				\\
+				
+				$\mathbf{0<x<1:}$
+				\begin{eqnarray}
+					\lim_{x \rightarrow a} f(x) \text{ } = \text{ } \lim_{x \rightarrow a} \text{ } \frac{1}{1+x^2} 						\text{ } = \text{ } \frac{1}{1+a^2} \text{ } = \text{ } \frac{1}{1+a^2} \text{ } = \text{ } f(a) 						\nonumber
+				\end{eqnarray}\\
+				$\mathbf{x\ge1:}$
+				\begin{eqnarray}
+					\lim_{x \rightarrow a} f(x) \text{ } = \text{ } \lim_{x \rightarrow a} \text{ }2x - \frac{3}{2} 						\text{ } = \text{ } 2a - \frac{3}{2} \text{ } = \text{ } f(a) \nonumber
+				\end{eqnarray}\\
+				Thus we have shown that
+				\begin{eqnarray}
+					\lim_{x \rightarrow a} f(x) = f(a) \nonumber
+				\end{eqnarray}
+				for $\{x \in \mathbb{R} \mid x > 0\}$ and that there is no discontinuity at $x=1$.  Hence $f$ 				is continuous on $(0,\infty)$.\\			
+				
+		\end{enumerate}
+	
+	\item
+	
+		\begin{enumerate}
+		
+			\item[(i)] $f: (0,1) \rightarrow \mathbb{R}, \hspace{0.3cm} x \mapsto x^2$\\
+				
+				\begin{enumerate}
+				
+					\item[(a)] \emph{Monotone}\\ 
+					Let $a,b \in (0,1)$ and $a<b$. Then $a^2 < b^2 \hspace{0.2cm} \textbf{ iff }							\hspace{0.2cm} a+b > 0$.
+					Since $a$, $b$ are both positive, $a+b>0$. Thus $f(a) < f(b)$ whenever
+					$a<b$, and $f$ is monotonically increasing.\\		
+					
+					\item[(b)] \emph{Injective}\\
+					Given $f$ is continuous and \emph{strictly} monotone, it is necessarily injective. 						Moreover, $f(a) = f(b) \hspace{0.2cm} \textbf{ iff } \hspace{0.2cm} a = b$. We also 						note that there is no $x \in (0,1)$ such that $f(x) \le 0$ or $f(x) \ge 1$, thus $f$ is 						not surjective.\\
+					
+					\item[(c)] $\inf(f) = 0 \hspace{0.2cm} \text{ and }  \hspace{0.2cm} \sup(f) = 1$ \\
+					It is immediate from the definition of $f$ that the infimum is 0 and the supremum is 1.  
+					It also follows that $f$ attains neither of its bounds.\\
+					
+				\end{enumerate}
+			
+			\item[(ii)] $g: \mathbb{R} \backslash \{-1\} \rightarrow \mathbb{R}, \hspace{0.3cm} x \mapsto 
+					\frac{1}{1+x}$\\
+			
+				\begin{enumerate}
+				
+					\item[(a)]  \emph{Non-monotone}\\
+					Let $a,b,c,d \in \mathbb{R} \backslash \{-1\} \text{ and } a<b<-1<c<d$. Then by 						definition,
+					\begin{eqnarray}
+						f(a)&>& f(b) \hspace{0.3cm} \text{ whenever } \hspace{0.3cm} a<b 
+						\hspace{0.3cm} \Rightarrow \hspace{0.3cm} \text { decreasing }\nonumber \\
+						f(c)&>& f(d) \hspace{0.3cm} \text{ whenever } \hspace{0.25cm} c<d 
+						\hspace{0.3cm} \Rightarrow \hspace{0.3cm} \text { decreasing }\nonumber 
+					\end{eqnarray}
+					However,
+					\begin{eqnarray}
+						f(a)&<&f(d) \hspace{0.3cm} \text{ whenever } \hspace{0.3cm} a<d 
+						\hspace{0.3cm} \Rightarrow \hspace{0.3cm} \text { increasing }\nonumber \\
+						f(b)&<&f(c) \hspace{0.35cm} \text{ whenever } \hspace{0.35cm} b<c 
+						\hspace{0.3cm} \Rightarrow \hspace{0.3cm} \text { increasing }\nonumber 
+					\end{eqnarray}
+					Thus $g$ is not monotonic since it is not entirely non-decreasing or non-increasing
+					over its domain.\\
+					
+					\item[(b)] \emph{Injective}\\
+					Even though not monotonic, $g$ is injective since $f(a) = f(b) \hspace{0.2cm} 	
+					\textbf{ iff }	 \hspace{0.2cm} a = b$ (this is because $g$ is not continuous). We also 						note that there is no $x \in \mathbb{R} \backslash \{-1\}$ such that $f(x) = 0$, 							therefore $f$ is not surjective.\\
+					
+					\item[(c)] \emph{No infimum or supremum} \\
+					The one-sided limits at $x=-1$ show that $g$ is unbounded above and below
+					since both limits do not exist.
+					\begin{eqnarray}
+						\lim_{x \rightarrow -1^+} g(x) & = &\lim_{x \rightarrow -1^+} \text{ } 
+						\frac{1}{1+x} \text{ } = +\infty \nonumber \\
+						\lim_{x \rightarrow -1^-} g(x) & = &\lim_{x \rightarrow -1^-} \text{ } 
+						\frac{1}{1+x} \text{ } = -\infty \nonumber
+					\end{eqnarray}\\
+				
+				\end{enumerate}
+				
+			\item[(iii)] $h: \mathbb{R} \rightarrow \mathbb{R}, \hspace{0.3cm} x \mapsto \frac{1}{x^2+2}$\\
+			
+				\begin{enumerate}
+				
+					\item[(a)] \emph{Non-monotone}\\
+					Let $a,b,c,d \in \mathbb{R} \text{ and } a<b<0<c<d$. Then by definition,
+					\begin{eqnarray}
+						h(a)&<&h(b) \hspace{0.3cm} \text{ whenever } \hspace{0.3cm} a<b 
+						\hspace{0.3cm} \Rightarrow \hspace{0.3cm} \text { increasing }\nonumber \\
+						h(c)&>&h(d) \hspace{0.3cm} \text{ whenever } \hspace{0.25cm} c<d 
+						\hspace{0.3cm} \Rightarrow \hspace{0.3cm} \text { decreasing }\nonumber 
+					\end{eqnarray}
+					Thus $h$ is not monotonic since it is increasing in $\mathbb{R}_0^-$ and 
+					decreasing $\mathbb{R}_0^+$ \\
+					\item[(b)] \emph{Neither}\\
+					Knowing that $h$ is continuous in $\mathbb{R}$ and non-monotone, we can say 						that $h$ is not injective.  Furthermore, there exists $a \ne b$ such that $h(a) = h(b)$,
+					namely when $a=-b$ (as $h$ is symmetric at $x=0$). We also note that there is no 						$x \in \mathbb{R}$ such that $h(x) \le 0$, thus $h$ is not surjective.\\
+					
+					\item[(c)] $\inf(h) = 0 \hspace{0.2cm} \text{ and }  \hspace{0.2cm} \sup(h) = \max(h) =
+					\frac{1}{2}$ \\
+					Since $x^2\ge0$, then \hspace{0.05cm} $x^2+2>0 \hspace{0.05cm} \text{ and } 						\hspace{0.05cm} \frac{1}{x^2+2} > 0$.  It follows that $h$ is bounded below by
+					infimum 0, which it never attains. To find the supremum, we solve for $x$ so that
+					the denominator is smallest.  Clearly, this is when $x=0$ and thus $h(0) = 
+					\frac{1}{0^2+2} = \frac{1}{2}$. Hence $h$ is bounded above by supremum 
+					$\frac{1}{2}$, which it attains.\\
+		
+				\end{enumerate}
+				
+			\item[(iv)] $t: (-\frac{\pi}{2}, \frac{\pi}{2}) \rightarrow \mathbb{R}, \hspace{0.3cm} x \mapsto 
+					\tan(x)$\\
+			
+				\begin{enumerate}
+				
+					\item[(a)] \emph{Monotone}\\
+					Let $a,b \in (-\frac{\pi}{2}, \frac{\pi}{2}) \text{ and } a<b<0<c<d$. Then by definition,
+					\begin{eqnarray}
+						t(a)&<& t(b) \hspace{0.3cm} \text{ whenever } \hspace{0.3cm} a<b 
+						\hspace{0.3cm} \Rightarrow \hspace{0.3cm} \text { increasing }\nonumber \\
+						t(c)&<& t(d) \hspace{0.3cm} \text{ whenever } \hspace{0.25cm} c<d 
+						\hspace{0.3cm} \Rightarrow \hspace{0.3cm} \text { increasing }\nonumber \\
+						t(b)&<&t(c) \hspace{0.3cm} \text{ whenever } \hspace{0.3cm} b<c 
+						\hspace{0.3cm} \Rightarrow \hspace{0.3cm} \text { increasing }\nonumber
+					\end{eqnarray}
+					Thus $t(u) < t(v)$ whenever $u < v$, and $t$ is monotonically increasing.\\  	
+					
+					\item[(b)] \emph{Bijective}\\
+					Since $t(u) = t(v) \hspace{0.2cm} \textbf{ iff } \hspace{0.2cm} u = v$, $t$ is injective. 						We also observe that $t \rightarrow +\infty$ \text{ as } $x \rightarrow \frac{\pi}{2}$ 
+					\hspace{0.1cm} while \hspace{0.1cm} $t \rightarrow -\infty$ \text{ as } $x \rightarrow -					\frac{\pi}{2}$. Consequently, for all $x \in (-\frac{\pi}{2}, \frac{\pi}{2}) \text{ } 
+					\text{ there exists } \text{ } t(x) \in \mathbb{R}$.  Hence $t$ is also surjective. \\
+			
+					\item[(c)] \emph{No infimum or supremum}\\
+					Since $t$ decreases without bound as $x$ tends to $-\frac{\pi}{2}$, there is no
+					infimum. Similarly, since $t$ increases without bound as $x$ tends to $\frac{\pi}{2}$,
+					there is no supremum.  The one-sided limits confirm that $t$ is unbounded above 						and below since the limits do not exist.
+					\begin{eqnarray}
+						\lim_{x \rightarrow (-{\frac{\pi}{2}})^+} \text{ } \tan(x) \text{ } & = & -\infty 								\nonumber \\
+						\lim_{x \rightarrow (\frac{\pi}{2})^-} \text{ } \tan(x) \text{ } & = &\infty \nonumber
+					\end{eqnarray}
+				\end{enumerate}
+				
+		\end{enumerate}
+
+\end{enumerate}
+	
+\end{document} 	

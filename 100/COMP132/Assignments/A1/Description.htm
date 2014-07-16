@@ -1,0 +1,287 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>Description of a1 Assignment for comp132 at UNE</title>
+<link rel="stylesheet" type="text/css" href="/~comp132/UT/Css/ut.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body bgcolor="#cccc99">
+
+<style type="text/css">
+<!--
+-->
+.noul {
+text-decoration:none
+}
+</style>
+
+
+<table width=100%>
+<tr>
+  <td width=30%>
+
+<a href="http://www.une.edu.au" class=noul> <img  align="left" src="/images/unelogomin.gif" border="0" alt="University of New
+England"></a>
+  </td>
+  <td width=40% align=center>
+
+
+<br>
+<center>
+        <a href="/" class=noul>
+        <font size="+2">School of Science and Technology</font></a>
+</center>
+  </td>
+  <td width=30%></td>
+</tr>
+</table>
+
+<br clear="all" />
+<hr size="6" />
+<!-- do not remove or change the javascript comment below this one -->
+<!-- header end -->
+
+<center>
+	<font color="black" size="+2">
+		Description of a1 Assignment for comp132 at UNE
+	</font>
+	<hr size="6" />
+</center>
+<br />
+<font color="black" size="">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+            "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>Programming Assignment A1 --- ``Jump It'' Game
+
+</TITLE>
+
+<META http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<META name="GENERATOR" content="hevea 1.10">
+<STYLE type="text/css">
+.li-itemize{margin:1ex 0ex;}
+.li-enumerate{margin:1ex 0ex;}
+.thefootnotes{text-align:left;margin:0ex;}
+.dt-thefootnotes{margin:0em;}
+.dd-thefootnotes{margin:0em 0em 0em 2em;}
+.footnoterule{margin:1em auto 1em 0px;width:50%;}
+.center{text-align:center;margin-left:auto;margin-right:auto;}
+DIV TABLE{margin-left:inherit;margin-right:inherit;}
+PRE{text-align:left;margin-left:0ex;margin-right:auto;}
+BLOCKQUOTE{margin-left:4ex;margin-right:4ex;text-align:left;}
+TD P{margin:0px;}
+.display{border-collapse:separate;border-spacing:2px;width:auto; border:none;}
+.dcell{white-space:nowrap;padding:0px;width:auto; border:none;}
+.dcenter{margin:0ex auto;}
+.minipage{text-align:left; margin-left:0em; margin-right:auto;}
+.section{padding:.5ex; color:navy; background: LightYellow;}
+.tty{font-family:monospace;white-space:pre;
+border:none;background: #f5f5f5;
+padding-left:2ex;padding-top:7pt;padding-bottom:13pt;
+margin-left:2ex;margin-right:97pt;}
+</STYLE>
+</HEAD>
+<BODY >
+<!--HEVEA command line is: hevea -O -I ../.. -I ../../.. a1.tex -->
+<!--CUT DEF section 1 --><DIV CLASS="center"><FONT SIZE=5><B>Programming Assignment A1 &#X2014; <EM>&#X201C;Jump It&#X201D; Game</EM></B></FONT><BR>
+Due 11 March
+</DIV><!--TOC section Objectives-->
+<H2 CLASS="section"><!--SEC ANCHOR -->Objectives</H2><!--SEC END --><UL CLASS="itemize"><LI CLASS="li-itemize">
+Creating and compiling a simple program
+</LI><LI CLASS="li-itemize">Designing classes
+</LI><LI CLASS="li-itemize">Use of recursive algorithms
+</LI><LI CLASS="li-itemize">Learn basic combinatorics
+</LI></UL><!--TOC section Task: &#X201C;Jump It&#X201D; Game-->
+<H2 CLASS="section"><!--SEC ANCHOR -->Task: &#X201C;Jump It&#X201D; Game</H2><!--SEC END --><P>The game &#X201C;Jump It&#X201D; consists of a board with <I>n</I> positive integers in a
+row, except for the first column, which always contains zero.
+These numbers represent the cost to enter each column.
+Here is a sample game board with <I>n</I> set to 6:
+</P><TABLE CLASS="display dcenter"><TR VALIGN="middle"><TD CLASS="dcell"><TABLE BORDER=1 CELLSPACING=0 CELLPADDING=1><TR><TD ALIGN=center NOWRAP>&#XA0;0&#XA0;</TD><TD ALIGN=center NOWRAP>&#XA0;3&#XA0;</TD><TD ALIGN=center NOWRAP>&#XA0;80&#XA0;</TD><TD ALIGN=center NOWRAP>&#XA0;6&#XA0;</TD><TD ALIGN=center NOWRAP>&#XA0;57&#XA0;</TD><TD ALIGN=center NOWRAP>&#XA0;10&#XA0;&#XA0;</TD></TR>
+</TABLE></TD></TR>
+</TABLE><P>
+The objective of the game is to move from the first column to the last column
+with the lowest total cost.
+The number in each column represents the cost to enter that column.
+You always start the game in the first column and have two types of moves.
+You can either move to the adjacent column or jump over the adjacent column
+to land two columns over.
+The cost of a game is the sum of the costs of the visited columns.</P><P>In the board shown above, there are several ways to get to the end.
+Starting in the first column, our cost so far is 0.
+We could jump to 80, ten jump to 57, then move to 10 for a total cost of
+80+57+10=147.
+However, a cheaper path would be to move to 3, jump to 6, then jump to 10,
+for a total cost of 3+6+10=19.</P><P>Write a recursive solution to this problem that computes the lowest cost
+of the game and outputs this value for an arbitrary large game board
+represented as an array. Your program does not have to output the actual sequence
+of jumps but only the lowest cost of this sequence.
+After making sure that your solution works on small arrays,
+test your solution on larger boards with larger values of <I>n</I> to get
+a feel for the scalability and efficiency of your solution.</P><P>Implement the game in a separate class <CODE>Game</CODE>.
+Write a driver that makes use of a <CODE>Game</CODE> object in a public class
+<CODE>GameDriver</CODE> that has the <CODE>main</CODE> method.</P><!--TOC section Example-->
+<H2 CLASS="section"><!--SEC ANCHOR -->Example</H2><!--SEC END --><!--TOC paragraph Note:-->
+<H5 CLASS="paragraph"><!--SEC ANCHOR -->Note:</H5><!--SEC END --><P> user entered values are shown in <B>bold</B>.</P><!--TOC subsubsection Example 1-->
+<H4 CLASS="subsubsection"><!--SEC ANCHOR -->Example 1</H4><!--SEC END --><DIV CLASS="tty">This program plays the `Jump It' game.
+
+Enter a positive number or 0 to stop? <B>3</B>
+
+Enter a positive number or 0 to stop? <B>80</B>
+
+Enter a positive number or 0 to stop? <B>6</B>
+
+Enter a positive number or 0 to stop? <B>57</B>
+
+Enter a positive number or 0 to stop? <B>10</B>
+
+Enter a positive number or 0 to stop? <B>0</B>
+This is the board: 0, 3, 80, 6, 57, 10
+The lowest cost is: 19</DIV><!--TOC subsubsection Example 2-->
+<H4 CLASS="subsubsection"><!--SEC ANCHOR -->Example 2</H4><!--SEC END --><DIV CLASS="tty">This program plays the `Jump It' game.
+
+Enter a positive number or 0 to stop? <B>1</B>
+
+Enter a positive number or 0 to stop? <B>2</B>
+
+Enter a positive number or 0 to stop? <B>3</B>
+
+Enter a positive number or 0 to stop? <B>4</B>
+
+Enter a positive number or 0 to stop? <B>5</B>
+
+Enter a positive number or 0 to stop? <B>6</B>
+
+Enter a positive number or 0 to stop? <B>7</B>
+
+Enter a positive number or 0 to stop? <B>8</B>
+
+Enter a positive number or 0 to stop? <B>9</B>
+
+Enter a positive number or 0 to stop? <B>0</B>
+This is the board: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+The lowest cost is: 25</DIV><!--TOC section Important Notes-->
+<H2 CLASS="section"><!--SEC ANCHOR -->Important Notes</H2><!--SEC END --><OL CLASS="enumerate" type=1><LI CLASS="li-enumerate">
+For the purposes of this assignment, you can assume that the user
+will only enter valid values.</LI><LI CLASS="li-enumerate">You may use <CODE>ArrayList</CODE> of integers to store the board.</LI><LI CLASS="li-enumerate">Test your program. In particular, be sure to test it on <B>turing</B> before
+you submit it.
+Testing is a part of the assessment, see the Assessment section below.
+</LI></OL><!--TOC section Submitting this Assignment-->
+<H2 CLASS="section"><!--SEC ANCHOR -->Submitting this Assignment</H2><!--SEC END --><UL CLASS="itemize"><LI CLASS="li-itemize">
+Your assignment must be submitted using the <CODE>submit</CODE> program on <B>turing</B>. 
+</LI><LI CLASS="li-itemize">This assignment is assignment <B>a1</B></LI><LI CLASS="li-itemize">From within the <CODE>submit</CODE> program, create a script of your program
+		(select option&#XA0;1)
+		compiling and running correctly on <B>turing</B>.
+		It is a part of the assessment, see marking criteria below.</LI><LI CLASS="li-itemize">You will need to submit <B>three</B> files for this assignment:
+	<OL CLASS="enumerate" type=1><LI CLASS="li-enumerate">
+	 An algorithm for the application program.
+	 		It should be in a plain text file called <CODE>Game.txt</CODE>.
+			The algorithm should include all the methods defined in
+			your program.
+			You should specify what each of the method receives, what outputs and
+			operations performs.
+	 </LI><LI CLASS="li-enumerate">The source code for the driver program. 
+			It should be in a plain text file called <CODE>GameDriver.java</CODE>. 
+	 </LI><LI CLASS="li-enumerate">The source code for your implementation of class <CODE>Game</CODE>.
+	 		In this class you should implement a recursive method computing
+			the lowest cost in the &#X201C;Jump It&#X201D; game. 
+			It should be in a plain text file called <CODE>Game.java</CODE>. 
+	</LI></OL>
+	
+</LI><LI CLASS="li-itemize">After you have submitted your assignment files and exited the submit 
+		program, check the submit record that the submit program placed in your 
+		directory. It should show the names of the files you submitted along with
+		their size and submit date. It should also contain a copy of the script
+		you created. If the submit record doesn&#X2019;t list the required files or shows
+		that one of the files has a file size of 0 (i.e., the file is empty) or
+		doesn&#X2019;t contain a copy of your script, you will need to resubmit your 
+		entire assignment again. 
+</LI></UL><!--TOC section Reminders-->
+<H2 CLASS="section"><!--SEC ANCHOR -->Reminders</H2><!--SEC END --><UL CLASS="itemize"><LI CLASS="li-itemize">
+The comp132 online subdirectory for this assignment contains an 
+		<A HREF="http://mcs.une.edu.au/~comp132/Assignments/Assignment_A1/Updates">update</A> file.
+		The file is updated regularly 
+		with additional comments and hints regarding this assignment as questions
+		come in from students. Be sure to check this file prior to the assignment
+		due date in case any additional information has been provided.</LI><LI CLASS="li-itemize">If you have any questions regarding this assignment,
+		<B>check the updates</B> for this assignment.
+		If your question has not been addressed, then
+		<B>email</B> <A HREF="mailto:comp132@mcs.une.edu.au">comp132@mcs.une.edu.au</A></LI><LI CLASS="li-itemize">Submissions by electronic mail or post will not be marked.</LI><LI CLASS="li-itemize">During the marking procedure, your program may be tested with
+		a data set that differs from the sample shown above.</LI><LI CLASS="li-itemize">It is not acceptable to post assignment code to the 
+		comp132 Bulletin Board.</LI></UL><!--TOC section Assessment-->
+<H2 CLASS="section"><!--SEC ANCHOR -->Assessment</H2><!--SEC END --><P><A NAME="sec-assessment"></A>
+Your assignment will be marked on the following criteria:
+</P><DIV CLASS="center">
+<DIV CLASS="minipage">
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=1><TR><TD ALIGN=center NOWRAP bgcolor="#CC9999"><B><EM>Documentation</EM></B></TD><TD ALIGN=center NOWRAP bgcolor="#CC9999"><B><EM>out of 4</EM></B></TD></TR>
+<TR><TD ALIGN=left NOWRAP>Algorithm file accurately describes program functionality	</TD><TD ALIGN=right NOWRAP>out of 2.0</TD></TR>
+<TR><TD ALIGN=left NOWRAP>Style and accurate, and sufficient commenting			</TD><TD ALIGN=right NOWRAP>out of 2.0</TD></TR>
+<TR><TD ALIGN=center NOWRAP bgcolor="#CC9999"><EM><B>Programming</B><SUP><A NAME="text1" HREF="#note1">1</A></SUP></EM>
+										</TD><TD ALIGN=center NOWRAP bgcolor="#CC9999"><B><EM>out of 6</EM></B></TD></TR>
+<TR><TD ALIGN=left NOWRAP>Compiling and testing of the program		</TD><TD ALIGN=right NOWRAP>out of 1.0</TD></TR>
+<TR><TD ALIGN=left NOWRAP>Correct program behaviour				</TD><TD ALIGN=right NOWRAP>out of 1.0</TD></TR>
+<TR><TD ALIGN=left NOWRAP>Program gives correct answers to input	</TD><TD ALIGN=right NOWRAP>out of 1.0</TD></TR>
+<TR><TD ALIGN=left NOWRAP>Correct implementation of <CODE>Game</CODE> class</TD><TD ALIGN=right NOWRAP>out of 2.0</TD></TR>
+<TR><TD ALIGN=left NOWRAP>Estimation of efficiency of your program<SUP><A NAME="text2" HREF="#note2">2</A></SUP>
+										</TD><TD ALIGN=right NOWRAP>out of 1.0</TD></TR>
+<TR><TD ALIGN=right NOWRAP bgcolor="#CC9999"><B><EM>Total:</EM></B>	</TD><TD ALIGN=left NOWRAP bgcolor="#CC9999"><B><EM>10 marks</EM></B></TD></TR>
+</TABLE>
+<!--BEGIN STICKYNOTES document-->
+<HR CLASS="footnoterule"><DL CLASS="thefootnotes"><DT CLASS="dt-thefootnotes">
+<A NAME="note1" HREF="#text1">1</A></DT><DD CLASS="dd-thefootnotes">		If your program does not compile on <B>turing</B> then your assignment receives
+		0.0 marks for programming.
+</DD><DT CLASS="dt-thefootnotes"><A NAME="note2" HREF="#text2">2</A></DT><DD CLASS="dd-thefootnotes">	For this assignment you should estimate how many
+	times your program call the recursive method, with
+	respect to the number of columns on the board.
+</DD></DL>
+<!--END NOTES-->
+</DIV>
+</DIV><!--CUT END -->
+<!--HTMLFOOT-->
+<!--ENDHTML-->
+<!--FOOTER-->
+<HR SIZE=2><BLOCKQUOTE CLASS="quote"><EM>This document was translated from L<sup>A</sup>T<sub>E</sub>X by
+<A HREF="http://hevea.inria.fr/index.html">H<FONT SIZE=2><sup>E</sup></FONT>V<FONT SIZE=2><sup>E</sup></FONT>A</A>.</EM></BLOCKQUOTE></BODY>
+</HTML>
+</font>
+<!-- footer begin -->
+<!-- do not remove or change the javascript comment above this one -->
+<hr />
+<table border="0" cellspacing="0" cellpadding="0" width=100%>
+<tr VALIGN="middle">
+<td align="left">
+E-mail
+ <a href="mailto:comp132@turing.une.edu.au">
+                comp132@turing.une.edu.au</a>
+</td>
+<td align="right">
+<a HREF="/~comp132/"><img SRC="/icons/small/back.png" BORDER="0" ALT="[HOME]"></a>
+<a HREF="/~comp132/" title="comp132 home page">~comp132</a>
+</td>
+</tr>
+</table>
+<hr />
+<font size="-1">
+        index.cgi size 188.  Last modified Wed Jan 18 11:07:47 2012<br />
+
+        This page has been visited 1037 times since Wed Jul  9 18:10:33 2008<br />
+
+This page is constructed using: <a href="http://mcs.une.edu.au/~wwwdev">
+The Unit Template version 0.2.</a>
+</font>
+<hr />
+
+<a href="http://www.une.edu.au/">
+        <img border="0" align="left" src="/images/unehomepage.gif"
+        alt="unehomepage.gif"/></a>
+
+<a href="http://maths.une.edu.au/">
+        <img border="0" align="right" src="/images/dpt_home.gif"
+        alt="departmenthome.gif"/></a>
+<br />
+<br />
+<hr />
+</body>
+</html>
+

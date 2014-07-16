@@ -1,0 +1,7 @@
+function x = reciprocal(x0,n)
+  x = zeros(1,n+1);
+  x(1) = x0;
+  for k = 1:n
+    x(k+1) = x(k).*(2-2*x(k));
+  end
+endfunction

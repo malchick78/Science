@@ -1,0 +1,17 @@
+1. Create a Scanner object for keyboard input
+
+2. Declare two double variables: mass, weight
+
+3. Prompt the user to input a number for the object's mass
+
+4. Read in the number and store it in the variable mass
+
+5. Calculate the object's weight with the formula:
+   weight = mass x 9.8
+
+6. Use logical operator to check range and display results
+	(a) If weight >= 20 AND weight <= 2000, output weight to 
+		println method
+	(b) Else if weight < 20, output "the object is too light" to 
+		println method
+	(c) Else, output "the object is too heavy" to println method

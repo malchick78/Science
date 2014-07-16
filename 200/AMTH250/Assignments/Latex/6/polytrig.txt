@@ -1,0 +1,14 @@
+function  [a yy] = polytrig(x, y, k, n1, n2)
+% Fit a combination of a polynomial and trig functions to data
+
+% set up design matrix
+aa = vander(x, n1+1);
+for j = 1:n2
+  aa(:,n1+2*j) = sin(j*k*x); 
+  aa(:,n1+2*j+1) = cos(j*k*x); 
+end
+% determine coeffs
+a = aa\y;
+% evaluate fitted function at data points
+yy = polyval(a(1:n1+1),x) + aa(:,n1+2:n1+2*n2+1)*a(n1+2:n1+2*n2+1);
+endfunction

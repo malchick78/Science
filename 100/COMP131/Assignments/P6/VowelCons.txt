@@ -1,0 +1,11 @@
+	  VowelCons		   | Create an object of the VowelCons class
+-----------------------
+- input:String		   | Declare variable to reference the user input		
+- numVowels:int		   | Declare variable to store the number of vowels in the string
+- numCons:int		   | Declare variable to store the number of consonants in the string
+- letterCount:int	   | Declare variable to store the number of letters in the string
+-----------------------
++ VowelCons(str:String)| Constructor to accept a String object as its argument
++ getNumVowels( ):int  | Method that uses an if-statement to determine numVowels
++ getNumCons( ):int	   | Method that uses the isLetter test to determine letterCount and 
+					   | then subtracts numVowels to calculate numConsonants

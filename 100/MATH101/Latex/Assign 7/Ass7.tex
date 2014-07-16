@@ -1,0 +1,232 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{a4wide, amsxtra}
+
+\usepackage[pdftex]{graphicx}
+
+\usepackage{hyperref}
+
+ \title{MATH101 Assignment 7}
+
+ \author{Mark Villar}
+
+\begin{document} 
+
+\maketitle 
+
+\begin{enumerate}
+	
+	\item 
+	
+		\begin{enumerate}
+		
+			\item Let $f: \mathbb{R} \backslash \{ \left( \frac{(2n+1)\pi}{2} \right)^\frac{1}{3} \mid n \in 
+				\mathbb{Z} \} \longrightarrow \mathbb{R}, \hspace{0.5cm} x \longmapsto \tan(x^3)$ \\
+				By the chain rule and Lemma 7.7(i) of the lecture notes (p.94)
+				\begin{align}
+					f'(x) & = \frac{ d}{dx} \tan(x^3) = \left(\frac{ d}{dx} x^3 \right) \sec^2(x^3) \notag \\
+					& = 3x^2 \sec^2(x^3) \notag
+				\end{align}
+			
+			\item Let $g:  \mathbb{R} \backslash \{n\pi \mid n \in \mathbb{Z} \} \longrightarrow \mathbb{R},
+				\hspace{0.5cm} t \longmapsto \frac{1-\cos t}{1+\sin t}$ \\
+				By the quotient rule
+				\begin{align}
+					g'(t) & = \frac{ d}{dt}\left(\frac{1-\cos t}{1+\sin t}\right) \notag \\
+					& = \frac{(1+\sin t)(\sin t) - (1-\cos t)(\cos t)}{(1+\sin t)^2} \notag \\
+					& = \frac{\sin t + \sin^2 t -\cos t + \cos^2 t}{(1+\sin t)^2} \notag \\
+					& = \frac{1+\sin t - \cos t}{(1+\sin t)^2} \notag \\
+					& = \frac{1}{1+\sin t} -\frac{\cos t}{(1+\sin t)^2} \notag
+				\end{align}
+			
+			\item Let $h:\mathbb{R}\longrightarrow\mathbb{R},\hspace{0.5cm} s\longmapsto \ln(1+s^4)$ \\
+				By the chain rule
+				\begin{align}
+					h'(s) & = \frac{ d}{ds} \left(1+s^4\right) \cdot \left(\frac{1}{1+s^4}\right) \notag \\
+					& = \frac{4s^3}{1+s^4} \notag
+				\end{align}
+				
+			\item Let $j: \mathbb{R}\longrightarrow\mathbb{R}, \hspace{0.5cm} x\longmapsto e^x\sin x$ \\
+				By the product rule
+				\begin{align}
+					j'(x) & = e^x \left(\frac{ d}{dx} \sin x\right) + \sin x \left(\frac { d}{dx} e^x \right) \notag \\
+					& = e^x\cdot \cos x + \sin x \cdot e^x \notag \\
+					& = e^x(\cos x+ \sin x) \notag 
+				\end{align}
+			
+			\item Let $k: \mathbb{R}\longrightarrow\mathbb{R}, \hspace{0.5cm} t\longmapsto 
+				\frac{e^t}{e+t^2}$ \\
+				By the quotient rule
+				\begin{align}
+					k'(t) & = \frac{ d}{dt}\left(\frac{e^t}{e+t^2}\right) \notag \\
+					& = \frac{(e+t^2)(e^t) - (e^t)(2t)}{(e+t^2)^2} \notag \\
+					& = \frac{e^t(e+t^2-2t)}{(e+t^2)^2} \notag \\
+					& = \frac{e^t(e+t^2)}{(e+t^2)^2} - \frac{(e^t)(2t)}{(e+t^2)^2} \notag \\
+					& = \frac{e^t}{e+t^2} - \frac{2e^t t}{(e+t^2)^2} \notag
+				\end{align}
+			
+			\item Let $m: \mathbb{R} \backslash \{n\pi \mid n \in \mathbb{Z} \} \longrightarrow\mathbb{R}, 					\hspace{0.5cm} x\longmapsto \ln(\sin^2x)$\\
+				By the chain rule
+				\begin{align}
+					m'(x) & = \frac{ d}{dx} \sin^2x \cdot \left(\frac{1}{\sin^2 x}\right) \notag \\
+					& = \frac{2 \sin x \cos x}{\sin^2 x} \notag \\
+					& = \frac{2 \cos x}{\sin x} \notag \\
+					& = 2 \cot x \notag
+				\end{align}
+			
+			\item Let $p: \mathbb{R}\longrightarrow\mathbb{R}, \hspace{0.5cm} x\longmapsto e^{\cos x}$\\
+				By the chain rule
+				\begin{align}
+					p'(x) & = \left(\frac{ d}{dx} \cos x\right) e^{\cos x} \notag \\
+					& = -\sin x \cdot e^{\cos x} \notag \\
+					& = -e^{\cos x} \sin x \notag
+				\end{align}
+				
+		\end{enumerate}
+		
+	\item Using implicit differentiation, we find $\frac{dy}{dx}$ for the following equations. \\
+	
+		\begin{enumerate}
+		
+			\item 
+				\begin{align}
+					\frac{ d} {dx} \left(x^3y+x^2y^2-5x-10 \right) & = 3x^2 +x^3 \text{ } \frac{dy}{dx} + 						2xy^2 + 2x^2y \text{ } \frac{dy}{dx} - 5 = 0 \notag \\
+					& = (x^3+2x^2y) \text{ } \frac{dy}{dx}+3x^2+2xy^2-5=0 \notag
+				\end{align}
+			If $x^3+2x^2y \ne 0$,
+			$$\hspace{0.3cm} \frac{dy}{dx} = \frac{5 -3x^2y -2xy^2}{x^3+2x^2y}$$
+			
+			\item
+				\begin{align}
+					\frac{ d} {dx} \left(y^2\cos x+xe^y \right) & = -y^2 \sin x + 2y\cos x \text{ } \frac{dy}{dx}						+ e^y + xe^y \text{ } \frac{dy}{dx} = 0 \notag \\
+					& = (2y\cos x + xe^y) \text{ } \frac{dy}{dx} - y^2\sin x + e^y = 0 \notag
+				\end{align}
+			If $2y\cos x + xe^y \ne 0$,
+			$$\hspace{1.2cm} \frac{dy}{dx} = \frac{y^2\sin x - e^y}{2y\cos x + xe^y}$$
+			
+			\item
+				\begin{align}
+					\hspace{0.5cm} \frac{ d} {dx} \left(x^3+\tan(x+y)-2 \right) & = 3x^2 + \sec^2(x+y)
+					\left(1+\frac{dy}{dx} \right) = 0  \notag \\
+					& = \sec^2(x+y) \text{ } \frac{dy}{dx} + 3x^2 + \sec^2(x+y) = 0 \notag
+				\end{align}
+			If $\sec^2(x+y) \ne 0$,
+			$$\hspace{1cm} \frac{dy}{dx} = \frac{-3x^2-\sec^2(x+y)}{\sec^2(x+y)}$$
+			$$\hspace{1.9cm} = -3x^2\cos^2(x+y) -1$$
+			
+			\item
+				\begin{align}
+					\hspace{2.1cm}\frac{ d} {dx} \left(xy-x^3 \ln(x+y) \right) & = y + x \text{ } \frac{dy}{dx} - 					3x^2 \ln(x+y) - x^3 \left(\frac{1}{x+y}\right) \left(1+\frac{dy}{dx}\right) = 0 \notag \\
+					& = \left(x-\frac{x^3}{x+y}\right) \frac{dy}{dx} +y - 3x^2 \ln(x+y) - \frac{x^3}{x+y} =0 						\notag
+				\end{align}
+				$$\hspace{1.9cm}\left(x^2+xy-x^3\right) \frac{dy}{dx} = -xy-y^2+3x^3\ln(x+y)+3x^2y
+				\ln(x+y)+x^3$$ \\
+				If $x^2+xy-x^3 \ne 0$,
+				$$\hspace{4.7cm}\frac{dy}{dx} = \frac{-xy-y^2+3x^3\ln(x+y)+3x^2y \ln(x+y)+x^3}{x^2+xy-					x^3}$$
+				$$\hspace{3.4cm} = \frac{x^3-y^2-xy+3xy+3x^2y\ln(x+y)}{x^2+xy-x^3}$$
+				$$\hspace{2.45cm} = \frac{x^3-y^2+2xy+3x^2y\ln(x+y)}{x^2+xy-x^3}$$
+				\\
+		\end{enumerate}
+								
+	\item 
+	
+		\begin{enumerate}
+		
+			\item Let $f: \mathbb{R}\longrightarrow\mathbb{R},\hspace{0.5cm} x\longmapsto x^3; 
+			\hspace{0.5cm} [0,1]$ \\
+			Since $f$ is a polynomial function, it is differentiable everywhere and hence it satisfies the 
+			hypotheses of the Mean Value Theorem on [0,1]. Now
+			$$\frac{f(1)-f(0)}{1-0} = \frac{1^3-0^3}{1} = 1$$
+			As $f'(x)=3x^2$, 
+			$$f'(c)=\frac{f(1)-f(0)}{1-0}=1 \hspace{0.3cm} \text{if and only if} \hspace{0.3cm} 3c^2=1$$
+			Equivalently, $c^2=\frac{1}{3}$ and $c=\pm \frac{1}{9}$. But only $c=\frac{1}{9}$ lies in $[0,1]$.  			Thus,
+			$$\hspace{2cm} f^c=\frac{f(1)-f(0)}{1-0} \hspace{0.3cm} \text{for} \hspace{0.3cm} c \in [0,1] 				\hspace{0.3cm} \text{if and only if} \hspace{0.3cm} c = \frac{1}{9}$$
+											
+			\item Let $f: \mathbb{R}^+\longrightarrow\mathbb{R},\hspace{0.5cm} x\longmapsto \frac{1}{x}; 
+			\hspace{0.5cm} [1,2]$ \\
+			Since $f$ is a hyperbolic function, it is differentiable (and continuous) over $\mathbb{R}^+ 				\backslash \{0\}$ and hence it satisfies the hypotheses of the Mean Value Theorem on [1,2]. 				Now
+			$$\frac{f(2)-f(1)}{2-1} = \frac{\frac{1}{2}-\frac{1}{1}}{1} = -\frac{1}{2}$$
+			As $f'(x)=-\frac{1}{x^2}$,
+			$$f'(c)=\frac{f(2)-f(1)}{2-1}=-\frac{1}{2} \hspace{0.3cm} \text{if and only if} \hspace{0.3cm} 					-\frac{1}{c^2}=-\frac{1}{2}$$
+			Equivalently, $c^2=2$ and $c=\pm \sqrt{2}$. But only $c=\sqrt{2}$ lies in $[1,2]$. Thus,
+			$$\hspace{2cm} f^c=\frac{f(2)-f(1)}{2-1} \hspace{0.3cm} \text{for} \hspace{0.3cm} c \in [1,2] 				\hspace{0.3cm} \text{if and only if} \hspace{0.3cm} c = \sqrt{2}$$
+			
+			\item Let $f: \mathbb{R}^+\longrightarrow\mathbb{R},\hspace{0.5cm} x\longmapsto \ln x; 
+			\hspace{0.5cm} [1,e]$ \\
+			Since $f$ is a logarithmic function, it is differentiable over $\mathbb{R}^+ \backslash \{0\}$ and
+			hence it satisfies the hypotheses of the Mean Value Theorem on [1,e]. Now
+			$$\frac{f(e)-f(1)}{e-1} = \frac{\ln e-\ln 1}{e-1} = \frac{1-0}{e-1} = \frac{1}{e-1}$$
+			As $f'(x)=\frac{1}{x}$,
+			$$f'(c)=\frac{f(e)-f(1)}{e-1}=\frac{1}{e-1} \hspace{0.3cm} \text{if and only if} \hspace{0.3cm} 				\frac{1}{c}=\frac{1}{e-1}$$
+			Equivalently, $c=e-1$. Thus,
+			$$\hspace{2cm} f^c=\frac{f(e)-f(1)}{e-1} \hspace{0.3cm} \text{for} \hspace{0.3cm} c \in [1,e] 				\hspace{0.3cm} \text{if and only if} \hspace{0.3cm} c = e-1 \approx 1.71828$$
+
+		\end{enumerate}
+	
+	\item Let $f: \mathbb{R}^+\longrightarrow \mathbb{R},\hspace{0.5cm} x\longmapsto \ln (1+x)$ \\
+		Since $f(x) = \ln(1+x)$ is differentiable on $\mathbb{R}^+$, we apply the Mean Value Theorem for 			all $x \in (0,\infty)$ such that
+		$$f'(c)=\frac{f(x)-f(0)}{x-0} \hspace{0.3cm} \text{for some} \hspace{0.3cm} c \in (0,\infty)$$
+		As $f'(x)=\frac{1}{1+x}$,
+		$$f'(c)=\frac{1}{1+c} = \frac{\ln(1+x)-\ln(1+0)}{x-0} = \frac{\ln(1+x)-0}{x} = \frac{\ln(1+x)}{x}$$
+		Thus, 
+			\begin{align}
+				x & = (1+c) \ln(1+x) \notag \\
+				& > \ln(1+x) \hspace{0.3cm} \text{as} \hspace{0.3cm} (1+c) > 1 \notag
+			\end{align} 
+		\medskip
+		Now let $g: \mathbb{R}^+\longrightarrow \mathbb{R},\hspace{0.5cm} x\longmapsto \frac{x}{1+x}$ \\
+		Since $g(x) = \frac{x}{1+x}$ is differentiable on  $\mathbb{R}^+$, we apply the Mean Value 				Theorem for all $x \in (0,\infty)$ such that
+		$$g'(c)=\frac{g(x)-g(0)}{x-0} \hspace{0.3cm} \text{for some} \hspace{0.3cm} c \in (0,\infty)$$
+		As $g'(x)=\frac{1}{(1+x)^2}$,
+		$$g'(c)=\frac{1}{(1+c)^2} = \frac{\frac{x}{1+x}-\frac{0}{1+0}}{x-0} = \frac{\frac{x}{1+x}}{x} = 
+		\frac{1}{1+x}$$\\
+		Thus, 
+			\begin{align}
+				1+x = (1+c)^2 \Rightarrow \frac{x}{1+x} & = \frac{x}{(1+c)^2} \notag \\
+				& = \frac{(1+c)\ln(1+x)}{(1+c)^2} \notag \\
+				& = \frac{1+c}{(1+c)^2} \ln(1+x) \notag \\
+				& < \ln(1+x) \hspace{0.3cm} \text{as} \hspace{0.3cm} \frac{1+c}{(1+c)^2} < 1 \notag
+			\end{align}
+		Hence we have shown that
+		
+		$$\frac{x}{1+x} < \ln(1+x) < x \hspace{0.3cm} \text{for all} \hspace{0.3cm} x>0$$
+		\smallskip
+		%To show that $g(x)< f(x)$ for $x>0$, we observe that $\frac{x}{1+x} <1$ for all $x$. We then 
+		%examine where $\ln (1+x) > 1$.
+			%\begin{align}
+				%\ln (1+x) > 1 & \Rightarrow 1+x > e \notag \\ 
+				%& \Rightarrow x > e-1 \notag
+			%\end{align}
+		%Therefore, 
+		%$$\ln(1+x) > \frac{x}{1+x} \hspace{0.3cm} \text{on} \hspace{0.3cm} [e-1,\infty)$$ \\
+		%We now consider if this is true on the interval $(0,e-1)$ by comparing limits.
+		
+		%$$\lim_{x\rightarrow e-1} \frac{x}{1+x} = \frac{e-1}{e} = 1 - \frac{1}{e}$$
+		
+		%$$\lim_{x\rightarrow e-1} \ln(1+x)  = \ln(1+e-1) = \ln(e) = 1$$ \\
+		%This is clearly the case at $x=e-1$. We also conclude that $f(x) > g(x)$ over the rest of the interval 			because both monotonically increasing functions intersect only once at $x=0$, implying that
+		
+		%$$\lim_{x\rightarrow a} \ln(1+x) > \lim_{x\rightarrow a} \frac{x}{1+x}, \hspace{0.3cm} a>0$$ \\
+		
+	\item Let $$h(x)=f(x)[g(b)-g(a)]-g(x)[f(b)-f(a)]$$
+	\\
+	Since $f$ and $g$ are both continuous on [a,b] and differentiable on (a,b), then $h$ is also continuous 		on $[a,b]$ and differentiable on $(a,b)$. Moreover,
+		\begin{align}
+			h(a) & = f(a)[g(b)-g(a)]-g(a)[f(b)-f(a)] \notag \\
+			& = f(a)g(b)-f(a)g(a)-g(a)f(b)+f(a)g(a) \notag \\
+			& = f(a)g(b)-g(a)f(b) \notag \\
+			h(b) & =  f(b)[g(b)-g(a)]-g(b)[f(b)-f(a)] \notag \\
+			& = f(b)g(b)-g(a)f(b)-f(b)g(b)+f(a)g(b) \notag \\
+			&= f(a)g(b)-g(a)f(b) \notag 
+		\end{align}
+	Since $h(a)=h(b)$ it follows from Rolle's Theorem (p.86 of the lecture notes) that $h'(c)$ = 0 for some $c 	\in (a,b)$. Consequently,
+		\begin{align}
+			h'(c) & = f'(c)[g(b)-g(a)]-g'(c)[f(b)-f(a)] = 0 \notag \\
+			& \Rightarrow \frac{f'(c)}{g'(c)}=\frac{f(b)-f(a)}{g(b)-g(a)} \notag
+		\end{align}
+	
+	\hspace{3.3cm} if $g(b) \ne g(a)$ and $g'(c) \ne 0$.
+				
+\end{enumerate}
+	
+\end{document}

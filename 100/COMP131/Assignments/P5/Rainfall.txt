@@ -1,0 +1,11 @@
+		   Rainfall			 	| --> Create an object of the Rainfall class
+-------------------------------------
+- thisYear:double				| --> Declare private field variable to reference the array of rainfall data
+-------------------------------------
++ Rainfall(r:double)			| --> Constructor to accept the array as argument and initialises the array as doubles
++ getTotalRainFall( ):double	| --> Instance method that calculates and returns the total rainfall
++ getAverageRainFall( ):double	| --> Instance method that calculates and returns the average rainfall
++ getHighestMonth( ):int		| --> Instance method that returns the month with the highest rainfall
++ getLowestMonth( ):int			| --> Instance method that returns the month with the lowest rainfall
++ getRainAt(int:month):double	| --> Instance method that returns a specified value in the array and accepts the 
+									  element number to return as its argument

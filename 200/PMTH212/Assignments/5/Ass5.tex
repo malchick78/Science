@@ -1,0 +1,101 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{a4wide, amsxtra}
+
+\usepackage[pdftex]{graphicx}
+
+ \title{PMTH212 Assignment 5}
+
+ \author{Mark Villar}
+
+\begin{document} 
+
+\maketitle 
+
+\begin{enumerate}
+	
+	\item $f(x,y)=e^{xy^2}$
+		\begin{align*}
+			f_x&=\frac{\partial}{\partial x}(e^{xy^2})= y^2e^{xy^2} \\
+			f_{xy}&=\frac{\partial}{\partial y}(f_x)=\frac{\partial}{\partial y}(y^2e^{xy^2})=2ye^{xy^2}+2xy^3e^{xy^2}=2ye^{xy^2}(1+xy^2)\\
+			f_{xyx}&=\frac{\partial}{\partial x}(f_{xy})=\frac{\partial}{\partial x}(2ye^{xy^2}(1+xy^2))=2y^3e^{xy^2}+2y^3e^{xy^2}+2xy^5e^{xy^2} \\
+			&=4y^3e^{xy^2}+2xy^5e^{xy^2}=2y^3e^{xy^2}(2+xy^2) \\
+			f_{xx}&=\frac{\partial}{\partial x}(f_x)=\frac{\partial}{\partial x}(y^2e^{xy^2})=y^4e^{xy^2}\\
+			f_{xxy}&=\frac{\partial}{\partial y}(f_{xx})=\frac{\partial}{\partial y}(y^4e^{xy^2})=4y^3e^{xy^2}+2xy^5e^{xy^2}=2y^3e^{xy^2}(2+xy^2) \\
+			f_y&=\frac{\partial}{\partial y}(e^{xy^2})= 2xye^{xy^2} \\
+			f_{yx}&=\frac{\partial}{\partial x}(f_y)=\frac{\partial}{\partial x}(2xye^{xy^2})=2ye^{xy^2}+2xy^3e^{xy^2}=2ye^{xy^2}(1+xy^2)=f_{xy} \\
+			f_{yxx}&=\frac{\partial}{\partial x}(f_{yx})=\frac{\partial}{\partial x}(f_{xy})=2y^3e^{xy^2}(2+xy^2)
+		\end{align*}
+		
+	Hence, \ $f_{xyx}=f_{xxy}=f_{yxx}=2y^3e^{xy^2}(2+xy^2)$.
+		
+	\item
+		\begin{align*}
+			\frac{\partial z}{\partial u}&=\frac{\partial z}{\partial x} \frac{\partial x}{\partial u}+\frac{\partial z}{\partial y} \frac{\partial y}{\partial u} \\
+			&=3\left(1+\frac{v}{u}\right)+(-2)(2u)=3+\frac{3v}{u}-4u \\
+			\frac{\partial z}{\partial v}&=\frac{\partial z}{\partial x} \frac{\partial x}{\partial v}+\frac{\partial z}{\partial y} \frac{\partial y}{\partial v} \\
+			&=3\ln u+(-2)(-\ln v-1)=3\ln u+2 \ln v +2
+		\end{align*}
+							
+	\item From the Cauchy-Riemann equations, we know that $\dfrac{\partial u}{\partial x}=\dfrac{\partial v}{\partial y}$ \ such that
+		\begin{align*}
+			 &\frac{\partial u}{\partial x}=\frac{\partial u}{\partial r} \frac{\partial r}{\partial x}=\frac{\partial v}{\partial \theta}\frac{\partial \theta}{\partial y}=\frac{\partial v}{\partial y}
+		\end{align*}
+		\begin{align*}
+			&r=\frac{x}{\cos \theta}, &\frac{\partial r}{\partial x}=\frac{1}{\cos \theta} \\
+			&\theta=\sin^{-1}\left(\frac{y}{r}\right), &\frac{\partial \theta}{\partial y}= \frac{1}{\sqrt{1-\left(\frac{y}{r}\right)^2}}=\frac{1}{r\sqrt{1-\sin^2\theta}}=\frac{1}{r\cos \theta}
+		\end{align*}	
+		Hence,
+		\begin{align*}
+			&\frac{\partial u}{\partial r} \frac{1}{\cos \theta}=\frac{\partial v}{\partial \theta}\frac{1}{r\cos \theta} \\
+			&\frac{\partial u}{\partial r}=\frac{1}{r}\frac{\partial v}{\partial \theta} \\
+		\end{align*}
+
+		We also know that $\dfrac{\partial u}{\partial y}=-\dfrac{\partial v}{\partial x}$ \ such that
+		\begin{align*}
+			&\frac{\partial u}{\partial y}=\frac{\partial u}{\partial \theta} \frac{\partial \theta}{\partial y}=-\frac{\partial v}{\partial r}\frac{\partial r}{\partial x}=-\frac{\partial v}{\partial x}
+		\end{align*}
+		
+		Hence,
+		\begin{align*}
+			&\frac{\partial u}{\partial \theta} \frac{1}{r\cos \theta}= -\frac{\partial v}{\partial r}\frac{1}{\cos \theta} \\
+			&\frac{\partial v}{\partial r}=-\frac{1}{r}\frac{\partial u}{\partial \theta}
+		\end{align*}
+		
+	\medskip
+	
+	\item $z=f(x,y)=\ln \left[(x^2+y^2)^{1/2}\right]$ \ at \ $P(-1,0,0)$
+		\begin{align*}
+			&f(-1,0)=\ln\left[(1+0)^{1/2}\right]=\ln 1=0 \\
+			&f(x,0)=\ln\left[(x^2+0)^{1/2}\right]=\ln x \\
+			&f_x(x,0)=\frac{1}{x} \\
+			&f_x(-1,0)=\frac{1}{x}\Big|_{(-1,0)}=-1 \\
+			&f(-1,y)=\ln\left[(1+y^2)^{1/2}\right] \\
+			&f_y(-1,y)=\frac{y}{1+y^2} \\
+			&f_y(-1,0)=\frac{y}{1+y^2}\Big|_{(-1,0)}=0
+		\end{align*}
+	
+	The equation of the tangent plane to the given surface is therefore
+	$$z=0-1(x+1)+0(y-0) \ \Rightarrow \ x+z+1=0$$
+			
+	Since $\vec{n}=\big<-1,0,-1\big>$, the equation of the normal line at $(-1,0,0)$ is 
+		\begin{align*}
+			&x+1=-t \ \Rightarrow x=-t-1 \\
+			&y-0=0 \ \Rightarrow y=0 \\
+			&z-0=-t \ \Rightarrow z=-t \\
+			&-x-1=-z \ \Rightarrow \ x-z+1=0
+		\end{align*}
+		
+		\medskip
+		
+	\item $f(x,y)=3x^2y-xy$ \ at \ $P(2,-3)$
+		\begin{align*}
+			\bigtriangledown f(2,-3)&=\big<6xy-y,3x^2-x\big>=\big<-36+3,12-2\big> \\
+			&=\big<-33,10\big> \ \text{is perpendicular to the level curve at} \ (2,-3) \\
+			||\bigtriangledown f(2,-3)||&=\sqrt{(-33)^2+10^2}=\sqrt{1189} \\
+		 	\hspace{.7cm}\mathbf{u}=\frac{\bigtriangledown f(2,-3)}{||\bigtriangledown f(2,-3)||}&=\left<-\frac{33}{\sqrt{1189}},\frac{10}{\sqrt{1189}}\right> \ \text{is the normalised unit vector}
+		\end{align*}
+					
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,143 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{amsmath}
+
+\title{AMTH250 \hfill Assignment 2}
+
+\author{Mark Villar}
+
+\begin{document}
+
+\maketitle
+
+\subsubsection*{Question 1}
+The reduced cubic equation $y^{3}+3py+2q=0$ has one real and two complex solutions when $D=q^{2}+p^{3}>0$. These are given by Cardano's formula as 
+	\begin{align*}
+		y_{1}=u+v, \quad y_{2}=-\frac{u+v}{2}+\frac{i}{2}\sqrt{3}(u-v), \quad y_{3}=-\frac{u+v}{2}-\frac{i}{2}\sqrt{3}(u-v)
+	\end{align*}
+	where
+	\begin{align*}
+		u=\sqrt[3]{-q+\sqrt{q^{2}+p^{3}}},  \qquad v=\sqrt[3]{-q-\sqrt{q^{2}+p^{3}}}
+	\end{align*}
+
+\subsubsection*{Question 2}
+An $n \times n \ \text{matrix} \ \mathbf{A}$ is \textsl{non-singular} if it satisfies any one of the following equivalent conditions:
+	\begin{enumerate}
+		\item $\mathbf{A}$ has an inverse, i.e. there is a matrix $\mathbf{A}^{-1}$ such that 
+		\begin{align*}
+			\mathbf{AA}^{-1}=\mathbf{A}^{-1}\mathbf{A}=\mathbf{I}
+		\end{align*}
+		\item $\det \mathbf{A} \neq 0.$
+
+		\item $\operatorname{rank} \mathbf{A} = n$. (The rank of a matrix is the maximum number of linearly independent rows or columns of the matrix.)
+
+		\item For every non-zero vector $\mathbf{z}$, $\mathbf{Az} \neq 0$.
+
+	\end{enumerate}
+
+\subsubsection*{Question 3}
+The \textit{gamma function} $\Gamma(x)$ is defined by 
+	\begin{align*}
+		\Gamma(x) &\equiv \lim_{n \rightarrow \infty} \prod^{n-1}_{\nu=0} \frac{n! \thinspace n^{x-1}}{x+\nu} \\
+		&=\lim_{n \rightarrow \infty} \frac{n! \thinspace n^{x-1}}{x(x+1) \cdots (x+n-1)} \\
+		&=\int^\infty_0 e^{-t}t^{x-1} \thinspace dt
+	\end{align*} 
+The integral definition is only valid for $x>0$.
+
+\subsubsection*{Question 4}
+Given an $n$-vector $\mathbf{a}$, we can annihilate \textbf{all} of its entries below the $k$th position, provided that $a_k \neq 0$, by the following transformation:
+	\begin{align*}
+		\mathbf{M}_k\mathbf{a}=
+		\begin{bmatrix}
+			1 &\ldots &0 &0 &\ldots &0 \\
+			\vdots &\ddots &\vdots &\vdots &\ddots &\vdots \\
+			0 &\ldots &1 &0 &\ldots &0 \\
+			0 &\ldots &-m_{k+1} &1 &\ldots &0 \\
+			\vdots &\ddots &\vdots &\vdots &\ddots &\vdots \\
+			0 &\ldots &-m_n &0 &\ldots &1
+		\end{bmatrix}
+		\begin{bmatrix}
+			a_1 \\
+			\vdots \\
+			a_k \\
+			a_{k+1} \\
+			\vdots \\
+			a_n
+		\end{bmatrix}=
+		\begin{bmatrix}
+			a_1 \\
+			\vdots \\
+			a_k \\
+			0 \\
+			\vdots \\
+			0
+		\end{bmatrix}
+	\end{align*}
+where $m_i=a_i/a_k, \thinspace i=k+1, \ldots, n$. 
+
+\subsubsection*{Question 5}
+The absolute and relative error are defined by
+	\begin{align}
+		\text{Absolute error } \thickspace &= \thickspace \ \text{Approximate value} - \text{True value} \\
+		\text{Relative error } \thickspace &= \thickspace \ \frac{\text{Absolute error}}{\text{ True value}}
+		\intertext{A useful way to think of relative error is via the expression}
+		\text{Approximate value } \thickspace &= \thickspace \ \text{True value} \times (1+\text{Relative error})
+	\end{align}
+	
+\subsubsection*{Question 6}
+Differentiating the differential equation 
+	$$\frac{dy}{dt}=f(t,y)$$
+gives
+	$$\frac{d^2y}{dt^2}=\frac{d}{dt}f(t,y)=\frac{\partial f}{\partial t}+\frac{\partial f}{\partial y}\frac{dy}{dt}=\frac{\partial f}{\partial t}+\frac{\partial f}{\partial y}f$$
+and we have the Taylor series approximation
+	\begin{align*}
+		y(t+h) &\approx y(t)+y'(t)h+\frac{1}{2}y''(t)h^2 \\
+		&=y(t)+hf(t,y)+\frac{h^2}{2}\left(\frac{\partial f}{\partial t}(t,y)+\frac{\partial f}{\partial y}(t,y)f(t,y)\right)
+	\end{align*}
+
+\newpage
+	
+\subsubsection*{Question 7}
+	\begin{table}[!ht]
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				\multicolumn{2}{|c|}{No Pivoting} &\multicolumn{2}{c|}{Partial Pivoting} &\multicolumn{2}{c|}{Complete Pivoting} \\
+				\hline
+				Error &Residual &Error &Residual &Error &Residual \\
+				\hline
+				8.964 &$2.07 \times 10^{-14}$ &0.156 &$2.53 \times 10^{-16}$ &0.164 &$2.53 \times 10^{-16}$ \\
+				1.426 &$2.77 \times 10^{-15}$ &0.113 &$2.04 \times 10^{-16}$ &0.175 &$2.93 \times 10^{-16}$ \\
+				0.883 &$3.60 \times 10^{-16}$ &0.080 &$2.97 \times 10^{-16}$ &0.036 &$3.48 \times 10^{-16}$ \\
+				\hline
+			\end{tabular}
+		\end{center}
+		\caption{Errors and residuals for 3 random $100 \times 100$ matrices.}
+	\end{table}
+
+\subsubsection*{Question 8}
+	\begin{center}
+		\begin{tabular}{cc} % main table
+			\multicolumn{2}{c}{Payoff (\$)} \\
+			\multicolumn{1}{c}{Player 1} &\multicolumn{1}{c}{Player 2} \\
+			\hline
+			\\
+			\begin{tabular}{|c|c|c|} % sub-table 1
+				\hline 
+				1 &2 &3 \\
+				\hline
+				4 &5 &6 \\
+				\hline
+			\end{tabular} &
+			\begin{tabular}{|c|c|} % sub-table 2
+				\hline
+				1 &3 \\
+				\hline
+				2 &5 \\
+				\hline
+				3 &6 \\
+				\hline
+			\end{tabular} \\
+		\end{tabular}
+	\end{center}
+\end{document}

@@ -1,0 +1,189 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{a4wide, amsxtra}
+
+\usepackage{hyperref} 
+
+\usepackage{url} 
+
+ \title{MATH101 Assignment 3}
+
+ \author{Mark Villar}
+
+\begin{document} 
+
+\maketitle 
+
+\begin{enumerate}
+	
+	\item 
+	
+		\begin{enumerate}
+		
+			\item $\bar z=7$ and $|z|=7$\\
+			
+			\item  $\bar z=\sqrt{3}-i$ and $|z|=\sqrt{3+1}=2$\\
+			
+			\item	$z= {2+i \over 2-i} \times {2+i \over 2+i}={4+4i+i^2 \over 4+1}={3+4i \over 5}=
+				{3 \over 5}+{4 \over5}i$\\
+				
+				$\bar z ={3 \over 5}-{4 \over5}i$ and $|z|=\sqrt{{9\over25}+{16\over25}}=1$\\
+			
+			\item $z=(i^2)^2=(-1)^2=1$\\
+				
+				$\bar z=1$ and $|z|=1$\\
+			
+			\item $z=2^3-3(2)^2(3i)+3(2)(3i)^2-(3i)^3=8-36i-54+27i$\\
+			
+				$z=-46+9i$ and $\bar z=-46-9i$\\
+				
+				$|z|=\sqrt{2116+81}=13\sqrt{13}$\\
+				
+			\item $z={2^3+3(2)^2(3i)+3(2)(3i)^2+(3i)^3 \over 5^3-3(5)^2(2i)+3(5)(2i)^2-(2i)^3}=
+				{8+36i-54-27i \over 125-150i-60+8i}={-46+9i \over 65-142i}$\\
+				
+				$z={-46+9i \over 65-142i} \times {65+142i \over 65+142i}=
+				{-2990-6532i+585i+1278i^2 \over 4225+20164}={-4268-5947i \over 24389}$\\
+				
+				$z=-{4268 \over 24389}-{5947 \over 24389}i$ and 
+				$\bar z=-{4268 \over 24389}+{5947 \over 24389}i$\\
+				
+				$|z|=\sqrt{\big({4268 \over 24389} \big)^2+\big({5947 \over 24389}\big)^2}=
+				\sqrt{2197 \over 24389}$ or\\
+				
+				$|z|=\sqrt{46^2+9^2 \over 65^2+142^2} =\sqrt{2116+81 \over 4225+20164}=
+				\sqrt{2197 \over 24389}$\\
+			
+			\item $z={(3+i)-(1-i) \over (1-i)(3+i)}={2+2i \over 3+i-3i-i^2}={2+2i \over 4-2i}$\\
+			
+				$z={2+2i \over 4-2i} \times {4+2i \over 4+2i}={8+4i+8i+4i^2 \over 16+4}={4+12i \over 20}=
+				{1 \over 5}+{3 \over 5}i$\\
+				
+				$\bar z={1 \over 5}-{3 \over 5}i$ and $|z|=\sqrt{{1 \over 25}+{9 \over 25}} = 
+				{\sqrt{10} \over 5}$\\
+			
+		\end{enumerate}
+		\medskip
+	\item 
+		In order for $f$ to be a well-defined function, we must have $x \ge 0$ (since we cannot take the 			square root of a negative number in $\mathbb{R}$). Hence, the maximum subset is\\
+		$X_f \subseteq [0,\infty) :=$ dom$(f) = \{x \in \mathbb{R}  \mid x \ge 0\} := \mathbb{R}^+_0$ \\
+		\\For $X_g$ we must have $x^2-1 \ge 0$ or equivalently, $|x| \ge 1$. This implies\\
+		$X_g \subseteq (-\infty,-1] \cup [1,\infty) :=$ dom$(g) = \{x \in \mathbb{R} \mid x \le -1$ or $x \ge 1\}$.
+		\\
+		\\
+		For $X_h$ we must have $x \ge 1$. This is because $g$ and $h$ differ only by their codomains, 			with codom($h$) restricted to $\mathbb{R}^+_0$. So by deduction, we find
+		\\
+		$X_h \subseteq [1,\infty) :=$ dom$(h)=\{x \in \mathbb{R} \mid x \ge 1\}$.\\
+		\\
+		As square roots take only non-negative values in $\mathbb{R}$, the range (or image) of 	the				functions $f$, $g$ and $h$ are all $ \{x \in \mathbb{R}  \mid x \ge 0\} := \mathbb{R}^+_0$.
+		\\
+		\\$f\circ g : $ im$(g) =$ dom$(f) = \{x \in \mathbb{R} \mid x \ge 0\}$\\
+		$f\circ h : $ im$(h) =$ dom$(f) = \{x \in \mathbb{R} \mid x \ge 0\}$\\
+		$g\circ f : $ im$(f) \ne $ dom$(g) \Leftrightarrow \{x \in \mathbb{R} \mid x \ge 0\} \ne 
+		\{x \in \mathbb{R} \mid x \le -1$ or $x \ge 1\}$\\
+		$h \circ f : $ im$(f) \ne $ dom$(h) \Leftrightarrow \{x \in \mathbb{R} \mid x \ge 0\} \ne
+		\{x \in \mathbb{R} \mid x \ge 1\}$\\
+		\\
+		Of the four compositions above, only $f\circ g$ and $f\circ h$ are defined.\\ 
+		\\
+		$f\circ g : X_g \rightarrow  \mathbb{R}$, \text{ } $x \mapsto f(g(x))= f(\sqrt{x^2-1})=
+		\sqrt{\left(\sqrt{x^2-1}\right)} \text{ where }$\\
+		$$\text{dom}(f \circ g) = \text{dom}(g) := \{x \in \mathbb{R} \mid x \le -1 \text{ or } x \ge 1\}$$
+		$$\text{codom}(f \circ g) = \text{codom}(f) := \mathbb{R}$$
+		$$\text{im}(f \circ g) = \text{im}(g) := \{x \in \mathbb{R}  \mid x \ge 0\}$$
+		\\
+		$f\circ h : X_h \rightarrow  \mathbb{R}$, \text{ } $x \mapsto f(h(x))= f(\sqrt{x^2-1})=
+		\sqrt{\left(\sqrt{x^2-1}\right)} \text{ where }$\\
+		$$\text{dom}(f \circ h) = \text{dom}(h) := \{x \in \mathbb{R} \mid x \ge 1\}$$
+		$$\text{codom}(f \circ h) = \text{codom}(f) := \mathbb{R}$$
+		$$\text{im}(f \circ h) = \text{im}(h) := \{x \in \mathbb{R}  \mid x \ge 0\}$$
+		\\
+	\item 
+		\begin{enumerate}
+		
+			\item 
+				We must have $x \ne -1$ for $f$ to be a function (since we cannot divide by 0). Thus, the 				maximum subset is $X := \{x \in \mathbb{R} \mid x \ne -1\}$ and the function
+				$f : X \rightarrow \mathbb{R}$, \text{  } $x \mapsto {1 \over 1+x} \text { }$ has 
+				$\text{ im}(f) = \{x \in \mathbb{R}  \mid x \ne 0\}$.\\
+				\\
+				Clearly, $f$ is not surjective since codom$(f) \ne$ im$(f)$, as there is no 
+				$x \in \mathbb{R}$ such that $f(x) = 0$.  We give the following proof below.\\
+				
+				Let $y$ be in the codomain $ \mathbb{R}$.  We must find an $x$ in the domain $X$ 					such that $f(x) =  {1 \over 1+x} = y$.  Solving for $x$, we find 
+				$x = {1-y \over y}$ where $y \ne 0$.  Thus, there is no $x \in \mathbb{R}$ which satisfies 
+				$f(x)=0$.\\ 
+				\\
+				However, the function is injective because $f(x) = f(x')$ if and only if $x=x'$. We show this
+				by direct proof.  Assume $f(x)=f(x')$.  That is, ${1 \over 1+x} = {1 \over 1+x'}$.  Hence, 
+				$1+x=1+x'$ and $x=x'$. Hence, $f$ is injective.\\
+				
+				Geometrically, this means every horizontal line intersects the graph of $f$ in at most one 
+				point.\\
+			
+			\item
+				If we write $\sqrt{x^4-x^2}$ in factorised form, $\sqrt{x^2(x^2-1)} \text{, }$ then we 						must have $|x| \ge 1$ or $x=0$ for $f$ to be a function.  Thus,
+				$X := \{x \in \mathbb{R} \mid |x| \ge 1 \text{ or } x=0\}$ and $f: X \rightarrow \mathbb{R}$,
+				\text{ } $x \mapsto \sqrt{x^4-x^2} \text { }$ has $\text{ im}(f) = \{x \in \mathbb{R}  
+				\mid x \ge 0\}$.\\
+				\\
+				Again, $f$ is not surjective since codom$(f) \ne$ im$(f)$, as there is no
+				$x \in \mathbb{R}$ such that $f(x) < 0$. The function is also not injective and we prove 					this by contradiction.\\  
+				
+				Assume $f(x)=f(x')$ such that $\sqrt{x^4-x^2} = \sqrt{x'^4-x'^2}$. Hence, $x^4 = x'^4$ 
+				\text{ and } $x^2 = x'^2$. Observe that one solution to either equation is 
+				$x=2$ and $x'=-2$.  Hence, we have the following counterexample to $f$ being injective. 
+				Suppose $x=2$ and $x'=2$, then\\
+				
+				$f(x)= f(2) = \sqrt{2^4-2^2}=\sqrt{16-4}=\sqrt{12}$ \\
+				$f(x')=f(-2)= \sqrt{(-2)^4-(-2)^2}=\sqrt{16-4}=\sqrt{12}$\\
+				\\
+				but $x \ne x'$.  Thus $f$ is neither injective nor surjective.\\
+				
+			\item 
+				For $f$ to be a well-defined function, the maximum subset $X$ is the set of all real
+				numbers $\mathbb{R}$.  So the function $f : \mathbb{R} \rightarrow \mathbb{R}$, \text{  } 					$x \mapsto x^3-13 \text { }$ has $\text{ im}(f) = \mathbb{R}$.\\
+				\\
+				This function is surjective since codom$(f) =$ im$(f)$ .  In other words, its range 						coincides with its codomain.  Geometrically, this means that every horizontal line 
+				intersects the graph of $f$ in one or more points.  In this particular case, each horizontal
+				line intersects $f$ exactly once.\\
+				\\
+				It is also injective because $f(x) = f(x')$ if and only if $x=x'$. Again, we assume 
+				$f(x) = f(x')$ such that $x^3 = x'^3$. By taking cube roots, we find $x=x'$. Hence, $f$ is 					injective.\\
+				\\
+				Moreover, $f$ is bijective.
+
+		\end{enumerate}
+		
+	\item 
+		Let $\varepsilon > 0$ be given.  Then we must find a number, $\text{ }\delta > 0\text{ , }$ such that 
+		\\$|x| < \delta \text{ guarantees } \bigg|{1 \over 1+ x^2} - 1\bigg| < \varepsilon$.  Algebraic steps 
+		yield\\
+		
+		$$\bigg|{1 \over 1+ x^2} - 1\bigg| = \left|{1-(1+x^2)\over 1+ x^2}\right| =
+		\left|{-x^2\over 1+ x^2}\right| = {|-x^2|\over |1+ x^2|}$$\\
+		\\
+		The term $1+ x^2$ is always positive (since $x^2 > 0$).  So $1+ x^2 = |1+ x^2|$.  We also know that 		$|-x^2| = |x^2| = |x| |-x| = |x| |x|$.  Therefore,\\
+		
+		$$\bigg|{1 \over 1+ x^2} - 1\bigg| =  {|x||x| \over 1+ x^2} =  {|x| \over 1+ x^2} \text{ }|x|$$\\
+		\\
+		Now we must estimate the largest value that the term ${|x| \over 1+ x^2}$ can have for $x$ in an 
+		interval centred at 0.  We choose arbitrarily $-{1\over2} < x < {1\over2}$ which gives us
+		$|x| < {1\over2}$. Moreover $x^2 < {1 \over 4}$, which implies $1+x^2<{5\over4}$ and thus 
+		${1\over1+x^2}<{4\over5}$ .\\
+		\\  
+		Combining these estimates together yields\\
+		\\
+		$${|x| \over 1+ x^2} = |x| \text{ }{1\over1+x^2} < {1\over2} \cdot {4\over 5} = {2\over 5}$$\\
+		\\
+		and hence,\\
+		\\
+		$$\bigg|{1 \over 1+ x^2} - 1\bigg| = {|x| \over 1+ x^2} \text{ }|x| < {2\over 5}\text{ }|x|$$\\
+		\\
+		For this expression to be smaller than $\varepsilon$, we need $|x| < {5\over2}\text{ }\varepsilon$ .  
+		Thus, given any $\varepsilon > 0$ we have found 
+		$\delta = \text{min}\left[{1\over2} , {5\over2}\text{ }\varepsilon\right]$ guarantees
+		$\bigg|{1 \over 1+ x^2} - 1\bigg| < \varepsilon$ whenever $|x| < \delta$.\\
+		
+\end{enumerate}	
+	
+\end{document} 

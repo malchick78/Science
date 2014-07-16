@@ -1,0 +1,17 @@
+1. Declare three String variables: firstName, middleName, lastName
+
+2  Store my first, middle and last names in these variables
+   If no middle name, store "NA" in the middleName variable
+   
+3. Declare three char variables: firstInitial, middleInitial and lastInitial
+
+4. Store my first, middle and last initials in these variables
+   If no middle name, store " " in the middleInitial variable
+   
+5. Use logical operator to display results 
+   (a) If middleName is "NA":
+       (i)  Output firstName and lastName to println method 
+       (ii) Output firstInitial and lastInitial to println method 
+   (b) Else
+       (i)  Output firstName, middleName and lastName to println method
+       (ii) Output firstInitial, middlelastInitial and lastInitial to println method

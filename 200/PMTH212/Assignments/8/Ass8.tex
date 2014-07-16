@@ -1,0 +1,111 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{a4wide, amsxtra}
+
+\usepackage[pdftex]{graphicx}
+
+ \title{PMTH212 Assignment 8}
+
+ \author{Mark Villar}
+
+\begin{document} 
+
+\maketitle 
+
+\begin{enumerate}
+	
+	\item
+		\begin{align*}
+			\int^1_0 \int^x_0 e^{x^2} \ dy \ dx &= \int^1_0 e^{x^2}y \ \bigg|^x_0 \ dx =\int^1_0 xe^{x^2} \ dx \\
+			&=\frac{1}{2}e^{x^2} \bigg|^1_0 = \frac{1}{2}(e-1)
+		\end{align*}
+		
+	\medskip
+		
+	\item
+		
+		\begin{enumerate}
+		
+			\item $R$ is a type I region enclosed between $y=x^2$ and $y=\sqrt{x}$ and bounded by the vertical lines $x=0$ and $x=1$.
+				\begin{align*}
+					\ \ \ \ \ \ \ \ \ \ \ \ \ \ \int^1_0 \int^{\sqrt{x}}_{x^2} x+y \ dy \ dx &= \int^1_0 xy+\frac{y^2}{2} \bigg|^{\sqrt{x}}_{x^2} \ dx = \int^1_0 x^{3/2}+\frac{x}{2}-x^3-\frac{x^4}{2} \ dx \\
+					&=\frac{2}{5}x^{5/2}+\frac{1}{4}x^2-\frac{1}{4}x^4-\frac{1}{10}x^5 \bigg|^1_0=\frac{2}{5}+\frac{1}{4}-\frac{1}{4}-\frac{1}{10}=\frac{3}{10}
+				\end{align*}
+			
+			\item $R$ is a type I region enclosed between $y=x$ and $y=0$ and bounded by the vertical lines $x=0$ and $x=\pi$.
+				\begin{align*}
+					&\int^{\pi}_0 \int^x_0 x\cos y \ dy \ dx = \int^{\pi}_0 x\sin y \ \bigg|^x_0 \ dx= \int^{\pi}_0 x\sin x \ dx
+				\end{align*}
+				\begin{align*}
+					\ \ \ \ \ \ \ \ \ \ \ \ \int^{\pi}_0 x\sin x \ dx&=-x\cos x \ \bigg|^{\pi}_0+\int^{\pi}_0 \cos x \ dx \ \ \text{(integration by parts)} \\
+					&=-\pi(-1)-0+\sin x \ \bigg|^{\pi}_0 = \pi+0-0=\pi
+				\end{align*}
+				
+		\end{enumerate}
+					
+	\item 
+	
+		\begin{enumerate}
+		
+			\item 
+				\begin{align*}
+					&\frac{y}{2} \le x \le 1 \ \ \text{and} \ \ 0 \le y \le 2 \ \Rightarrow \ y \le 2x \le 2 \\
+					&\Rightarrow \ 0 \le y \le 2x \le 2 \ \Rightarrow \ 0 \le \ \frac{y}{2} \le x \le 1 \\
+					&\Rightarrow \ 0 \le y \le 2x \ \ \text{and} \ \ 0 \le x \le 1
+				\end{align*}
+				
+				\begin{align*}
+					\ \ \ \ \ \ \ \ \ \int^2_0 \int^1_{y/2} \cos x^2 \ dx \ dy &= \int^1_{y/2} \int^2_0 \cos x^2 \ dy \ dx = \int^1_0 \int^{2x}_0 \cos x^2 \ dy \ dx \\
+					&=\int^1_0 \cos (x^2)y \ \bigg|^{2x}_0 \ dx = \int^1_0 2x\cos x^2 = \sin x^2 \bigg|^1_0 \\
+					&=\sin 1-0 = \sin 1
+				\end{align*}
+			
+			\item
+				\begin{align*}
+					&1 \le x \le 3 \ \ \text{and} \ \ 0 \le y \le \ln x \ \Rightarrow \ 0 \le \ln x \le \ln 3 \\
+					&\Rightarrow \ 0 \le y \le \ln x \le \ln 3 \ \Rightarrow \ 1 \le \ e^y \le x \le 3 \\
+					&\Rightarrow \ 0 \le y \le \ln 3 \ \ \text{and} \ \ e^y \le x \le 3
+				\end{align*}
+				
+				\begin{align*}
+					\ \ \ \ \ \ \ \ \ \ \int^3_1 \int^{\ln x}_0 x \ dy \ dx &= \int^{\ln x}_0 \int^3_1 x \ dx \ dy = \int^{\ln 3}_0 \int^3_{e^y} x \ dx \ dy \\
+					&=\int^{\ln 3}_0 \frac{1}{2}x^2 \bigg|^3_{e^y} \ dy = \int^{\ln 3}_0 \frac{1}{2} \left(9-e^{2y}\right) \ dy \\
+					&= \frac{1}{2}\left(9y-\frac{1}{2}e^{2y}\right)\bigg|^{\ln 3}_0=\frac{1}{2}\left(9\ln 3-\frac{1}{2}e^{\ln 9}-0+\frac{1}{2}\right) \\
+					&=\frac{1}{2}\left(9\ln 3-\frac{9}{2}+\frac{1}{2}\right)=\frac{9}{2} \ln 3-2 \\
+				\end{align*}
+			
+		\end{enumerate}
+				
+	\item 
+			
+			\begin{enumerate}
+		
+			\item The region $R$ in the first quadrant within the circle $x^2+y^2=9$ is described by the simple polar region
+				$0 \le \theta \le \dfrac{\pi}{2}, \ \ 0 \le r \le 3$.  Hence,
+				\begin{align*}
+					\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \int \int_R (9-x^2-y^2)^{1/2} \ dA &= \int^{\frac{\pi}{2}}_0 \int^3_0 \left(9-r^2\cos^2\theta-r^2\sin^2\theta\right)^{\frac{1}{2}}r \ dr \ d\theta \\
+					&=\int^{\frac{\pi}{2}}_0 \int^3_0 \left(9-r^2\right)^{\frac{1}{2}}r \ dr \ d\theta = \int^{\frac{\pi}{2}}_0 -\frac{1}{3} \left(9-r^2\right)^{\frac{3}{2}} \bigg|^3_0 \ d\theta\\
+					&=\int^{\frac{\pi}{2}}_0 9 \ d\theta = 9\theta \ \bigg|^{\frac{\pi}{2}}_0 = \frac{9\pi}{2} \\
+				\end{align*}
+			
+			\item We express the region of integration $R$ enclosed by the circle $x^2+y^2=4$ as a simple polar region.
+				$$R: \ \ -\sqrt{4-y^2} \le x \le \sqrt{4-y^2}, \ \ -2 \le y \le 2$$
+				$$R: \ \ 0 \le \theta \le 2\pi, \ \ 0 \le r \le 2$$
+				Thus,
+				\begin{align*}
+					\ \ \ \ \ \ \ \int^2_{-2} \int^{(4-y^2)^{1/2}}_{-(4-y^2)^{1/2}} e^{-(x^2+y^2)} \ dx \ dy &= \int^{2\pi}_0 \int^2_0 e^{-(r^2\cos^2\theta+r^2\sin^2\theta)}r \ dr \ d\theta \\
+					&=\int^{2\pi}_0 \int^2_0 e^{-r^2}r \ dr \ d\theta = \int^{2\pi}_0 -\frac{e^{-r^2}}{2} \bigg|^2_0 \ d\theta\\
+					&=\int^{2\pi}_0 -\frac{e^{-4}}{2}+\frac{1}{2} \ d\theta = \frac{1-e^{-4}}{2}\theta \ \bigg|^{2\pi}_0 \\
+					&=\pi\left(1-\frac{1}{e^{4}}\right) \\
+				\end{align*}
+			
+		\end{enumerate}
+	
+	\item The surface area of the portion of $2x+2y+z=8$ in the first octant that is cut off by the three coordinate planes is given by
+		\begin{align*}
+			&
+		\end{align*}
+		
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,15 @@
+1. Create a Scanner object for keyboard input
+
+2. Declare double variables: speed, time
+
+3. Declare and initialise int variable to be used as a counter: hour
+
+4. Prompt user to input numbers for speed and time variables
+
+5. Read in numbers and store in corresponding variables
+
+6. Use while loops for input validation to ensure vehicle speed is 
+   not negative and time in motion is at least one hour
+ 
+7. Use PrintWriter object to write the results to a new file called
+   DistanceReport.txt

@@ -1,0 +1,155 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>Assignment A2 Updates</title>
+<link rel="stylesheet" type="text/css" href="/~comp132/UT/Css/ut.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body bgcolor="#cccc99">
+
+<style type="text/css">
+<!--
+-->
+.noul {
+text-decoration:none
+}
+</style>
+
+
+<table width=100%>
+<tr>
+  <td width=30%>
+
+<a href="http://www.une.edu.au" class=noul> <img  align="left" src="/images/unelogomin.gif" border="0" alt="University of New
+England"></a>
+  </td>
+  <td width=40% align=center>
+
+
+<br>
+<center>
+        <a href="/" class=noul>
+        <font size="+2">School of Science and Technology</font></a>
+</center>
+  </td>
+  <td width=30%></td>
+</tr>
+</table>
+
+<br clear="all" />
+<hr size="6" />
+<!-- do not remove or change the javascript comment below this one -->
+<!-- header end -->
+
+<center>
+	<font color="black" size="+2">
+		Assignment A2 Updates
+	</font>
+	<hr size="6" />
+</center>
+<br />
+<font color="black" size="">
+<body>
+<b>Q</b><BLOCKQUOTE class="question">
+Does this assignment only require the assumption that we are asking for a regular hexagon?
+</BLOCKQUOTE>
+<b>A</b><br>
+For this assignment we can assume a hexagon be regular with all sides equal size.
+So in your program, you need to input only one number for a hexagon, the length of a side.
+<p>
+
+<b>Q</b><BLOCKQUOTE class="question">
+With "a geometric figure must provide a constructor that takes a Scanner object as a parameter",
+I am assuming this is to take input from the user for each shape?
+From that wouldn't that then require re-writing the code to take input                                                                        
+from users for each shape?   
+</BLOCKQUOTE>
+<b>A</b><br>
+Yes, in your program every constructor will need to process user's input and ask for entry
+appropriate for each shape.
+The purpose of the assignment is to isolate common part of the classess and implement them as
+efficiently as possible.  If more than one class in the hierarchy share the same fields,
+they should probably be defined in their parent class.  You can use abstract classess, interfaces
+or normal classess, whatever you think is more appropriate.
+You should also provide validation of the inputs through mutators, so to avoid
+repetition of the code.
+<p>
+
+<b>Q</b><BLOCKQUOTE class="question">
+Do we assume that all triangles entered are equilateral (all sides equal)?  If not what properties do we need to record?
+</BLOCKQUOTE>
+<b>A</b><br>
+No, a rectangle should not assume any particular shape.
+Your program should ask for three numbers, for example lengths of its sides.
+Note, that you can validate if the sides indeed can form a triangle.
+<p>
+
+<b>Q</b><BLOCKQUOTE class="question">
+I am just wondering if there is a way to tell the program to look for a constructor with parameters?
+</BLOCKQUOTE>
+<b>A</b><br>
+There are some rules regarding super classes and subclasses and how the constructors are called and where.
+You do not need no-arg constructors if you are consistent with your implementation.
+Creating new scanner objects in your program has its drawbacks, as, unlike to C++, the objects are disconnected.
+Each of them will have its own input buffer and then some strange things can happen.
+
+Review Chapter 11 (Calling the Superclass Constructor), they talk about constructors in situations like ours.
+<p>
+
+<b>A - more</b><br>
+You do need more than one constructor implemented for the superclasses, that will be instantiated.
+There are two such cases in the hierarchy of the classes on the diagram.
+In your program you should call a constructor with Scanner parameter only once per the shape you are creating.
+You can either have a no-arg constructor for Rectangle (for example), or explicitly call another constructor with parameters,
+that would initialise its attributes.
+<p>
+
+
+<b>Q</b><BLOCKQUOTE class="question">
+How to store the entries in the list?
+</BLOCKQUOTE>
+<b>A</b><br>
+The shapes should be stored in a list of <code>GeometricFigure</code> objects.
+Here we use polymorphism.
+
+
+</body>
+
+</font>
+<!-- footer begin -->
+<!-- do not remove or change the javascript comment above this one -->
+<hr />
+<P> <a href="../"> Back to Assignment A2 Main Page</a> <p>
+<hr />
+E-mail
+ <a href="mailto:comp132@turing.une.edu.au">
+                comp132@turing.une.edu.au</a>
+<br />
+<hr />
+<font size="-1">
+        index.cgi size 161.  Last modified Wed Jan 18 11:07:47 2012<br />
+
+        This page has been visited 644 times since Wed Jul  9 18:10:33 2008<br />
+
+This page is constructed using: <a href="http://mcs.une.edu.au/~wwwdev">
+The Unit Template version 0.2</a>
+
+</font>
+<hr />
+
+<a href="http://www.une.edu.au/">
+        <img border="0" align="left" src="/images/unehomepage.gif" 
+        alt="unehomepage.gif"/></a>
+
+<a href="http://maths.une.edu.au/">
+        <img border="0" align="right" src="/images/dpt_home.gif" 
+        alt="departmenthome.gif"/></a>
+<br />
+<br />
+<hr />
+</body>
+</html>
+
+

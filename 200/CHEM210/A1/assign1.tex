@@ -1,0 +1,207 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{amsmath}
+
+\title{CHEM210 \hfill Assignment 1}
+
+\author{Mark Villar}
+
+\begin{document}
+
+\maketitle
+
+\subsubsection*{Question 1}
+	\begin{align*}
+		\frac{n}{V} = \frac{p}{RT} &= \frac{0.1 \times 1.013 \times 10^5 \ \text{Jm}^{-3}}{8.3145 \ \text{Jmol}^{-1} \text{K}^{-1}\times 298 \text{K}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        		} \\
+		\\
+ 		&= 4.1 \ \text{mol} \ \text{m}^{-3} \\
+		&= 2.5 \times 10^{24} \ \text{molecules} \  \text{m}^{-3}
+	\end{align*}
+	The second concentration was obtained by multiplying the first quantity by the Avogadro constant, $N_A= 6.022 \times 10^{23} \ \text{molecules} \ \text{mol}^{-1}$. \\
+	
+\subsubsection*{Question 2}
+	\begin{align*}
+		p_{_{\text{int}}}= \frac{nRT}{V_{\text{i}}} &= \frac{4 \times 10^{-3} \ \text{mol} \times 8.3145 \ \text{Nm mol}^{-1} \text{K}^{-1} \times 298 \text{K}}{1 \times 10^{-5} \ 			\text{m}^3} \\
+		\\
+		&= 9.9 \times 10^5 \ \text{Nm}^{-2}
+	\end{align*}
+	\begin{enumerate}
+		\item[(a)] 
+			Since the internal pressure is greater than the external pressure, the force on the piston due to the gas inside the cylinder is greater than the force due to the gas 					outside. As a result, the system does work on the piston causing it to shift upon release. The work done by the gas inside the cylinder depends on external pressure and 				can be expresed as follows.
+			\begin{align*}
+				w &= Fd = p_{_{\text{ext}}}Ad = p_{_{\text{ext}}} \Delta V
+			\end{align*}
+
+			As the piston moves out by some distance, the volume of gas inside the cylinder expands until the net force exerted on the piston is zero. 
+			This occurs when the internal pressure equals the external pressure and the piston eventually comes to a stop.
+                        $$p_{_{\text{int}}} = p_{_{\text{ext}}} = 1 \times 10^{5} \ \text{Nm}^{-2}$$
+		
+		\item[(b)]
+			\begin{align*}
+				V_{\text{f}}=\frac{nRT}{p_{_{\text{ext}}}} &= \frac{4 \times 10^{-3} \ \text{mol} \times 8.3145 \ \text{Nm mol}^{-1} \text{K}^{-1} \times 298 \text{K}}
+				{1 \times 10^{5} \ \text{Nm}^{-2}} \\
+				&= 9.9 \times 10^{-5} \ \text{m}^{3} \\
+				\\
+				\Delta V &=  V_{\text{f}} - V_{\text{i}} =  9.9 \times 10^{-5}  \ \text{m}^{3} -  1 \times 10^{-5} \ \text{m}^3 \\
+				&= 8.9 \times 10^{-5} \ \text{m}^3 \\
+				\\
+				w &=  p_{_{\text{ext}}} \Delta V =  1 \times 10^{5} \ \text{Nm}^{-2} \times 8.9 \times 10^{-5} \ \text{m}^3 \\
+				&= 8.9 \ \text{Nm}
+			\end{align*}
+			The positive sign indicates that work has been done \emph{by} the gas during this irreversible expansion. \\
+
+		\item[(c)] 
+			As the internal energy of an isothermal expansion is constant, $\Delta U = 0$. From the First Law of Thermodynamics, it follows that
+			\begin{align*}
+				&\Delta U = q + w = 0 \\
+				&q = -w = -8.9 \ \text{Nm}
+			\end{align*}
+			
+			Note that the heat added \emph{to} the system is negative, indicating that heat energy leaves the system and enters the surroundings. So while the system cools, heat is 			transferred to the environment. This is also known as an exothermic process. \\ 
+		
+		\item[(d)]
+			\begin{align*}
+				w & = nRT \ \ln \left( \frac{V_{\text{f}}}{V_{\text{i}}} \right) \\ 
+				& = 4 \times 10^{-3} \ \text{mol} \times 8.3145 \ \text{Nm mol}^{-1} \text{K}^{-1} \\
+				&  \times 298 \text{K} \times \ln\left( \frac{9.9 \times 10^{-5} \ \text{m}^{3}}{1 \times 10^{-5} \ \text{m}^3} \right) \\
+				& = 22.7 \ \text{Nm} \\
+				\\
+				q & = -w = -22.7 \ \text{Nm}
+			\end{align*}
+			The heat and work values for this reversible isothermal expansion are about 2.5 times greater in magnitude than its irreversible counterpart. This 
+			result is consistent with reversible processes doing the \emph{maximum} amount of work.
+		
+		\item[(e)] Since enthalpy $H$ is a state function and therefore path independent, $\Delta H$ is a also a state function where $\Delta H_{\text{rev}} = \Delta H_{\text{irrev}}$.
+			For an ideal gas under isothermal conditions, we know that $H$ and $T$ are constant, so $\Delta U = 0$ and $\Delta T = 0$. Therefore,
+			\begin{align*}
+				\Delta H &= \Delta U + \Delta (pV) \\
+				&= \Delta U + nR\Delta T \\
+				&= 0 + 0 \\
+				&= 0 \\
+			\end{align*}
+	\end{enumerate}
+
+\subsubsection*{Question 3}
+	\begin{align*}
+		\Delta S_{\text{univ}} = -\frac{\Delta H_{\text{sys}}}{T_{\text{surr}}} + \Delta S_{\text{sys}}
+	\end{align*}
+	
+	\begin{enumerate}
+		\item[(a)] $\text{Sn}(\alpha)$ or grey tin is the more stable allotrope since $\Delta S_{\text{univ}} > 0$.
+			\begin{align*}
+				\Delta S_{\text{univ}} &= \frac{2.1 \times 10^3 \ \text{Jmol}^{-1}}{263 \text{K}} - 7.1 \ \text{JK}^{-1}\text{mol}^{-1} \\
+				\\
+				&= 0.88 \ \text{JK}^{-1}\text{mol}^{-1} \ \text{(spontaneous)}
+			\end{align*}
+		\item[(b)] $\text{Sn}(\beta)$ or white tin is the more stable allotrope since $\Delta S_{\text{univ}} < 0$.
+			\begin{align*}
+				\Delta S_{\text{univ}} &= \frac{2.1 \times 10^3 \ \text{Jmol}^{-1}}{313 \text{K}} - 7.1 \ \text{JK}^{-1}\text{mol}^{-1} \\
+				\\
+				&= -0.39 \ \text{JK}^{-1}\text{mol}^{-1} \ \text{(non-spontaneous)}
+			\end{align*}
+	\end{enumerate}
+	The two allotropes will be at equilibrium with each other when $\Delta S_{\text{univ}} = 0$. This occurs when $T = 298 \text{K}$. \\
+	\begin{align*}
+		\Delta S_{\text{univ}} = \frac{2.1 \times 10^3 \ \text{Jmol}^{-1}}{298 \text{K}} - 7.1 \ \text{JK}^{-1}\text{mol}^{-1} \approx 0 \\
+	\end{align*}
+	The Gibbs free energy changes are also computed for both temperatures.
+	$$\Delta G = \Delta H - T \Delta S$$
+	\begin{enumerate}	
+		\item[(a)] $\text{Sn}(\alpha)$ is the more stable allotrope since $\Delta G < 0$.
+			\begin{align*} 
+				\Delta G &= -2.1 \times 10^3 \ \text{Jmol}^{-1} - 263 \text{K} \left(- 7.1 \ \text{JK}^{-1}\text{mol}^{-1}\right) \\
+				&=-232.7 \ \text{Jmol}^{-1} \ \text{(product-favoured)}
+			\end{align*}
+		\item[(b)] $\text{Sn}(\beta)$ is the more stable allotrope since $\Delta G > 0$.
+			\begin{align*}
+				\Delta G &= -2.1 \times 10^3 \ \text{Jmol}^{-1} - 313 \text{K} \left(- 7.1 \ \text{JK}^{-1}\text{mol}^{-1}\right) \\
+				&=122.3 \ \text{Jmol}^{-1}  \ \text{(reactant-favoured)}
+			\end{align*}
+	\end{enumerate}
+
+\subsubsection*{Question 4}
+	\begin{align*}
+		\Delta_{\text{r}} H^\circ &= \sum \Delta_{\text{f}} H^\circ_{\text{products}} - \sum \Delta_{\text{f}} H^\circ_{\text{reactants}} \\
+		&= \Delta_{\text{f}} H^\circ_{\text{CaO(s)}}+ \Delta_{\text{f}} H^\circ_{{\text{CO}}_{2} \text{(g)}} - \Delta_{\text{f}} H^\circ_{{\text{CaCO}}_{3} \text{(s)}} \\
+		&= -634.9 \ \text{kJ mol}^{-1} - 393.5 \ \text{kJ mol}^{-1} + 1207.6 \ \text{kJ mol}^{-1} \\
+		&= 179.2 \ \text{kJmol}^{-1} \\
+		\\
+		\Delta_{\text{r}} S^\circ &= \sum S^\circ_{\text{products}}  - \sum S^\circ_{\text{reactants}} \\
+		&= S^\circ_{\text{CaO(s)}}+ S^\circ_{{\text{CO}}_{2} \text{(g)}} - S^\circ_{{\text{CaCO}}_{3} \text{(s)}} \\
+		&= 38.1 \ \text{JK}^{-1} \text{mol}^{-1} + 213.8 \ \text{JK}^{-1} \text{mol}^{-1} - 91.7 \ \text{JK}^{-1} \text{mol}^{-1} \\
+		&= 160.2 \ \text{JK}^{-1} \text{mol}^{-1} \\
+		\\
+		\Delta_{\text{r}} G^\circ &= \Delta_{\text{r}} H^\circ - T \Delta_{\text{r}} S^\circ \\
+		&=  179.2 \times 10^3 \ \text{Jmol}^{-1} - 800 \text{K} \ \big(160.2 \ \text{JK}^{-1} \text{mol}^{-1} \big) \\
+		&= 51040 \ \text{Jmol}^{-1} \\
+		&= 51.0 \ \text{kJmol}^{-1} \\     
+		\\
+		\ln K &= \frac{-\Delta_{\text{r}} G^\circ}{RT}  \qquad \ \ K = \exp \left(\frac{-\Delta_{\text{r}} G^\circ}{RT} \right) \\
+		K &= \exp \left(\frac{-51040 \ \text{Jmol}^{-1}}{8.3145 \ \text{Jmol}^{-1} \text{K}^{-1}\times 800 \text{K}} \right) \\
+		&= \exp \left(-7.673 \right) \\
+		&= 4.65 \times 10^{-4} \\
+		\\
+		K &= \frac{p_{_{{\text{CO}}_{2} \text{(g)}}}}{p^\circ} \qquad \ \ p_{_{{\text{CO}}_{2} \text{(g)}}} = Kp^\circ \\                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+		\\
+                     p_{_{{\text{CO}}_{2} \text{(g)}}} &= 4.65 \times 10^{-4} \times 10^5 \ \text{Nm}^{-2} \\
+		&= 46.5 \ \text{Nm}^{-2}
+	\end{align*}
+
+\newpage 
+
+\subsubsection*{Question 5} 
+	\emph{Hydrogen cyanide:}
+	$$\text{HCN}_{\text{(aq)}} + \text{H}_2 \text{O}_{\text{(l)}} \rightleftharpoons \text{CN}^-_{\text{(aq)}} + \text{H}_3 \text{O}_{\text{(aq)}}^+$$
+	\begin{align*}
+		\text{p} K_{\text{a}} &= -\log_{10} K_{\text{a}} = 9.21 \\
+		K_{\text{a}} &= 10^{-9.21} = 6.166 \times 10^{-10}
+	\end{align*}
+	Since HCN dissociates to give the same stoichiometric coefficients for the $\text{H}_3 \text{O}^+$ ion and $ \text{CN}^-$ ions, their concentrations must also be same. 
+	$$\left[\text{H}_3 \text{O}^+\right] = \left[\text{CN}^- \right]$$
+	We also assume that the acid is weak so that very little of the HCN will actually dissociate. This means the initial concentration of the acid will be approximately equal to its equilibrium
+	concentration.
+	\begin{align*}
+		\big[\text{HCN}\big] \approx \big[\text{HCN}\big]_{\text{init}}
+	\end{align*}
+	Hence,
+	\begin{align*}
+		K_{\text{a}} = \frac{\left[\text{H}_3 \text{O}^+\right] \left[\text{CN}^- \right]}{\big[\text{HCN}\big]} = \frac{\left[\text{H}_3 \text{O}^+\right]^2}{\big[\text{HCN}\big]} 
+	\end{align*}
+	\begin{align*}
+		\left[\text{H}_3 \text{O}^+\right] &= \sqrt{K_{\text{a}} \big[\text{HCN}\big]} = \sqrt{6.166 \times 10^{-10} \times 0.1 \ \text{mol} \ \text{dm}^{-3}} \\
+		&= 7.852 \times 10^{-6} \ \text{mol} \ \text{dm}^{-3} \\
+		\\
+		\text{pH} &= -\log_{10} \left[\text{H}_3 \text{O}^+\right] = -\log_{10} \left( 7.852 \times 10^{-6} \ \text{mol} \ \text{dm}^{-3}\right) \\
+		&= 5.11
+	\end{align*}
+	A pH value of $5.11$ is closer to 7 than 1, confirming that HCN is indeed a weak acid. The ratio of conjugate base to acid is then calculated below.
+	\begin{align*}
+		 \frac{\left[\text{CN}^- \right]}{\big[\text{HCN}\big]} &= \frac{7.852 \times 10^{-6} \ \text{mol} \ \text{dm}^{-3}}{ 0.1 \ \text{mol} \ \text{dm}^{-3}} \\
+		&= 7.852 \times 10^{-5}
+	\end{align*}
+	%This ratio confirms that very little of the acid dissociated in aqueous solution.
+	\emph{Methanoic acid:}
+	$$\text{HCOOH}_{\text{(aq)}} + \text{H}_2 \text{O}_{\text{(l)}} \rightleftharpoons \text{HCOO}^-_{\text{(aq)}} + \text{H}_3 \text{O}_{\text{(aq)}}^+$$
+	\begin{align*}
+		\text{p} K_{\text{a}} &= -\log_{10} K_{\text{a}} = 3.75 \\
+		K_{\text{a}} &= 10^{-3.75} = 1.778 \times 10^{-4}
+	\end{align*}
+	Methanoic acid is a stronger acid than hydrogen cyanide since its p$K_{\text{a}}$ is smaller, or equivalently, its $K_{\text{a}}$ is larger. We also expect the stronger acid to be
+	more dissociated in aqueous solution. \\
+	\\
+           In other words, the conjugate base of HCOOH would be present at higher concentrations than the conjugate base of HCN if an equimolar mixture in water was prepared. \\
+	\\
+	By subtracting one of the two dissociation equilibria from the other and cancelling the $\text{H}_2 \text{O}$ and $\text{H}_3 \text{O}^+$ terms accordingly, the equilibrium equation 		for this mixture is expressed below.
+	$$\text{HCN}_{\text{(aq)}} + \text{HCOO}^-_{\text{(aq)}} \rightleftharpoons \text{CN}^-_{\text{(aq)}} + \text{HCOOH}_{\text{(aq)}}$$
+	Hence,
+	\begin{align*}
+		K &= \frac{\big[\text{CN}^-\big] \big[\text{HCOOH} \big]}{\big[\text{HCN} \big] \big[\text{COOH}^- \big]} \\
+		&= \frac{K_\text{a} \text{(HCN)}}{K_\text{a} \text{(HCOOH)}} \\
+		&= \frac{6.166 \times 10^{-10}}{1.778 \times 10^{-4}} \\
+		&= 3.467 \times 10^{-6} \\
+		\\
+		\text{p}K &= 5.46 
+	\end{align*}
+	Since p$K > 0$, the equilibrium is to the left and is reactants-favoured. This indicates that methanoic acid is more dissociated than hydrogen cyanide, thus showing that
+	$$\big[\text{COOH}^- \big] > \big[\text{CN}^-\big]$$
+\end{document}

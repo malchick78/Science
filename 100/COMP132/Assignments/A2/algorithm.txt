@@ -1,0 +1,40 @@
+Declare unsortedValue as Vehicle object to hold first 
+unsorted value in the array.
+
+Declare scan as an int variable to scan the array.
+ 
+If field equals type
+   For each element in the array starting at position 1
+      unsortedValue equals array[index]
+      scan = index
+      While (scan > 0 and array[scan-1] > unsortedValue)
+      	    array[scan] equals array[scan-1]
+	    scan equals scan-1
+      End while
+   array[scan] = unsortedValue
+   End for
+End if
+
+Else if field equals make
+   For each element in the array starting at position 1
+      unsortedValue equals array[index]
+      scan = index
+      While (scan > 0 and array[scan-1] > unsortedValue)
+            array[scan] equals array[scan-1]
+            scan equals scan-1
+      End while
+   array[scan] = unsortedValue
+   End for
+End else if
+
+Else if field equals colour
+   For each element in the array starting at position 1
+      unsortedValue equals array[index]
+      scan = index
+      While (scan > 0 and array[scan-1] > unsortedValue)
+            array[scan] equals array[scan-1]
+            scan equals scan-1
+      End while
+   array[scan] = unsortedValue
+   End for
+End else if

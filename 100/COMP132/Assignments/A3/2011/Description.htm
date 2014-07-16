@@ -1,0 +1,276 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>Description of a3 Assignment for comp132 at UNE</title>
+<link rel="stylesheet" type="text/css" href="/~comp132/UT/Css/ut.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body bgcolor="#cccc99">
+
+<style type="text/css">
+<!--
+-->
+.noul {
+text-decoration:none
+}
+</style>
+
+
+<table width=100%>
+<tr>
+  <td width=30%>
+
+<a href="http://www.une.edu.au" class=noul> <img  align="left" src="/images/unelogomin.gif" border="0" alt="University of New
+England"></a>
+  </td>
+  <td width=40% align=center>
+
+
+<br>
+<center>
+        <a href="/" class=noul>
+        <font size="+2">School of Science and Technology</font></a>
+</center>
+  </td>
+  <td width=30%></td>
+</tr>
+</table>
+
+<br clear="all" />
+<hr size="6" />
+<!-- do not remove or change the javascript comment below this one -->
+<!-- header end -->
+
+<center>
+	<font color="black" size="+2">
+		Description of a3 Assignment for comp132 at UNE
+	</font>
+	<hr size="6" />
+</center>
+<br />
+<font color="black" size="">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+            "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>Programming Assignment A3 --- A student records class
+
+</TITLE>
+
+<META http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<META name="GENERATOR" content="hevea 1.10">
+<STYLE type="text/css">
+.li-itemize{margin:1ex 0ex;}
+.li-enumerate{margin:1ex 0ex;}
+.thefootnotes{text-align:left;margin:0ex;}
+.dt-thefootnotes{margin:0em;}
+.dd-thefootnotes{margin:0em 0em 0em 2em;}
+.footnoterule{margin:1em auto 1em 0px;width:50%;}
+.center{text-align:center;margin-left:auto;margin-right:auto;}
+DIV TABLE{margin-left:inherit;margin-right:inherit;}
+PRE{text-align:left;margin-left:0ex;margin-right:auto;}
+BLOCKQUOTE{margin-left:4ex;margin-right:4ex;text-align:left;}
+TD P{margin:0px;}
+.minipage{text-align:left; margin-left:0em; margin-right:auto;}
+.section{padding:.5ex; color:navy; background: LightYellow;}
+</STYLE>
+</HEAD>
+<BODY >
+<!--HEVEA command line is: hevea -O -I ../.. -I ../../.. a3.tex -->
+<!--CUT DEF section 1 --><DIV CLASS="center"><FONT SIZE=5><B>Programming Assignment A3 &#X2014; <EM>A student records class</EM></B></FONT><BR>
+Due 8 April
+</DIV><!--TOC section Objectives-->
+<H2 CLASS="section"><!--SEC ANCHOR -->Objectives</H2><!--SEC END --><UL CLASS="itemize"><LI CLASS="li-itemize">
+Designing classes
+</LI><LI CLASS="li-itemize">Using Java interface types
+</LI><LI CLASS="li-itemize">Using Java collections
+</LI><LI CLASS="li-itemize">Using comparators and iterators
+</LI></UL><!--TOC section Task 1: A &#X2019;Student&#X2019; class-->
+<H2 CLASS="section"><!--SEC ANCHOR -->Task 1: A &#X2019;Student&#X2019; class</H2><!--SEC END --><P>Write a Java class &#X2019;Student&#X2019; which implements the following interface:</P><PRE CLASS="verbatim">// Interface type for a student record with student number, name 
+// and year of commencement
+interface StudentSpecification {
+
+  // Constructor
+  // public Student(int studentNumber, String name, int year);
+
+  // Change the name of the student
+  void setName(String name);
+
+  // Change the year of commencement
+  void setYearOfCommencement(int year); 
+
+  // Get the student number of a student
+  int getStudentNumber();
+
+  // Get the name
+  String getName();
+
+  // Get the year of commencement
+  int getYearOfCommencement();
+}
+</PRE><!--TOC section Task 2: A &#X2019;StudentRecords&#X2019; class-->
+<H2 CLASS="section"><!--SEC ANCHOR -->Task 2: A &#X2019;StudentRecords&#X2019; class</H2><!--SEC END --><P>Write a Java class &#X2019;StudentRecords&#X2019; which implements the following
+interface: </P><PRE CLASS="verbatim">// Interface type for a collection of student records
+interface StudentRecordsSpecification extends Iterable&lt;Integer&gt; {
+
+  // Constructor: create with zero records
+  // public StudentRecords();
+
+  // Add a student to the records
+  // Throw an exception if there is already a student with the
+  // same student number
+  void addStudent(Student student) throws DuplicateStudentNumber;
+
+  // Remove the student with this student number
+  // Return 'false' if no such student
+  boolean removeStudent(int studentNumber);
+
+  // Get the name of the student with this student number
+  // Return null if no such student
+  String getName(int studentNumber);
+
+  // Get the year of commencement of the student with this student number
+  // Return zero if no such student
+  int getYearOfCommencement(int studentNumber);
+
+  // Return an iterator which iterates through the student numbers of
+  // all of the students.
+  // The order should be by increasing year of commencement and if several
+  // students have the same year of commencement then in alphabetic
+  // order of their names.
+  // This method is declared in the interface type 'Iterable'.
+
+  // Iterator&lt;Integer&gt; iterator();
+}
+</PRE><!--TOC section Task 3: Testing-->
+<H2 CLASS="section"><!--SEC ANCHOR -->Task 3: Testing</H2><!--SEC END --><P>Give your &#X2019;StudentRecords&#X2019; class a &#X2019;main&#X2019; method which thoroughly
+tests the code.<BR><BR>
+<B>Example:</B><BR><BR>
+The code:<BR>
+</P><PRE CLASS="verbatim">    StudentRecords s=new StudentRecords();
+    s.addStudent(new Student(123, "Fran", 2009));
+    s.addStudent(new Student(465, "Bernard", 2008));
+    s.addStudent(new Student(222, "Manny", 2008));
+
+    System.out.println(s.getName(222));
+    System.out.println(s.getYearOfCommencement(123));
+
+    for (Integer i : s) System.out.println(s.getName(i));
+
+should produce the output:
+
+    Manny
+    2009
+    Bernard
+    Manny
+    Fran
+</PRE><!--TOC section Important Notes-->
+<H2 CLASS="section"><!--SEC ANCHOR -->Important Notes</H2><!--SEC END --><OL CLASS="enumerate" type=1><LI CLASS="li-enumerate">
+Your implementation should make good use of appropriate interface types and
+classes from the Java Collections Framework. You should choose classes
+in such a way that the operations will be efficient even for a very large
+number of student records.
+</LI><LI CLASS="li-enumerate">Hint: You may need to store (references to) the &#X2019;Student&#X2019; objects in more
+than one JCF collection class within your &#X2019;StudentRecords&#X2019; class.
+</LI><LI CLASS="li-enumerate">The ordering for the &#X2019;iterator&#X2019; method should be maintained
+by using a &#X2019;Comparator&#X2019; class.
+</LI><LI CLASS="li-enumerate">Please contact me if you are not sure how to get started or if you
+get stuck.
+</LI></OL><!--TOC section Submitting this Assignment-->
+<H2 CLASS="section"><!--SEC ANCHOR -->Submitting this Assignment</H2><!--SEC END --><UL CLASS="itemize"><LI CLASS="li-itemize">
+Your assignment must be submitted using the <CODE>submit</CODE> program on <B>turing</B>. 
+</LI><LI CLASS="li-itemize">This assignment is assignment <B>a3</B>.</LI><LI CLASS="li-itemize">From within the <CODE>submit</CODE> program, create a script of your program
+		(select option&#XA0;1)
+		compiling and running correctly on <B>turing</B>.
+		It is a part of the assessment, see marking criteria below.</LI><LI CLASS="li-itemize">You will need to submit:
+	<OL CLASS="enumerate" type=1><LI CLASS="li-enumerate">
+The source code StudentSpecification.java
+</LI><LI CLASS="li-enumerate">The source code StudentRecordsSpecification.java
+</LI><LI CLASS="li-enumerate">The source code Student.java
+</LI><LI CLASS="li-enumerate">The source code StudentRecords.java
+</LI><LI CLASS="li-enumerate">The source code DuplicateStudentNumber.java
+</LI><LI CLASS="li-enumerate">The source code for your Comparator class.
+</LI><LI CLASS="li-enumerate">The source code for your Iterator class.
+	</LI></OL>
+	
+</LI><LI CLASS="li-itemize">After you have submitted your assignment files and exited the submit 
+		program, check the submit record that the submit program placed in your 
+		directory. It should show the names of the files you submitted along with
+		their size and submit date. It should also contain a copy of the script
+		you created. If the submit record doesn&#X2019;t list the required files or shows
+		that one of the files has a file size of&#XA0;0 (i.e., the file is empty) or
+		doesn&#X2019;t contain a copy of your script, you will need to resubmit your 
+		entire assignment again. 
+</LI></UL><!--TOC section Assessment-->
+<H2 CLASS="section"><!--SEC ANCHOR -->Assessment</H2><!--SEC END --><P><A NAME="sec-assessment"></A>
+Your assignment will be marked on the following criteria:
+</P><DIV CLASS="center">
+<DIV CLASS="minipage">
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=1><TR><TD ALIGN=center NOWRAP bgcolor="#CC9999"><B><EM>Documentation</EM></B></TD><TD ALIGN=center NOWRAP bgcolor="#CC9999"><B><EM>out of 4</EM></B></TD></TR>
+<TR><TD ALIGN=left NOWRAP>Correct source files and program structure	</TD><TD ALIGN=right NOWRAP>out of 2.0</TD></TR>
+<TR><TD ALIGN=left NOWRAP>Style and accurate, sufficient commenting			</TD><TD ALIGN=right NOWRAP>out of 2.0</TD></TR>
+<TR><TD ALIGN=center NOWRAP bgcolor="#CC9999"><EM><B>Programming</B><SUP><A NAME="text1" HREF="#note1">1</A></SUP></EM>
+										</TD><TD ALIGN=center NOWRAP bgcolor="#CC9999"><B><EM>out of 6</EM></B></TD></TR>
+<TR><TD ALIGN=left NOWRAP>Compiling and testing of the program		</TD><TD ALIGN=right NOWRAP>out of 1.0</TD></TR>
+<TR><TD ALIGN=left NOWRAP>Correct program behaviour				</TD><TD ALIGN=right NOWRAP>out of 1.0</TD></TR>
+<TR><TD ALIGN=left NOWRAP>Correct implementation of the classes and methods		</TD><TD ALIGN=right NOWRAP>out of 3.0</TD></TR>
+<TR><TD ALIGN=left NOWRAP>Good use of Java Collections Framework</TD><TD ALIGN=right NOWRAP>out of 1.0</TD></TR>
+<TR><TD ALIGN=right NOWRAP bgcolor="#CC9999"><B><EM>Total:</EM></B>	</TD><TD ALIGN=left NOWRAP bgcolor="#CC9999"><B><EM>10 marks</EM></B></TD></TR>
+</TABLE>
+<!--BEGIN STICKYNOTES document-->
+<HR CLASS="footnoterule"><DL CLASS="thefootnotes"><DT CLASS="dt-thefootnotes">
+<A NAME="note1" HREF="#text1">1</A></DT><DD CLASS="dd-thefootnotes">		If your program does not compile on <B>turing</B> then your assignment receives
+		0.0 marks for programming.
+</DD></DL>
+<!--END NOTES-->
+</DIV>
+</DIV><!--CUT END -->
+<!--HTMLFOOT-->
+<!--ENDHTML-->
+<!--FOOTER-->
+<HR SIZE=2><BLOCKQUOTE CLASS="quote"><EM>This document was translated from L<sup>A</sup>T<sub>E</sub>X by
+<A HREF="http://hevea.inria.fr/index.html">H<FONT SIZE=2><sup>E</sup></FONT>V<FONT SIZE=2><sup>E</sup></FONT>A</A>.</EM></BLOCKQUOTE></BODY>
+</HTML>
+</font>
+<!-- footer begin -->
+<!-- do not remove or change the javascript comment above this one -->
+<hr />
+<table border="0" cellspacing="0" cellpadding="0" width=100%>
+<tr VALIGN="middle">
+<td align="left">
+E-mail
+ <a href="mailto:comp132@turing.une.edu.au">
+                comp132@turing.une.edu.au</a>
+</td>
+<td align="right">
+<a HREF="/~comp132/"><img SRC="/icons/small/back.png" BORDER="0" ALT="[HOME]"></a>
+<a HREF="/~comp132/" title="comp132 home page">~comp132</a>
+</td>
+</tr>
+</table>
+<hr />
+<font size="-1">
+        index.cgi size 188.  Last modified Thu Jan 19 12:50:35 2012<br />
+
+        This page has been visited 990 times since Wed Jul  9 18:10:33 2008<br />
+
+This page is constructed using: <a href="http://mcs.une.edu.au/~wwwdev">
+The Unit Template version 0.2.</a>
+</font>
+<hr />
+
+<a href="http://www.une.edu.au/">
+        <img border="0" align="left" src="/images/unehomepage.gif"
+        alt="unehomepage.gif"/></a>
+
+<a href="http://maths.une.edu.au/">
+        <img border="0" align="right" src="/images/dpt_home.gif"
+        alt="departmenthome.gif"/></a>
+<br />
+<br />
+<hr />
+</body>
+</html>
+

@@ -1,0 +1,690 @@
+{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf480
+{\fonttbl\f0\fswiss\fcharset77 Arial-BoldMT;\f1\fswiss\fcharset77 ArialMT;\f2\froman\fcharset77 Times-Roman;
+\f3\ftech\fcharset2 Symbol;\f4\froman\fcharset77 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;}
+{\info
+{\title Gaddis \'d0 Starting Out With Java 5 \'d0 From Control Structures to Objects}
+{\author George McOuat}
+{\*\company Paliku International}}\vieww9200\viewh8100\viewkind1\viewscale100
+\deftab720
+\pard\pardeftab720\ri0
+
+\f0\b\fs24 \cf0 Gaddis \'d0 Starting Out With Java 5 \'d0 From Control Structures to Objects\
+Chapter 04 \'d0 Loops and Files\
+\
+Multiple Choice
+\f1\b0 \
+\pard\pardeftab720\ri0
+
+\f2\fs20 \cf0 \
+\pard\pardeftab720\ri0
+
+\fs22 \cf0 1. What will be the values of x and y as a result of the following code?\
+int x 
+\f3 = 
+\f2 25, y 
+\f3 = 
+\f2 8;\
+x 
+\f3 += 
+\f2 y
+\f3 ++
+\f2 ;\
+a.	x 
+\f3 = 
+\f2 25, y 
+\f3 = 
+\f2 8\
+b.	x 
+\f3 = 
+\f2 33, y 
+\f3 = 
+\f2 8\
+c.	x 
+\f3 = 
+\f2 33, y 
+\f3 = 
+\f2 9\
+d.	x 
+\f3 = 
+\f2 34, y 
+\f3 = 
+\f2 9\
+\
+ANS: C\
+\
+2. What will be the value of x after the following code is executed?\
+int x, y 
+\f3 = 
+\f2 4, z 
+\f3 = 
+\f2 6;\
+x 
+\f3 = 
+\f2 (y
+\f3 ++
+\f2 ) * (
+\f3 ++
+\f2 z);\
+a.	24\
+b.	28\
+c.	30\
+d.	35\
+\
+ANS: B\
+\
+3. If a loop does not contain within itself a way to terminate, it is called\
+a.	A while loop\
+b.	A do-while loop\
+c.	A for loop\
+d.	An infinite loop\
+\
+ANS: D\
+\
+4. A(n) ____ will always be executed at least once.\
+a.	Pre-test loop\
+b.	Post-test loop\
+c.	Sentinel loop\
+d.	for loop\
+\
+ANS: B\
+\
+5. What will be the value of x after the following code is executed?\
+int x 
+\f3 = 
+\f2 10;\
+while (x 
+\f3 < 
+\f2 100)\
+\{\
+	x 
+\f3 += 
+\f2 10;\
+\}\
+a.	90\
+b.	100\
+c.	110\
+d.	This is an infinite loop\
+\
+ANS: B\
+\
+6. What will be the value of x after the following code is executed?\
+int x 
+\f3 = 
+\f2 10, y 
+\f3 = 
+\f2 20;\
+while (y 
+\f3 < 
+\f2 100)\
+\{\
+	x 
+\f3 += 
+\f2 y;\
+\}\
+a.	90\
+b.	110\
+c.	210\
+d.	This is an infinite loop\
+\
+ANS: D\
+\
+7. What values for number could you enter to terminate the following while loop?\
+System.out.print(\'d2Enter a number: \'d3);\
+int number 
+\f3 = 
+\f2 Keyboard.nextInt();\
+while (number 
+\f3 < 
+\f2 100 && number 
+\f3 > 
+\f2 500)\
+\{\
+	System.out.print(\'d2Enter another number: \'d3);\
+	number 
+\f3 = 
+\f2 Keyboard.nextInt();\
+\}\
+a.	Numbers less than 100 or greater than 500\
+b.	Numbers in the range 100\'d0499\
+c.	Numbers in the range 100\'d0500\
+d.	The boolean condition can never be true\
+\
+ANS: D\
+\
+8. The do-while loop is a pre-test loop.\
+a.	True\
+b.	False\
+\
+ANS: B\
+\
+9. What will be the value of x after the following code is executed?\
+int x 
+\f3 = 
+\f2 10;\
+do\
+\{\
+	x *
+\f3 = 
+\f2 20;\
+\}\
+while (x 
+\f3 > 
+\f2 5);\
+a.	10\
+b.	200\
+c.	This is an infinite loop.\
+d.	The loop will not be executed, the initial value of x 
+\f3 > 
+\f2 5.\
+\
+ANS: C\
+\
+10. How many times will the following do-while loop be executed?\
+int x 
+\f3 = 
+\f2 11;\
+do\
+\{\
+	x 
+\f3 += 
+\f2 20;\
+\}\
+while (x 
+\f3 > 
+\f2 100);\
+a.	0\
+b.	1\
+c.	4\
+d.	5\
+\
+ANS: B\
+\
+11. A loop that repeats a specific number of times is known as a(n) _____.\
+a.	Sentinel loop\
+b.	Conditional loop\
+c.	Counter-controlled loop\
+d.	Infinite loop\
+\
+ANS: C\
+\
+12. How many times will the following for loop be executed?\
+for (int count 
+\f3 = 
+\f2 10; count 
+\f3 <= 
+\f2 21; count
+\f3 ++
+\f2 )\
+	System.out.println(\'d2Java is great!!!\'d3);\
+a.	10\
+b.	11\
+c.	12\
+d.	0\
+\
+ANS: C\
+\
+13. What will be the value of x after the following code is executed?\
+int x 
+\f3 = 
+\f2 10;\
+for (int y 
+\f3 = 
+\f2 5; y 
+\f3 < 
+\f2 20; y 
+\f3 +=
+\f2 5)\
+	x 
+\f3 += 
+\f2 y;\
+a.	40\
+b.	25\
+c.	30\
+d.	Invalid for statement\
+\
+ANS: A\
+\
+14. In the for loop, the control variable cannot be initialized to a constant value and tested\
+against a constant value.\
+a.	True\
+b.	False\
+\
+ANS: B\
+\
+15. A(n) ____ is a value that signals when the end of a list of values has been reached.\
+a.	Terminal value\
+b.	Final value\
+c.	End value\
+d.	Sentinel\
+\
+ANS: D\
+\
+16. Before entering a loop to compute a running total, the program should first\
+a.	Read all the values into main memory\
+b.	Set the accumulator where the total will be kept to an initial value, usually zero\
+c.	Know exactly how many values there are to total\
+d.	Set all variables to zero\
+\
+ANS: B\
+\
+17. When the break statement is encountered in a loop, all the statements in the body of the loop that appear after it are ignored, and the loop prepares for the next iteration.\
+a.	True\
+b.	False\
+\
+ANS: B\
+\
+18. The _____ is ideal in situations where the exact number of iterations is known.\
+a.	while loop\
+b.	do-while loop\
+c.	for loop\
+d.	if statement\
+\
+ANS: C\
+\
+19. The PrintWriter class allows you to open a file for writing and establish a connection\
+with it.\
+a.	True\
+b.	False\
+\
+ANS: B\
+\
+20. Given the following two statements, which statement below will write to a file?\
+FileWriter fdisk 
+\f3 = 
+\f2 new FileWriter(\'d2DiskFile.txt\'d3);\
+PrintWriter diskOut 
+\f3 = 
+\f2 new PrintWriter(fdisk)\
+a.	fdisk.println(\'d2Calvin\'d3);\
+b.	DiskFile.println(\'d2Calvin\'d3);\
+c.	PrintWriter.println(\'d2Calvin\'d3);\
+d.	diskOut
+\f4\fs24 .println
+\f2\fs22  (\'d2Calvin\'d3);\
+\
+ANS: D\
+\
+21. When an object in your program is capable of throwing an exception, you must either write code that deals with the possible exceptions, or ___.\
+a.	There is no \'d2or\'d3, you must write the code to deal with the exception.\
+b.	Allow your methods to rethrow the exceptions when they occur.\
+c.	Nothing\'d1there is no such thing as an exception in programming.\
+d.	Use an if statement to avoid such exceptions\
+\
+ANS: B\
+\
+22. When working with files, you should have the following import statement near the top of your program:\
+a.	import javax.swing.*;\
+b.	import java.io.*;\
+c.	import javac.io.*;\
+d.	import java.file.*;\
+\
+ANS: B\
+\
+23. Which of the following will open a file and allow you to append data to its existing contents?\
+a.	FileWriter fwriter 
+\f3 = 
+\f2 new FileWriter(\'d2MyFile.txt\'d3, true);\
+b.	FileWriter fwriter 
+\f3 = 
+\f2 new FileWriter(\'d2MyFile.txt\'d3);\
+c.	PrintWriter outfile 
+\f3 = 
+\f2 new PrintWriter(fwriter, true);\
+d.	PrintWriter outfile 
+\f3 = 
+\f2 new PrintWriter(fwriter);\
+\
+ANS: A\
+\
+24. When reading a line from a file into the variable str, use the following while statement to check for end of file:\
+a.	while (str 
+\f3 == 
+\f2 null)\
+b.	while (!EOF)\
+c.	while (str !
+\f3 = 
+\f2 null)\
+d.	while (str !
+\f3 = 
+\f2 \'d2 \'d3)\
+\
+ANS: C\
+\
+25. Which of the following methods will not convert a string to a number:\
+a.	Integer.parseInteger(str)\
+b.	Double.parseDouble(str)\
+c.	Integer.parseInt(str)\
+d.	Each will convert a string to a number\
+\
+ANS: A\
+\
+26. What will be the values of x and y as a result of the following code?\
+int x 
+\f3 = 
+\f2 12, y 
+\f3 = 
+\f2 5;\
+x 
+\f3 += 
+\f2 y\'d0 \'d0;\
+a.	x 
+\f3 = 
+\f2 12, y 
+\f3 = 
+\f2 5\
+b.	x 
+\f3 = 
+\f2 16, y 
+\f3 = 
+\f2 4\
+c.	x 
+\f3 = 
+\f2 17, y 
+\f3 = 
+\f2 5\
+d.	x 
+\f3 = 
+\f2 17, y 
+\f3 = 
+\f2 4\
+\
+ANS: D\
+\
+27. What will be the value of x after the following code is executed?\
+int x, y 
+\f3 = 
+\f2 15, z 
+\f3 = 
+\f2 3;\
+x 
+\f3 = 
+\f2 (y\'d0 \'d0) / (
+\f3 ++
+\f2 z);\
+a.	3\
+b.	4\
+c.	5\
+d.	6\
+\
+ANS: A\
+\
+28. In all but rare cases, loops must contain within themselves\
+a.	Arithmetic statements\
+b.	if statements\
+c.	A way to terminate\
+d.	Nested loops\
+\
+ANS: C\
+\
+29. Which of the following are pre-test loops:\
+a.	while, for, do-while\
+b.	while, do-while\
+c.	while, for\
+d.	for, do-while\
+\
+ANS: C\
+\
+30. What will be the value of x after the following code is executed?\
+int x 
+\f3 = 
+\f2 10;\
+while (x 
+\f3 < 
+\f2 100);\
+\{\
+x 
+\f3 += 
+\f2 10;\
+\}\
+a.	90\
+b.	100\
+c.	110\
+d.	This is an infinite loop\
+\
+ANS: B\
+\
+31. What will be the value of x after the following code is executed?\
+int x 
+\f3 = 
+\f2 10, y 
+\f3 = 
+\f2 20;\
+while (y 
+\f3 < 
+\f2 100)\
+\{\
+x 
+\f3 += 
+\f2 y;\
+y 
+\f3 += 
+\f2 20;\
+\}\
+a.	90\
+b.	110\
+c.	130\
+d.	210\
+\
+ANS: D\
+\
+32. What values for number could you enter to terminate the following while loop?\
+System.out.print(\'d2Enter a number: \'d3);\
+int number 
+\f3 = 
+\f2 Keyboard.nextInt();\
+while (number 
+\f3 < 
+\f2 100 || number 
+\f3 > 
+\f2 500)\
+\{\
+	System.out.print(\'d2Enter another number: \'d3);\
+	number 
+\f3 = 
+\f2 Keyboard.nextInt();\
+\}\
+a.	Numbers less than 100\
+b.	Numbers greater than 500\
+c.	Numbers in the range 99\'d0501\
+d.	Numbers in the range 100\'d0500\
+\
+ANS: D\
+\
+33. The do-while loop must be terminated with a semicolon.\
+a.	True\
+b.	False\
+\
+ANS: A\
+\
+\pard\pardeftab720\ri0
+
+\fs18 \cf0 3
+\fs22 4. What will be the value of x after the following code is executed?\
+int x 
+\f3 = 
+\f2 10;\
+do\
+\{\
+	x *
+\f3 = 
+\f2 20;\
+\}\
+while (x 
+\f3 < 
+\f2 5);\
+a.	10\
+b.	200\
+c.	This is an infinite loop.\
+d.	The loop will not be executed, the initial value of x 
+\f3 > 
+\f2 5.\
+\
+ANS: B\
+\
+35. How many times will the following do-while loop be executed?\
+int x 
+\f3 = 
+\f2 11;\
+do\
+\{\
+	x 
+\f3 += 
+\f2 20;\
+\}\
+while (x 
+\f3 <= 
+\f2 100);\
+a.	1\
+b.	3\
+c.	4\
+d.	5\
+\
+ANS: D\
+\
+36. A loop that executes as long as a particular condition exists is called a(n) _____.\
+a.	Sentinel loop\
+b.	Conditional loop\
+c.	Count-controlled loop\
+d.	Infinite loop\
+\
+ANS: B\
+\
+37. A for loop must possess which of the following elements\
+a.	Initialize a control variable to a starting value\
+b.	Test the control variable by comparing it to a maximum/minimum value and terminate when the variable reaches that value\
+c.	Update the control variable during each iteration\
+d.	All of the above\
+e.	None of the above\
+\
+ANS: D\
+\
+38. What will be printed after the following code is executed?\
+for (int number 
+\f3 = 
+\f2 5; number 
+\f3 <= 
+\f2 15; number 
+\f3 +=
+\f2 3)\
+	system.out.print(number 
+\f3 + 
+\f2 \'d2, \'d3);\
+a.	5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15\
+b.	5, 8, 11, 14, 17\
+c.	5, 8, 11, 14\
+d.	This is an invalid for statement\
+\
+ANS: C\
+\
+39. In a for statement, the control variable can only be incremented.\
+a.	True\
+b.	False\
+\
+ANS: B\
+\
+40. A(n) ____ is a sum of numbers that accumulates with each iteration of a loop.\
+a.	Running total\
+b.	Final total\
+c.	Grand total\
+d.	Galloping total\
+\
+ANS: A\
+\
+41. A sentinel value is a value that ____ and signals that there are no more values to be entered.\
+a.	Is a different data type than the values being processed\
+b.	Is a special value that cannot be mistaken as a member of the list\
+c.	Indicates the start of a list\
+d.	Guards the list\
+\
+ANS: B\
+\
+42. When the continue statement is encountered in a loop, all the statements in the body of the loop that appear after it are ignored, and the loop prepares for the next iteration.\
+a.	True\
+b.	False\
+\
+ANS: A\
+\
+43. The _____ is ideal in situations where you always want the loop to iterate at least once.\
+a.	while loop\
+b.	do-while loop\
+c.	for loop\
+d.	if statement\
+\
+ANS: B\
+\
+44. A file must always be opened before using it and closed when the program is finished using it.\
+a.	True\
+b.	False\
+\
+ANS: A\
+\
+45. What does the following code do?\
+System.out.print(\'d2Enter the filename: \'d3);\
+filename 
+\f3 = 
+\f2 Keyboard.readString();\
+FileWriter fwriter 
+\f3 = 
+\f2 new FileWriter(filename);\
+a.	It establishes a connection with a file called filename\
+b.	It writes to a file called filename\
+c.	It allows the user of the program to enter the file name of the file he/she wants to write to\
+d.	Nothing, there is a syntax error\
+\
+ANS: C\
+\
+46. A(n) _____ is an item that separates other items.\
+a.	Separator\
+b.	Partition\
+c.	Doorway\
+d.	Delimiter\
+\
+ANS: D\
+\
+47. Any method that calls a method that uses a FileWriter or PrintWriter object should have a throws IOException clause in its header.\
+a.	True\
+b.	False\
+\
+ANS: A\
+\
+48. Which of the following will open a file and allow you to append data to its existing contents?\
+a.	PrintWriter outfile 
+\f3 = 
+\f2 new PrintWriter(fwriter, true);\
+b.	PrintWriter outfile 
+\f3 = 
+\f2 new PrintWriter(fwriter);\
+c.	FileWriter fwriter 
+\f3 = 
+\f2 new FileWriter(\'d2MyFile.txt\'d3, true);\
+d.	FileWriter fwriter 
+\f3 = 
+\f2 new FileWriter(\'d2MyFile.txt\'d3);\
+\
+ANS: C\
+\
+49. In the following code, what is the purpose of the while statement?\
+String str 
+\f3 = 
+\f2 inputFile.readLine();\
+while ( str !
+\f3 = 
+\f2 null )\
+\{\'c9\
+\}\
+a.	To check for end of file\
+b.	To check for spaces at the first of the input record\
+c.	To loop if the a null character was read\
+d.	There is no purpose, this code is not needed\
+\
+ANS: A\
+\
+50. Which of the following will not convert a string to a number?\
+a.	Double.parseDouble(str)\
+b.	Integer.parseInt(str)\
+c.	Int.parseInt(str)\
+d.	They will each parse a string into a number\
+\
+ANS: C\
+}

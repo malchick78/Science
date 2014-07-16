@@ -1,0 +1,122 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{a4wide, amsxtra}
+
+\usepackage[pdftex]{graphicx}
+
+ \title{PMTH212 Assignment 1}
+
+ \author{Mark Villar}
+
+\begin{document} 
+
+\maketitle 
+
+\begin{enumerate}
+	
+	\item Let $P=(2,1,6)$, \ $Q=(4,7,9)$ \ and \ $R=(8,5,-6)$.
+		\begin{align*}
+			\overrightarrow{PQ} &= \big<4-2, 7-1, 9-6\big> = \big<2,6,3\big> \\
+			\overrightarrow{PR} &= \big<8-2, 5-1, -6-6\big> = \big<6,4,-12\big> \\
+			\overrightarrow{PQ}\cdot\overrightarrow{PR}\ &=\ 2\times6+6\times4+3\times(-12)=12+24-36=0			\\
+			\cos \theta \ &= \ \frac{\overrightarrow{PQ}\cdot\overrightarrow{PR}}{||\overrightarrow{PQ}|| \ ||
+			\overrightarrow{PR} ||} = 0 \\
+			\theta \ &= \ \frac{\pi}{2} \ \ \text{or} \ \ 90^\circ \\
+		\end{align*}
+		
+	\item Let $P=(5,2,3)$.  The orthogonal projection of $P$ to the
+		
+		\begin{enumerate}
+		
+			\item $xy$-plane is $Q=(5,2,0)$ and the distance is $|PQ|=3$
+			
+			\item $xz$-plane is $R=(5,0,3)$ and the distance is $|PR|=2$
+			
+			\item $y$-axis is $S=(0,2,0)$ and the distance is $|PS|=\sqrt{5^2+3^2}=\sqrt{34}$ \\	
+			
+		\end{enumerate}
+					
+	\item If the initial point is $(-2,1,4)$ then the terminal point $(x_2,y_2,z_2)$ of $\mathbf{v}=\mathbf{i}+2			\mathbf{j}-3\mathbf{k}$ is found by
+		\begin{align*}
+			\big<1,2,-3\big> &= \big<x_2-(-2), y_2-1, z_2-4\big> \\
+			(x_2, y_2, z_2) &= (1-2, 2+1, -3+4) = (-1, 3,1)
+		\end{align*}
+		\smallskip
+				
+	\item We form two vectors $\overrightarrow{AB}$ and $\overrightarrow{AC}$, both lying on the plane. By 		the properties of the cross product, $\overrightarrow{AB}\times\overrightarrow{AC}$ is perpendicular 		to both $\overrightarrow{AB}$ and $\overrightarrow{AC}$, hence to the plane. Thus we can use 
+		$\mathbf{n}=\overrightarrow{AB}\times\overrightarrow{AC}$ as a normal vector. Since
+			\begin{align*}	
+				\overrightarrow{AB}&=\big<1-0, -1-(-2), -2-1\big> = \big<1,1, -3\big> \\
+				\overrightarrow{AC}&=\big<-1-0, 1-(-2), 0-1\big> = \big<-1, 3, -1\big>
+			\end{align*}
+			\begin{align*}
+				\mathbf{n}=
+					\begin{vmatrix}
+						& \ \ \mathbf{i} \ &\mathbf{j} \ & \ \ \mathbf{k} \ \ \\
+						& \ \ 1 \ &1 \ &-3 \ \ \\
+						&-1 \ &3 \ &-1 \ \ \\
+					\end{vmatrix} 
+					&= (-1+9)\mathbf{i}-(-1-3)\mathbf{j}+(3+1)\mathbf{k} \\
+					&=8\mathbf{i}+4\mathbf{j}+4\mathbf{k}
+			\end{align*}
+			
+	\item	 To find parametric equations for the line passing through $(1,1)$ and parallel to 
+		$x=-5+t, \ y=1-2t$, we use the vector equation \ $\vec{r}=\vec{r_0}+t\vec{v}$. \ Since $\vec{u}$ and 			$\vec{v}$ are parallel iff \ $\vec{u}=t\vec{v}$ \ for some scalar $t$, \ $\vec{r_0}=\big<1,1\big>$ \ and \ 
+		$\vec{u}=\vec{v}=\big<1,-2\big>$ \ implies
+			\begin{align*}
+			 	x=1+t, \ y=1-2t \\
+			\end{align*}
+		
+	\item
+		\begin{enumerate}
+		
+			\item Let $\rho_1$ and $\rho_2$ be the planes $x-y+3z-2=0$ and $2x+z-1=0$ respectively. 
+				The corresponding normal vectors are $\vec{n_1}=\big<1,-1,3\big>$ and $\vec{n_2}=					\big<2,0,1\big>$.  Since 
+				\begin{align*}
+					\vec{n_1}\cdot\vec{n_2} &= 1\times2+(-1)\times0+3\times1=5\ne0
+				\end{align*}
+				then $\rho_1$ and $\rho_2$ are not perpendicular.	\\
+							
+			\item Let $\rho_3$ and $\rho_4$ be the planes $3x-2y+z-1=0$ and $4x+5y-2z-4=0$ 						respectively. The corresponding normal vectors are $\vec{n_3}=\big<3,-2,1\big>$ and 
+				$\vec{n_4}=\big<4,5,-2\big>$.  Since 
+				\begin{align*}
+					\vec{n_3}\cdot\vec{n_4} &= 3\times4+(-2)\times5+1\times(-2)=0
+				\end{align*}
+				then $\rho_3$ and $\rho_4$ are perpendicular. \\
+			
+		\end{enumerate}
+		
+	\item
+		\begin{enumerate}
+		
+			\item The equation of the plane that passes through $(-1,4,-3)$ and is perpendicular to 
+				$\vec{n}=\big<1,2,-1\big>$ is given by
+					\begin{align*}
+						&1(x+1)+2(y-2)-1(z+3)=0 \\
+						&x+1+2y-4-z-3=0 \\
+						&x+2y-z-6=0
+					\end{align*}	
+							
+			\item The equation of the plane that passes through $(-1,2,-5)$ and is perpendicular to both
+				$\vec{n_1}=\big<2,-1,1\big>$ and $\vec{n_2}=\big<1,1,-2\big>$ is found by
+					\begin{align*}
+						\mathbf{n}=
+							\begin{vmatrix}
+								&\mathbf{i} \ &\ \ \mathbf{j} \ & \ \ \mathbf{k} \ \ \\
+								&2 \ &-1 \ &\ \ 1 \ \ \\
+								&1 \ &\ \ 1 \ &-2 \ \ \\
+							\end{vmatrix} 
+							&=(2-1)\mathbf{i}-(-4-1)\mathbf{j}+(2+1)\mathbf{k} \\
+							&=\mathbf{i}+5\mathbf{j}+3\mathbf{k} = \big<1,5,3\big>
+					\end{align*}
+					Hence,
+					\begin{align*}
+						&1(x+1)+5(y-2)+3(z+5)=0 \\
+						&x+1+5y-10+3z+15=0 \\
+						&x+5y+3z+6=0
+					\end{align*}
+		\end{enumerate}
+		
+\end{enumerate}
+
+\end{document}

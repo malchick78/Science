@@ -1,0 +1,57 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{a4wide, amsxtra}
+
+\usepackage[pdftex]{graphicx}
+
+ \title{PMTH212 Assignment 6}
+
+ \author{Mark Villar}
+
+\begin{document} 
+
+\maketitle 
+
+\begin{enumerate}
+	
+	\item $f(x,y,z)=(x-3y+4z)^{1/2}$ \ at \ $P(0,-3,0)$
+		\begin{align*}
+			\bigtriangledown f(x,y,z)&=\left<\frac{1}{2\sqrt{x-3y+4z}}, \ -\frac{3}{2\sqrt{x-3y+4z}}, \ \frac{2}{\sqrt{x-3y+4z}} \right> \\
+			&=\left<\frac{1}{6}, \ -\frac{1}{2}, \ \frac{2}{3}\right> \ \text{at} \ P
+		\end{align*}
+		$f$ increases most rapidly in the direction $\left<\dfrac{1}{6}, \ -\dfrac{1}{2}, \ \dfrac{2}{3}\right>$
+		\begin{align*}
+			&||f(0,-3,0)||=\sqrt{\left(\frac{1}{6}\right)^2+\left(-\frac{1}{2}\right)^2+\left(\frac{2}{3}\right)^2}=\sqrt{\frac{13}{18}}=\frac{1}{3}\sqrt{\frac{13}{2}} \\
+			&\mathbf{u}=\frac{\bigtriangledown f(0,-3,0)}{||f(0,-3,0)||}=\left<\frac{1}{2}\sqrt{\frac{2}{13}}, \ -\frac{3}{2}\sqrt{\frac{2}{13}}, \ 2\sqrt{\frac{2}{13}} \ \right>
+		\end{align*}
+		The rate of increase of $f$ in that direction is $||f(0,-3,0)||=\dfrac{1}{3}\sqrt{\dfrac{13}{2}}$
+		
+	\medskip
+		
+	\item $z=f(x^2+y^2)$. Let $z=f(u), \ u=x^2+y^2$ \ such that
+		\begin{align*}
+			&\frac{\partial z}{\partial x}=\frac{\partial z}{\partial u}\frac{\partial u}{\partial x}=\frac{\partial z}{\partial u}(2x) \\
+			&\frac{\partial z}{\partial y}=\frac{\partial z}{\partial u}\frac{\partial u}{\partial y}=\frac{\partial z}{\partial u}(2y) \\
+			\Rightarrow \ y&\frac{\partial z}{\partial x}-x\frac{\partial z}{\partial y}=2xy\frac{\partial z}{\partial u}-2xy\frac{\partial z}{\partial u}=0
+		\end{align*}
+		
+		\medskip
+							
+	\item Denote $W(x,y,z)=F(x,y,z(x,y))=0$ \ such that	
+		\begin{align*}
+			\frac{\partial W}{\partial x}&=\frac{\partial F}{\partial x}\frac{dx}{dx}+\frac{\partial F}{\partial z}\frac{\partial z}{\partial x}=0 \ \ \text{(chain rule)} \\
+			&=\frac{\partial F}{\partial x}+\frac{\partial F}{\partial z}\frac{\partial z}{\partial x}=0 \ \Rightarrow \ \frac{\partial z}{\partial x}=-\frac{\partial F/\partial x}{\partial F/\partial z} \\
+			\frac{\partial W}{\partial y}&=\frac{\partial F}{\partial y}\frac{dy}{dy}+\frac{\partial F}{\partial z}\frac{\partial z}{\partial y}=0 \ \ \text{(chain rule)} \\
+			&=\frac{\partial F}{\partial y}+\frac{\partial F}{\partial z}\frac{\partial z}{\partial y}=0 \ \Rightarrow \ \frac{\partial z}{\partial y}=-\frac{\partial F/\partial y}{\partial F/\partial z}
+			\end{align*}
+				
+	\item $F(u,v)=\int^v_u f(t) \ dt$
+		\begin{align*}
+			\int^v_u f(t) \ dt &= \Big[F(t)\Big]^v_u=F(v)-F(u)=F(u,v) \\
+			\frac{\partial F}{\partial u}&=F_u(u,v)=-F'(u)=-f(u) \\
+			\frac{\partial F}{\partial v}&=F_v(u,v)=F'(v)=f(v) 
+		\end{align*}
+					
+\end{enumerate}
+
+\end{document}

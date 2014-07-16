@@ -1,0 +1,16 @@
+				Car					| --> Create an object of the Car class
+-------------------------------------
+- yearModel: int					| --> Declare private fields for the attributes of car 
+- make : String						|
+- speed : int						|
+-------------------------------------
++ Car( )							| --> No-arg constructor that does not accept any arguments and also initialises the object's fields
++ Car(yr:int, mk:String, sp:int)	| --> Constructor to accept the car's attributes as arguments and assigns values to the object's fields
++ setYearModel(yr:int):void			| --> Mutator methods to set the values in an object's fields 
++ setMake(mk:String):void			|
++ setSpeed(sp:int):void				|
++ getYearModel( ):int				| --> Accessor methods to get the values stored in an object's fields
++ getMake( ):String					|
++ getSpeed( ):int					|
++ accelerate( ):int					| --> Method thats adds 5 to the speed field each time it is called
++ brake( ):int						| --> Method thats subtracts 5 to the speed field each time it is called

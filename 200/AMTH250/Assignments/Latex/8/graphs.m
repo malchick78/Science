@@ -1,0 +1,17 @@
+plot(t,y(:,1))
+axis([0 102 -20 20])
+xlabel('t')
+ylabel('y1')
+print('y1.eps','-deps')
+
+plot(t,y(:,2))
+axis([0 102 -30 30])
+xlabel('t')
+ylabel('y2')
+print('y2.eps','-deps')
+
+plot(t,y(:,3))
+axis([0 102 0 50])
+xlabel('t')
+ylabel('y3')
+print('y3.eps','-deps')

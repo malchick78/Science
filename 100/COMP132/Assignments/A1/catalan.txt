@@ -1,0 +1,48 @@
+
+********************************************************************/
+                           Catalan.java
+********************************************************************/
+The Catalan class contains a private method factorial and a public
+method catalan. Both methods are static, accept an int variable n
+as argument and return a long variable.
+
+factorial method:
+(a) Return the value 1 for base cases n=0,1.
+(b) Otherwise return factorial method recursively until base
+    case is reached, using method call factorial(n-1)*n.
+(c) Use cast operator to convert the returned int value to long.
+
+catalan method:
+(a) Declare double variable cat as the number to be returned.
+(b) Return the value 1 if n=0 or n=1.
+(c) Express the Catalan formula in factorial method notation:
+    (1/(n+1))*factorial(2*n)/(factorial(n)*factorial(n))
+(d) For n>1 use the factorial method to compute the formula in (c)
+    and store the value in the variable cat.
+(f) Return cat and use cast operator to convert the value from
+    double to long.
+
+
+********************************************************************/
+                         CatalanDemo.java
+********************************************************************/
+CatalanDemo is a driver program that demonstrates the Catalan class.
+It continually prompts the user to enter a positive integer and
+then displays the corresponding Catalan number.
+
+Create Scanner object for keyboard input.
+Display user prompt to enter a number.
+Read the number entered.
+
+Use while loop to validate input. Terminate program if number is -1.
+If number is positive:
+(a) Send number to the catalan method in the Catalan class
+(b) Store the result in a long variable catAnswer.
+(c) Display the result.
+(d) Display user prompt to enter a new number.
+(e) Read the number entered.
+
+If number is <-1:
+(a) Display invalid input message.
+(b) Display user prompt to enter a new number.
+(c) Read the number entered.

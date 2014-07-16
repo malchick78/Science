@@ -1,0 +1,280 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{a4wide, amsxtra}
+
+\usepackage{hyperref} 
+
+\usepackage{url} 
+
+ \title{MATH101 Assignment 2}
+
+ \author{Mark Villar}
+
+\begin{document} 
+
+\maketitle 
+
+\begin{enumerate}
+
+	\item To prove $(A \cup B)' = A' \cap B'$ we divide the proof into three parts. 
+	
+	For $A, B \subseteq X$:
+	
+		\begin{itemize}
+		
+			\item[-] 
+					Let $x \in (A \cup B)'$. This implies $x \notin (A \cup B)$ by definition of 	
+					complement. 	
+			
+					Then, $x \notin A$ and $x \notin B$ because if $x$ belonged 	to either A or B, 						then it would belong to their union.  
+						
+					By definition of $\notin$, $x \in A'$ and $x \in B'$. 
+						
+					Thus, $x \in (A' \cap B')$ by definition of intersection. 
+						
+					This proves  $(A \cup B)' \subseteq A' \cap B'$.
+						
+			\item[-] 
+					Let $x \in (A' \cap B')$.  This implies $x \in A'$ and $x \in B'$ by definition of 							intersection.
+			
+					By definition of complement, $x \notin A$ and $x \notin B$. 
+			
+					Hence, $x \notin (A \cup B)$ and consequently, $x \in (A \cup B)'$.  
+			
+					This then proves $A' \cap B' \subseteq (A \cup B)'$.
+			
+			\item[-] 
+					Since $(A \cup B)' \subseteq A' \cap B'$ and $A' \cap B' \subseteq (A \cup B)'$, then
+					$$(A \cup B)' = A' \cap B'$$.
+			
+		\end{itemize}
+		
+	\item 
+	
+		\begin{enumerate}
+		
+			\item inf$(X_{1}) = 0 \notin X_{1}$ and sup$(X_{1}) = 1 \in X_{1}$
+			
+				\begin{itemize}
+				
+					\item[-] 	Assuming $n \in \mathbb{N} \backslash \{0\}$ we can see that every 
+							element of $X_1$ is of the form ${1\over n^2}$.  The elements are 									
+							therefore arranged in strictly decreasing order, with the first element, 1, 								
+							also being  the largest.  Hence $X_1$ is bounded above and has a									
+							supremum 1, which is contained in the set.
+							
+					\item[-] 	We also observe that every element of $X_1$ is positive.  It follows 					
+							immediately that the set is bounded below by 0. 
+							
+					\item[-]	To show that the infimum of the set is 0 we use the Principle of 									Mathematical Induction.  Firstly, we show $n^2 \ge n$ for every 
+							$n \in \mathbb{N} \backslash \{0\}$.
+							\\
+							$n=1:$ 
+								\begin{equation*}
+									1^2 = 1 \ge 1
+								\end{equation*}	
+							$n>1:$  We make the inductive hypothesis that $n^2 \ge n$.  Then
+									\begin{eqnarray}
+										(n+1)^2 & = & n^2+2n+1 \nonumber \\
+										& \ge & n+2n+1 \nonumber \\
+										& = & 3n+1 \nonumber \\
+										& > & n+1 \nonumber
+									\end{eqnarray}
+									
+					\item[-]	Assume $x>0$.  Then ${1\over x} > 0$.  Since $n^2>n$ for every natural
+							number $n$, $n^2$ grows without bound as $n$ increases.  Hence we
+							can find a natural number, say $m$, with $m^2>{1\over x}$ or 
+							equivalently, $0<{1\over m^2}<x$.
+							
+					\item[-]	Since ${1\over m^2} \in X_1$, we have shown that $x$ is not a lower
+							bound for $X_1$.  Thus inf$(X_1)=0$.  Finally, since $0 \notin X_1$, the								infimum is not contained in the set.
+							
+				\end{itemize}
+				\medskip
+			
+			\item inf$(X_{2}) = -1 \in X_{2}$ and sup$(X_{2}) = 10 \notin X_{2}$
+			
+				\begin{itemize}
+				
+					\item[-] 	$X_{2}$ is equivalent to the interval $[-1,10)$.  Thus, the set is bounded
+							below with infimum 1 and bounded above with supremum 10.  Since
+							$x \ge -1$, the infimum is contained in the set. The supremum is not, 
+							however, since $x<10$.
+				\end{itemize}
+				\medskip
+				
+			\item inf$(X_{3}) = 0 \notin X_{3}$ and $X_{3}$ has no supremum
+			
+				\begin{itemize}
+				
+					\item[-] 	In order for ${1\over1-x}$ to be defined, we must have  $x \ne 1$. It 									follows that either $x<1$ or $x>1$. 
+					
+					\item[-]	In the former case, 
+							$${1\over1-x} > 0 \Longleftrightarrow 1>0(1-x)=0$$
+							which is clearly always true since $1>0$.
+						
+					\item[-]	In the latter case,
+							$${1\over1-x} < 0 \Longleftrightarrow 1<0(1-x)=0$$
+							which is a contradiction since $1\not< 0$.
+						
+					\item[-] 	Hence the inequality ${1\over1-x}>0$ is true if and only if $x<1$. We can 							then 	express the set equivalently as 
+							$X_3 := \{{1\over1-x} | x \in \mathbb{R}$ and $x <1\}$
+					
+					\item[-]	Since $x<1$, then $1-x>0$ and thus ${1\over1-x}>0$.  It follows
+							that $X_3$ is bounded below by 0 and that the infimum is not contained 
+							in the set.
+							
+					\item[-]	We also observe that ${1\over1-x}$ grows without bound as $x$ 									approaches 1 from the left.  Thus the set has no supremum.
+					
+				\end{itemize}
+		\end{enumerate}
+		
+	\bigskip
+	
+	\item 
+	
+		\begin{enumerate}
+		
+			\item[(i)] $(2-i)(3+4i) = 6+8i-3i -4i^2 = 10+5i$ \medskip
+			
+			\item[(ii)] $(1+i)^3 = 1+3i+3i^2+i^3=(1-3)+(3i-i)=-2+2i$ \medskip
+			
+			\item[(iii)] \large ${1-i\over2+3i} ={1-i\over2+3i}\times {2-3i\over2-3i}={2-3i-2i+3i^2\over4-9i^2}					={2-3-5i\over13}$ \medskip
+			
+				\begin{description}
+				
+					\item $=-{1\over13}-{5\over13}i$
+					
+				\end{description}
+				
+			\normalsize
+			
+			\medskip
+			
+			\item[(iv)] \large ${1\over2-3i}+{1\over2+i} = {2+i+2-3i\over(2-3i)(2+i)}={4-2i\over4+2i-6i-3i^2}=
+				{4-2i\over7-4i}$ \medskip
+				
+				\begin{description}
+				
+					\item $={4-2i\over7-4i}\times{7+4i\over7+4i}={28+16i-14i+8\over49+16}=
+						{36+2i\over65}$ \medskip
+						
+					\item $={36\over65}+{2\over65}i$
+					
+				\end{description} \medskip
+				
+		\end{enumerate}
+		
+		\bigskip
+	
+	\item Let $z=a+bi$ for $a,b \in \mathbb{R}$ such that $z^2=a^2-b^2+2abi=6-8i$.  Equating the real and 			imaginary parts give $a^2-b^2=6, 2ab=-8$ and $b=-{4\over a}$. Then,
+	
+		\begin{equation*}
+			a^2-\left(\frac{-4}{a}\right)^2 =6 \Longleftrightarrow a^4 -6a^2-16=0
+		\end{equation*}
+		\\
+		Solving for $a^2$ using the quadratic formula gives
+		\\
+		\begin{equation*}
+			a^2=\frac{6\pm \sqrt{36-4\times1\times(-16)}}{2}
+		\end{equation*}
+		
+		\begin{equation*}
+			a^2=\frac{6\pm \sqrt{100}}{2}
+		\end{equation*}
+		
+		\smallskip
+		
+		\begin{equation*}
+			=3\pm5
+		\end{equation*}
+		\\
+		We could also have factorised the equation to give $(a^2-8)(a^2+2)=0$. So there are two possible
+		solutions, $a^2=8$ or $a^2=-2$.  But only $a^2=8$ is valid since $a$ must be a real number.  
+		Therefore,
+		
+		\begin{equation*}
+			a=\pm 2\sqrt{2}
+		\end{equation*}
+		
+		\begin{equation*}
+			b=\mp \sqrt{2}
+		\end{equation*}
+		\\
+		which means there are two solutions for $z$:
+		
+		\begin{equation*}
+			z=\pm 2\sqrt{2}\mp \sqrt{2}i
+		\end{equation*}
+		
+		$$=\sqrt{2}(2-i), \sqrt{2}(-2+i)$$
+		\\
+		
+	\item
+		Let $a$ be a non-zero complex number and $m$ an integer such that \\
+		$$z^m=a$$ \\ 
+		We express $a$, $z$ and $z^m$ in modulus-argument form, \\
+		$$a=s(\cos \phi + i \sin \phi)$$
+		$$z=r(\cos \theta + i \sin \theta)$$
+		$$z^m=r^m(\cos(m \theta)+i\sin(m \theta))$$
+		\\
+		with $r$, $s > 0$; $0 \le \phi, \theta < 2\pi$; $r=|z|$ and $s=|a|$; $\phi$ = arg$(a)$ and 
+		$\theta$ =  arg$(z)$.
+		\\
+		Thus $z^m=a$ if and only if\\
+		$$r^m=s$$
+		$$\cos(m\theta)=\cos(\phi)$$
+		$$\sin(m\theta)=\sin(\phi)$$\\
+		with $0 \le m\theta < 2m\pi,$ whence\\
+		$$r=s^{1\over m}$$
+		$$m \theta \equiv \phi$$\\	
+		As complex numbers have an infinite number of arguments which differ by integer multiples of 
+		$2\pi$, we must have\\
+		$$m \theta = \phi + 2n \pi$$\\
+		with $0 \le n < m$ where $n \in \mathbb{Z}.$  This implies that\\
+		$$\theta \equiv {\phi+ 2n\pi \over m}$$\\
+		Hence we obtain the following expression for $z$\\
+		
+		$$z=r\left(\cos \bigg({\phi+2n\pi\over m}\bigg)+i\sin \bigg({\phi+2n\pi\over m}\bigg)\right)$$\\
+		\\
+		Now if we raise both sides of the equation $z=1^{1 \over m}$ to the power $m$, it is clear to see
+		that $z^m=1$.  So, in this case $a=1$ and therefore $r=s=1$.  The complex number 1 can then be 			written in polar form as\\
+		$$1 = \cos \phi+i\sin \phi$$\\
+		In order for this to be true, $\phi$ must equal 0 or be an integer multiple of $2\pi$.  Equating this
+		with our expression for $\theta$, we obtain\\
+		
+		$$z = \cos \bigg({0+2n\pi\over m}\bigg)+i\sin \bigg({0+2n\pi\over m}\bigg)$$\\
+		
+		Therefore we have shown that\\
+		
+		$$z = \cos \bigg({2n\pi\over m}\bigg)+i\sin \bigg({2n\pi\over m}\bigg)$$\\
+		
+		whenever $z=1^{1 \over m}$.\\
+		\\
+		To find all third roots of unity, simply substitute $m=3$ into the equation. We use $n=\{0,1,..,m-1\}$.\\
+		\\
+		$n=0:$
+		$$z=\cos (0)+i\sin(0)$$
+		\begin{equation*}
+			=1+0
+		\end{equation*}
+		\begin{equation*}
+			=1
+		\end{equation*}\\
+		\\
+		$n=1:$	
+		$$z=\cos \bigg({2\pi\over3}\bigg)+i\sin \bigg({2\pi\over3}\bigg)$$
+		\begin{equation*}
+			=-\frac{1}{2}+\frac{\sqrt{3}}{2}i
+		\end{equation*}\\
+		\\
+		$n=2:$
+		$$z=\cos \bigg({4\pi\over3}\bigg)+i\sin \bigg({4\pi\over3}\bigg)$$
+		\begin{equation*}
+			=-\frac{1}{2}-\frac{\sqrt{3}}{2}i
+		\end{equation*}
+		\smallskip
+
+\end{enumerate}	
+	
+\end{document} 

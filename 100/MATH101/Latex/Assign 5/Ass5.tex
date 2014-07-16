@@ -1,0 +1,229 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{a4wide, amsxtra}
+
+\usepackage{hyperref} 
+
+\usepackage{url} 
+
+ \title{MATH101 Assignment 5}
+
+ \author{Mark Villar}
+
+\begin{document} 
+
+\maketitle 
+
+\begin{enumerate}
+	
+	\item 
+		\begin{enumerate}
+			\item \emph{Non-monotone}
+				\begin{eqnarray}
+					\text{Let} \text{ } u_n & = & \frac{n^2-n+1}{2-n^2} \text{, } \text{ then} \nonumber \\
+					u_{n+1} & = & \frac{(n+1)^2-(n+1)+1}{2-(n+1)^2} \nonumber \\
+					& = & \frac{n^2+n+1}{1-2n-n^2} \text{, } \text{ and} \nonumber \\
+					\frac{u_{n+1}}{u_n} & = & \frac{n^2+n+1}{1-2n-n^2} \cdot \frac{2-n^2}{n^2-n+1}
+					\nonumber \\
+					& = & \frac{-n^4-n^3+n^2+2n+2}{-n^4-n^3+2n^2-3n+1} \nonumber
+				\end{eqnarray}\\
+			Thus  \hspace{0.05cm} $u_{n+1}>u_n$ \hspace{0.05cm} if and only if \hspace{0.05cm}					$2n^2-3n+1<n^2+2n+2$. That is, \hspace{0.05cm} $n^2-5n-1<0$.  This is true if and only
+			if $n \le 5$. Consequently, the sequence is increasing when $2 \le n < 6$ and decreasing
+			when $n \ge 6$. Explicitly,
+			$$\hspace{2.2cm} u_2=-\frac{3}{2} \text{, } \text{ } u_3=-1  \text{, } \text{ } u_4=-\frac{13}{14} 
+			\text{, } \text{ }u_5=-\frac{21}{23} \text{, } \text{ } u_6=-\frac{31}{34} \text{, } \text{ } 
+			u_7=-\frac{43}{47} \text{, } \text{ } u_8=-\frac{57}{62}$$
+			
+			Hence $u_n$ is not monotonic since $u_2<u_3<u_4<u_5<u_6>u_7>u_8$. 
+			
+			Moreover, as $n \rightarrow \infty \text{, } u_n \rightarrow -1$.  We show this by dividing out by 				$n^2$ and applying infinite limits such that
+				\begin{eqnarray}
+					\hspace{2cm} \frac{n^2-n+1}{2-n^2} & = & \frac{1-\frac{1}{n}+\frac{1}{n^2}}
+					{\frac{2}{n^2} -1} \nonumber \\
+					& \longrightarrow & \frac{1-0-0}{0-1} \text{ } = \text{ } -1 \text{ } \text{ as } \text{ } n 
+					\longrightarrow \infty \nonumber
+				\end{eqnarray}
+			
+			\item \emph{Monotone increasing}\\
+			
+			Let $u_n  =  \sqrt{2n^2-1} \text{, } \text{ then}$ 
+				\begin{eqnarray}
+					\hspace{2.5cm} u_m - u_n  =  \sqrt{2m^2-1} - \sqrt{2n^2-1}  \nonumber
+				\end{eqnarray}
+			Since $2m^2-1>0$ and $2n^2-1>0$, $u_m-u_n >0$ if and only if $m>n$, showing that 
+			$(u_n)_{n\in\mathbb{N}}$ is monotonically increasing.  It is then plain to see that $u_n 
+			\rightarrow \infty \text { as } n \rightarrow \infty$.\\
+					
+			\item	\emph{Monotone increasing}\\		
+			We first note that $u_n$ consists of two functions, namely $n$ and $\sin\left(\frac{1}{n}\right)$.  
+			While the former is clearly increasing and unbounded above in $\mathbb{N}$, we must 					consider the oscillating sine function more carefully.  We know that $\frac{1}{n} \rightarrow 0 
+			\text{ as } n \rightarrow \infty$.  Since sine is continuous, then 
+			$\sin\left(\frac{1}{n}\right) \rightarrow 0 \text{ as } n \rightarrow \infty$. This suggests 	there are				two counteracting effects as $n$ tends to infinity.  We also observe that 
+			$\sin\left(\frac{1}{n}\right)$ does not oscillate in $\mathbb{N}$ but is strictly decreasing. Due to 			the complexity of this composition, approximations are used to determine monotonicity.
+			$$\hspace{2.2cm} u_1 \approx .84147 \text{, } \text{ } u_2 \approx .95885 \text{, } \text{ } 
+			u_3 \approx .98158 \text{, } \text{ } u_4 \approx .98962 \text{, } \text{ } u_5 \approx.99335$$
+			Furthermore, $u_{100} \approx .99998$.  From these observations, we conclude that
+			$(u_n)_{n \in \mathbb{N}}$ is monotonically increasing since $u_1<u_2<...<u_n<u_{n+1}
+			\text{ ...}$\\
+			We also notice above that the sequence approaches 1 as $n$ approaches infinity. This can
+			be shown 	if we let $x=\frac{1}{n}$ such that
+				\begin{eqnarray}
+					n\sin\left(\frac{1}{n}\right) & = & \frac{1}{x} \sin x \nonumber \\
+					& = & \frac{\sin x}{x} \nonumber \\
+					& \longrightarrow & 1 \text{  } \text{ as } \text{  } x \text{  } \longrightarrow \text{  } 0 						\nonumber
+				\end{eqnarray}
+			Therefore, $u_n \rightarrow 1 \text{ as } n \rightarrow \infty$.
+									
+			\item \emph{Monotone decreasing}
+				\begin{eqnarray}
+					\text{Let} \text{ } u_n & = & \frac{n!}{n^n} \text{, } \text{ then} \nonumber \\
+					u_{n+1}  & = & \frac{(n+1)!}{(n+1)^{n+1}} \text{ }\text{ and} \nonumber \\
+					\frac{u_{n+1}}{u_n} & = & \frac{(n+1)!}{(n+1)^{n+1}} \cdot \frac{n^n}{n!} \text { } = 
+					\text{ } \frac{(n+1)n^n}{(n+1)^{n+1}}  \nonumber  \\
+					& = & \frac{n^n}{(n+1)^n} \nonumber
+				\end{eqnarray}\\
+			Thus, $u_{n+1} < u_n \text { if and only if } n^n < (n+1)^n$. This is clearly true for all $n$ 					so $(u_n)_{n \in \mathbb{N}}$ is monotonically decreasing. \\
+			To determine the behaviour of $u_n$ as $n \rightarrow \infty$, we consider the 						following.  Clearly, both $n!$ and $n^n$ are strictly increasing and unbounded above (which
+			might imply $u_n$ also increases without bound). But given sufficiently large $n$, the 						denominator outgrows the numerator by an exponential magnitude that their ratio is 					infinitesimally close to zero. Explicitly, we observe that even for, say $n=10:$
+			$$u_{10} \text{ } = \text{ } \frac{10!}{10^{10}} \text{ } = \text{ } \frac{567}{1562500} \text{ } \approx 			\text{ } .000363$$ 
+			Therefore, $u_n \rightarrow 0 \text{ as } n \rightarrow \infty$
+						
+			\item \emph{Monotone constant}\\
+			Since $\cos(2n\pi) = 1$ for all $n \in \mathbb{N}$, then 
+			$$u_n \text{ } = \text{ } \frac{1}{\cos(2n\pi)} \text{ } = \text{ } \frac{1}{1} \text{ } = \text{ }1$$
+			That is, $u_1=u_2= ... = u_n  = ... = 1$.  It then follows that as $n \rightarrow \infty$, $u_n = 1$.\\
+			
+			\item \emph{Monotone decreasing}
+			\begin{eqnarray}
+					\text{Let} \text{ } u_n & = & \sqrt{n+1}-\sqrt{n-1} \text{, } \text{ then} \nonumber \\
+					u_{n+1}  & = & \sqrt{(n+1)+1}-\sqrt{(n+1)-1} \text{ } = \text{ } \sqrt{n+2}-\sqrt{n} \text{ }						\text{ and}\nonumber \\
+					\frac{u_{n+1}}{u_n} & = & \frac{\sqrt{n+2}-\sqrt{n}}{\sqrt{n+1}-\sqrt{n-1}} \nonumber	
+				\end{eqnarray}\\	
+			Thus, $u_{n+1}<u_n$ if and only if $\sqrt{n+2}-\sqrt{n} < \sqrt{n+1}-\sqrt{n-1}$. We observe this
+			to be true for all $n$ so $(u_n)_{n \in \mathbb{N}}$ is monotonically decreasing. \\	
+			Moreover, as $n \rightarrow \infty  \text{, } u_n \rightarrow 0$. We show this by dividing by $n$ 				and applying infinite limits such that
+			\begin{eqnarray}
+					\hspace{2cm} \sqrt{n+1} - \sqrt{n-1} & = & \sqrt{1+\frac{1}{n}} - \sqrt{1-\frac{1}{n}} 						\nonumber \\
+					& \longrightarrow & \sqrt{1+0} - \sqrt{1-0} \text{ } = \text{ } 1-1 \text{ } = \text{ } 0 \text{ }
+					\text{ as } \text{ } n \longrightarrow \infty \nonumber
+				\end{eqnarray}
+		
+		\end{enumerate}
+		
+	\item \emph{Zeno's Bug} \\
+	The bug does not get to eat. As the bug crawls to its destination, it only gets halfway there each minute 		before it begins to tire and slows down. Consequently, the distance the bug is required to travel can be 		described by the following sequence, $u_n=\{2,1,\frac{1}{2},\frac{1}{4},\frac{1}{8},\frac{1}{16},...\}$.  Even 
+	though the sequence is monotonically decreasing, the bug will never reach its destination since 	
+	$u_n$ only tends to 0 as $n$ tends to infinity. \\
+					
+	\item 
+	
+		\begin{enumerate}
+		
+			\item \emph{Convergent}
+				\begin{eqnarray}
+					\frac{n^2}{n^4+1} \text{ } < \text{ } \frac{n^2+n^2}{n^4} \text{ } = \text{ } 
+					\frac{2n^2}{n^4} \text{ } = \text{ } \frac{2}{n^2} \nonumber
+				\end{eqnarray}
+			Since $\sum \frac{1}{n^k}$ converges if  $k>1$, then $\sum \frac{1}{n^2}$ converges. So 
+			comparison with the convergent series $\sum \frac{2}{n^2}$ shows that 
+				\begin{eqnarray}
+					\hspace{2cm} \sum^\infty_{n=0} \frac{n^2}{n^4+1} \text{ } \text{ converges.} 							\nonumber
+				\end{eqnarray}	
+										
+			\item  \emph{Convergent}
+				\begin{eqnarray}
+					\hspace{2.5cm} \frac{n3^n}{5^n+1} \text{ } < \text{ }\frac{n3^n+n3^n+n3^n}{5^n+1} 
+					\text{ } < \text{ } \frac{n3^{n+1}}{5^n} \text{ } < \text{ } \frac{3^n \cdot 3^{n+1}}{5^n} 
+					\text{ } = \text{ } \frac{3^{2n+1}}{5^n} \text{ } = \text{ } \frac{3 \cdot (3^2)^n}{5^n}							\nonumber
+				\end{eqnarray}
+			That is, 
+				\begin{eqnarray}
+					\hspace{2cm}\frac{n3^n}{5^n+1} \text{ } < \text{ }3 \left(\frac{9^n}{5^n}\right) = \text{ } 						3 \left(\frac{9}{5}\right)^n =  \text{ } 3 \text{ } \frac{1}{(0.\dot{ 5})^n} \nonumber
+				\end{eqnarray}
+			So comparison with the convergent geometric series $\sum \frac{1}{(0.\dot{ 5})^n}$ shows that
+				\begin{eqnarray}
+					\hspace{2cm} \sum^\infty_{n=1} \frac{n3^n}{5^n+1} \text{ } \text{ converges.} 							\nonumber
+				\end{eqnarray}							
+			\item \emph{Convergent} \\
+			Since $|\cos n| \le 1$, then 
+				\begin{eqnarray}
+					\hspace{1.5cm} \frac{|\cos n|}{n^2-1} \text{ } < \text{ } \frac{1}{n^2-1} \nonumber
+				\end{eqnarray}
+			We then expect $\sum \frac{1}{n^2-1}$ to converge since the $n$th term of the series is 					essentially $\frac{1}{n^2}$ for sufficiently large $n$. Thus we compare $\sum \frac{1}{n^2}$ 				with  
+				\begin{eqnarray}
+					\hspace{3.5cm} \sum^\infty_{n=2} \frac{|\cos n|}{n^2-1} \text{ } \text{ to show that the 						latter series converges.} \nonumber
+				\end{eqnarray}	
+				
+			\item	\emph{Divergent}
+				\begin{eqnarray}
+					\hspace{2cm}\frac{1}{\sqrt{2n^2+1}} \text{ } > \text{ } \frac{1}{\sqrt{2n^2+2n^2}} \text{ }
+					= \text{ } \frac{1}{\sqrt{4n^2}} \text{ } = \text{ } \frac{1}{2} \cdot \frac{1}{n} \nonumber
+				\end{eqnarray}
+			So comparison with the divergent harmonic series $\sum \frac{1}{n}$ shows that
+				\begin{eqnarray}
+					\hspace{2cm} \sum^\infty_{n=1} \frac{1}{\sqrt{2n^2+1}} \text{ } \text{ diverges.} 							\nonumber
+				\end{eqnarray}
+				
+		\end{enumerate}
+	
+	\item
+	
+		\begin{enumerate}
+				
+			\item \emph{Divergent}
+				\begin{eqnarray}
+					\text{Let} \text{ } u_n & = & \frac{5^n}{n^3} \text{, } \text{ then} \nonumber \\
+					u_{n+1} & = & \frac{5^{n+1}}{(n+1)^3} \text{, } \text{ and} \nonumber \\
+					\frac{u_{n+1}}{u_n} & = & \frac{5^{n+1}}{(n+1)^3} \cdot \frac{n^3}{5^n} \text{ } =
+					\text{ } \frac{5n^3}{(n+1)^3} \nonumber \\
+					& = & \frac{5n^3}{n^3+3n^2+3n+1} \nonumber \\
+					& = & \frac{5}{1+\frac{3}{n}+\frac{3}{n^2}+\frac{1}{n^3}} \nonumber \\
+					& \longrightarrow & \frac{5}{1+0+0+0} \text{ } = \text{ } 5 \text{ } \text{ as } \text{ } n
+					\longrightarrow \infty \nonumber
+				\end{eqnarray}\\
+			The series $\sum \frac{5^n}{n^3}$ diverges since the ratio test yields a number greater than 				1.
+								
+			\item \emph{Convergent}
+				\begin{eqnarray}
+					\text{Let} \text{ } u_n & = & \frac{7^n}{n!} \text{, } \text{ then} \nonumber \\
+					u_{n+1} & = & \frac{7^{n+1}}{(n+1)!} \text{, } \text{ and} \nonumber \\
+					\frac{u_{n+1}}{u_n} & = &  \frac{7^{n+1}}{(n+1)!} \cdot \frac{n!}{7^n} \text{ } =
+					\text{ } \frac{7}{n+1} \text{ } = \text{ } \frac{\frac{7}{n}}{1+\frac{1}{n}} \nonumber \\
+					& \longrightarrow & \frac{0}{1+0} \text{ } = \text{ } 0 \text{ } \text{ as } \text{ } n 
+					\longrightarrow \infty \nonumber
+				\end{eqnarray}
+			The series $\sum \frac{7^n}{n!}$ converges since the ratio test yields a number less than 1.
+			\bigskip
+			\item \emph{Convergent}
+				\begin{eqnarray}
+					\text{Let} \text{ } u_n & = & \frac{2^n}{n^n} \text{, } \text{ then} \nonumber \\
+					u_{n+1} & = & \frac{2^{n+1}}{(n+1)^{n+1}} \text{, } \text{ and} \nonumber \\
+					\frac{u_{n+1}}{u_n} & = & \frac{2^{n+1}}{(n+1)^{n+1}} \cdot \frac{n^n}{2^n} \text{ } =
+					\text{ } \frac{2n^n}{(n+1)^{n+1}} \text{ } \nonumber
+				\end{eqnarray}
+			Now by the same reasoning as in \textit{Question 1(d)} we conclude that 
+				\begin{eqnarray}
+					\frac{n^n}{(n+1)^{n+1}} \text{ } \longrightarrow \text{ } 0 \text{ } \text{ as } \text{ } n 					 	\longrightarrow \infty \nonumber
+				\end{eqnarray}
+			Explicitly, for sufficiently large $n$, say $n=100:$
+				\begin{eqnarray}
+					u_n \text{ } = \text{ } \frac{100^{100}}{101^{101}} \text{ } \approx \text{ } .00366 							\nonumber
+				\end{eqnarray}
+			The series $\sum \frac{2^n}{n^n}$ converges since the ratio test yields a number less than 1.
+			\bigskip
+			\item	\emph{Convergent}
+				\begin{eqnarray}
+					\hspace{2.5cm} \text{Let} \text{ } u_n & = & \sqrt{\frac{n}{n^3+1}} \text{, } \text{ then} 						\nonumber \\
+					u_{n+1} & = & \sqrt{\frac{{n+1}}{(n+1)^3+1}} \text{, } \text{ and} \nonumber \\
+					\frac{u_{n+1}}{u_n} & = & \sqrt{\frac{{n+1}}{n^3+3n^2+3n+2}} \cdot 
+					\sqrt{\frac{n^3+1}{n}} \nonumber \\
+					& = &  \sqrt{\frac{{\frac{1}{n^2}+\frac{1}{n^3}}}{1+\frac{3}{n}+\frac{3}{n^2}+
+					\frac{2}{n^3}}} \cdot \sqrt{\frac{1+\frac{1}{n^3}}{\frac{1}{n^2}}} \text{ } \longrightarrow 						\text{ } 0 \text{ } \text{ as } \text{ } n \longrightarrow \infty \nonumber
+				\end{eqnarray}
+			The series $\sum \sqrt{\frac{n}{n^3+1}}$ converges since the ratio test yields a number less 
+			than 1.
+		\end{enumerate}
+
+\end{enumerate}
+	
+\end{document}

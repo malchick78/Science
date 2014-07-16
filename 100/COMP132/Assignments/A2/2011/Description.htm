@@ -1,0 +1,310 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>Description of a2 Assignment for comp132 at UNE</title>
+<link rel="stylesheet" type="text/css" href="/~comp132/UT/Css/ut.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body bgcolor="#cccc99">
+
+<style type="text/css">
+<!--
+-->
+.noul {
+text-decoration:none
+}
+</style>
+
+
+<table width=100%>
+<tr>
+  <td width=30%>
+
+<a href="http://www.une.edu.au" class=noul> <img  align="left" src="/images/unelogomin.gif" border="0" alt="University of New
+England"></a>
+  </td>
+  <td width=40% align=center>
+
+
+<br>
+<center>
+        <a href="/" class=noul>
+        <font size="+2">School of Science and Technology</font></a>
+</center>
+  </td>
+  <td width=30%></td>
+</tr>
+</table>
+
+<br clear="all" />
+<hr size="6" />
+<!-- do not remove or change the javascript comment below this one -->
+<!-- header end -->
+
+<center>
+	<font color="black" size="+2">
+		Description of a2 Assignment for comp132 at UNE
+	</font>
+	<hr size="6" />
+</center>
+<br />
+<font color="black" size="">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+            "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>Programming Assignment A2 ---Class Hierarchy
+
+</TITLE>
+
+<META http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<META name="GENERATOR" content="hevea 1.10">
+<STYLE type="text/css">
+.li-itemize{margin:1ex 0ex;}
+.li-enumerate{margin:1ex 0ex;}
+.thefootnotes{text-align:left;margin:0ex;}
+.dt-thefootnotes{margin:0em;}
+.dd-thefootnotes{margin:0em 0em 0em 2em;}
+.footnoterule{margin:1em auto 1em 0px;width:50%;}
+.caption{padding-left:2ex; padding-right:2ex; margin-left:auto; margin-right:auto}
+.center{text-align:center;margin-left:auto;margin-right:auto;}
+DIV TABLE{margin-left:inherit;margin-right:inherit;}
+PRE{text-align:left;margin-left:0ex;margin-right:auto;}
+BLOCKQUOTE{margin-left:4ex;margin-right:4ex;text-align:left;}
+TD P{margin:0px;}
+.minipage{text-align:left; margin-left:0em; margin-right:auto;}
+.section{padding:.5ex; color:navy; background: LightYellow;}
+.obrazek{max-height: 320px; width: auto; max-width: 480px; height: auto;}
+.javalisting{font-family:monospace;white-space:pre;
+border:1px dashed red;background: #f9f9f9;
+padding-left:2ex;padding-top:3pt;padding-bottom:3pt;
+margin-left:1ex;margin-right:67pt;margin-top:1ex;margin-bottom:1ex;}
+.tty{font-family:monospace;white-space:pre;
+border:none;background: #f5f5f5;
+padding-left:2ex;padding-top:7pt;padding-bottom:13pt;
+margin-left:2ex;margin-right:97pt;}
+</STYLE>
+</HEAD>
+<BODY >
+<!--HEVEA command line is: hevea -O -I ../.. -I ../../.. a2.tex -->
+<!--CUT DEF section 1 --><DIV CLASS="center"><FONT SIZE=5><B>Programming Assignment A2 &#X2014; <EM>Class Hierarchy</EM></B></FONT><BR>
+Due 25 March
+</DIV><!--TOC section Objectives-->
+<H2 CLASS="section"><!--SEC ANCHOR -->Objectives</H2><!--SEC END --><UL CLASS="itemize"><LI CLASS="li-itemize">
+Creating and compiling a simple program
+</LI><LI CLASS="li-itemize">Designing classes
+</LI><LI CLASS="li-itemize">Learn inheritance of classes in Java
+</LI><LI CLASS="li-itemize">Use Java lists
+</LI></UL><!--TOC section Task: Class Hierarchy-->
+<H2 CLASS="section"><!--SEC ANCHOR -->Task: Class Hierarchy</H2><!--SEC END --><P>Design, build and test a class hierarchy to represent geometric figures including circles,
+triangles, squares, rectangles, polygons, and hexagons.
+</P><BLOCKQUOTE CLASS="figure"><DIV CLASS="center"><HR WIDTH="80%" SIZE=2></DIV>
+<DIV CLASS="center">
+<IMG SRC="figs/shapes-1.png" CLASS="obrazek">
+<DIV CLASS="caption"><TABLE CELLSPACING=6 CELLPADDING=0><TR><TD VALIGN=top ALIGN=left>Figure 1: Class hierarchy to represent geometric figures</TD></TR>
+</TABLE></DIV>
+<A NAME="fig-gf"></A>
+</DIV>
+<DIV CLASS="center"><HR WIDTH="80%" SIZE=2></DIV></BLOCKQUOTE><P>
+Implement just minimum number of methods per each class to reflect a distinctive
+characteristic of a particular geometric figure.
+In particular, each of the class must implement a <CODE>toString</CODE> method.
+Every class corresponding to a geometric figure must provide a constructor
+that takes a Scanner object as a parameter.
+For example:
+</P><DIV CLASS="javalisting"><FONT COLOR="#B7140B"><B>public</B></FONT> Square(Scanner keyboard)</DIV><P>Your program must first store the geometric figures in a list, and
+then display every figure with its attributes.
+In the output you should indicate the hierarchy of the classes, see Example below.</P><!--TOC section Example-->
+<H2 CLASS="section"><!--SEC ANCHOR -->Example</H2><!--SEC END --><!--TOC paragraph Note:-->
+<H5 CLASS="paragraph"><!--SEC ANCHOR -->Note:</H5><!--SEC END --><P> user entered values are shown in <B>bold</B>.</P><DIV CLASS="tty">This program tests a hierarchy of the GeometricFigure classes.
+
+Enter:
+  C -- to add a circle
+  T -- to add a triangle
+  S -- to add a square
+  R -- to add a rectangle
+  P -- to add a polygon
+  H -- to add a hexagon
+  Q -- to quit
+<B>C</B>
+
+Enter radius of a circle: <B>4.56</B>
+
+Enter:
+  C -- to add a circle
+  T -- to add a triangle
+  S -- to add a square
+  R -- to add a rectangle
+  P -- to add a polygon
+  H -- to add a hexagon
+  Q -- to quit
+<B>R</B>
+
+Enter the height and the length of a Rectangle: <B>3 4</B>
+
+Enter:
+  C -- to add a circle
+  T -- to add a triangle
+  S -- to add a square
+  R -- to add a rectangle
+  P -- to add a polygon
+  H -- to add a hexagon
+  Q -- to quit
+<B>s</B>
+
+Enter the length of a Square: <B>2.3</B>
+
+Enter:
+  C -- to add a circle
+  T -- to add a triangle
+  S -- to add a square
+  R -- to add a rectangle
+  P -- to add a polygon
+  H -- to add a hexagon
+  Q -- to quit
+<B>p</B>
+
+Enter the number of sides in a Polygon: <B>7</B>
+
+Enter:
+  C -- to add a circle
+  T -- to add a triangle
+  S -- to add a square
+  R -- to add a rectangle
+  P -- to add a polygon
+  H -- to add a hexagon
+  Q -- to quit
+<B>q</B>
+You entered the following figures:
+Geometric Figure -&gt; Circle: radius = 4.6
+Geometric Figure -&gt; Polygon: sides = 4 -&gt; Rectangle: height = 3, length = 4
+Geometric Figure -&gt; Polygon: sides = 4 -&gt; Rectangle: height = 2.3, length = 2.3 -&gt; Square
+Geometric Figure -&gt; Polygon: sides = 7</DIV><!--TOC section Important Notes-->
+<H2 CLASS="section"><!--SEC ANCHOR -->Important Notes</H2><!--SEC END --><OL CLASS="enumerate" type=1><LI CLASS="li-enumerate">
+For the purposes of this assignment, you can assume that the user
+will only enter valid values.</LI><LI CLASS="li-enumerate">Make your code efficient avoiding repetition of Java code.
+All attributes of the classes should be declare as <CODE>private</CODE>.</LI><LI CLASS="li-enumerate">Test your program. In particular, be sure to test it on <B>turing</B> before
+you submit it.
+Testing is a part of the assessment, see the Assessment section below.
+</LI></OL><!--TOC section Submitting this Assignment-->
+<H2 CLASS="section"><!--SEC ANCHOR -->Submitting this Assignment</H2><!--SEC END --><UL CLASS="itemize"><LI CLASS="li-itemize">
+Your assignment must be submitted using the <CODE>submit</CODE> program on <B>turing</B>. 
+</LI><LI CLASS="li-itemize">This assignment is assignment <B>a2</B></LI><LI CLASS="li-itemize">From within the <CODE>submit</CODE> program, create a script of your program
+		(select option&#XA0;1)
+		compiling and running correctly on <B>turing</B>.
+		It is a part of the assessment, see marking criteria below.</LI><LI CLASS="li-itemize">You will need to submit <B>nine</B> files for this assignment:
+	<OL CLASS="enumerate" type=1><LI CLASS="li-enumerate">
+	 An algorithm for the application program.
+	 		It should be in a plain text file called <CODE>GeometricFigureDriver.txt</CODE>.
+			The algorithm should include all the methods defined in
+			your program.
+			You should specify what each of the method receives, what outputs and
+			operations performs.
+	 </LI><LI CLASS="li-enumerate">The source code for the driver program. 
+			It should be in a plain text file called <CODE>GeometricFigureDriver.java</CODE>. 
+	 </LI><LI CLASS="li-enumerate">The source code for each of your implemented classes <CODE>Circle</CODE>,
+	 	<CODE>GeometricFigure</CODE>, <CODE>Hexagon</CODE>, <CODE>Polygon</CODE>, <CODE>Rectangle</CODE>,
+		<CODE>Square</CODE> and <CODE>Triangle</CODE>.
+	 		They all should be in a plain text files called <CODE>Circle.java</CODE>, etc. 
+	</LI></OL>
+	
+</LI><LI CLASS="li-itemize">After you have submitted your assignment files and exited the submit 
+		program, check the submit record that the submit program placed in your 
+		directory. It should show the names of the files you submitted along with
+		their size and submit date. It should also contain a copy of the script
+		you created. If the submit record doesn&#X2019;t list the required files or shows
+		that one of the files has a file size of 0 (i.e., the file is empty) or
+		doesn&#X2019;t contain a copy of your script, you will need to resubmit your 
+		entire assignment again. 
+</LI></UL><!--TOC section Reminders-->
+<H2 CLASS="section"><!--SEC ANCHOR -->Reminders</H2><!--SEC END --><UL CLASS="itemize"><LI CLASS="li-itemize">
+The comp132 online subdirectory for this assignment contains an 
+		<A HREF="http://mcs.une.edu.au/~comp132/Assignments/Assignment_A2/Updates">update</A> file.
+		The file is updated regularly 
+		with additional comments and hints regarding this assignment as questions
+		come in from students. Be sure to check this file prior to the assignment
+		due date in case any additional information has been provided.</LI><LI CLASS="li-itemize">If you have any questions regarding this assignment,
+		<B>check the updates</B> for this assignment.
+		If your question has not been addressed, then
+		<B>email</B> <A HREF="mailto:comp132@mcs.une.edu.au">comp132@mcs.une.edu.au</A></LI><LI CLASS="li-itemize">Submissions by electronic mail or post will not be marked.</LI><LI CLASS="li-itemize">During the marking procedure, your program may be tested with
+		a data set that differs from the sample shown above.</LI><LI CLASS="li-itemize">It is not acceptable to post assignment code to the 
+		comp132 Bulletin Board.</LI></UL><!--TOC section Assessment-->
+<H2 CLASS="section"><!--SEC ANCHOR -->Assessment</H2><!--SEC END --><P><A NAME="sec-assessment"></A>
+Your assignment will be marked on the following criteria:
+</P><DIV CLASS="center">
+<DIV CLASS="minipage">
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=1><TR><TD ALIGN=center NOWRAP bgcolor="#CC9999"><B><EM>Documentation</EM></B></TD><TD ALIGN=center NOWRAP bgcolor="#CC9999"><B><EM>out of 4</EM></B></TD></TR>
+<TR><TD ALIGN=left NOWRAP>Algorithm file accurately describes program functionality	</TD><TD ALIGN=right NOWRAP>out of 2.0</TD></TR>
+<TR><TD ALIGN=left NOWRAP>Style and accurate, and sufficient commenting			</TD><TD ALIGN=right NOWRAP>out of 2.0</TD></TR>
+<TR><TD ALIGN=center NOWRAP bgcolor="#CC9999"><EM><B>Programming</B><SUP><A NAME="text1" HREF="#note1">1</A></SUP></EM>
+										</TD><TD ALIGN=center NOWRAP bgcolor="#CC9999"><B><EM>out of 6</EM></B></TD></TR>
+<TR><TD ALIGN=left NOWRAP>Compiling and testing of the program		</TD><TD ALIGN=right NOWRAP>out of 1.0</TD></TR>
+<TR><TD ALIGN=left NOWRAP>Correct program behaviour				</TD><TD ALIGN=right NOWRAP>out of 1.0</TD></TR>
+<TR><TD ALIGN=left NOWRAP>Program gives correct answers to input	</TD><TD ALIGN=right NOWRAP>out of 1.0</TD></TR>
+<TR><TD ALIGN=left NOWRAP>Correct implementation of classes		</TD><TD ALIGN=right NOWRAP>out of 2.0</TD></TR>
+<TR><TD ALIGN=left NOWRAP>Code improvements<SUP><A NAME="text2" HREF="#note2">2</A></SUP>
+										</TD><TD ALIGN=right NOWRAP>out of 1.0</TD></TR>
+<TR><TD ALIGN=right NOWRAP bgcolor="#CC9999"><B><EM>Total:</EM></B>	</TD><TD ALIGN=left NOWRAP bgcolor="#CC9999"><B><EM>10 marks</EM></B></TD></TR>
+</TABLE>
+<!--BEGIN STICKYNOTES document-->
+<HR CLASS="footnoterule"><DL CLASS="thefootnotes"><DT CLASS="dt-thefootnotes">
+<A NAME="note1" HREF="#text1">1</A></DT><DD CLASS="dd-thefootnotes">		If your program does not compile on <B>turing</B> then your assignment receives
+		0.0 marks for programming.
+</DD><DT CLASS="dt-thefootnotes"><A NAME="note2" HREF="#text2">2</A></DT><DD CLASS="dd-thefootnotes">	For this assignment you should try to use the class hierarchy
+	to minimise the number of methods and reduce redundancies
+	in your Java code.
+	User input handling, detecting and reporting errors also
+	counts as an improvement.
+</DD></DL>
+<!--END NOTES-->
+</DIV>
+</DIV><!--CUT END -->
+<!--HTMLFOOT-->
+<!--ENDHTML-->
+<!--FOOTER-->
+<HR SIZE=2><BLOCKQUOTE CLASS="quote"><EM>This document was translated from L<sup>A</sup>T<sub>E</sub>X by
+<A HREF="http://hevea.inria.fr/index.html">H<FONT SIZE=2><sup>E</sup></FONT>V<FONT SIZE=2><sup>E</sup></FONT>A</A>.</EM></BLOCKQUOTE></BODY>
+</HTML>
+</font>
+<!-- footer begin -->
+<!-- do not remove or change the javascript comment above this one -->
+<hr />
+<table border="0" cellspacing="0" cellpadding="0" width=100%>
+<tr VALIGN="middle">
+<td align="left">
+E-mail
+ <a href="mailto:comp132@turing.une.edu.au">
+                comp132@turing.une.edu.au</a>
+</td>
+<td align="right">
+<a HREF="/~comp132/"><img SRC="/icons/small/back.png" BORDER="0" ALT="[HOME]"></a>
+<a HREF="/~comp132/" title="comp132 home page">~comp132</a>
+</td>
+</tr>
+</table>
+<hr />
+<font size="-1">
+        index.cgi size 188.  Last modified Wed Jan 18 11:07:47 2012<br />
+
+        This page has been visited 1100 times since Wed Jul  9 18:10:33 2008<br />
+
+This page is constructed using: <a href="http://mcs.une.edu.au/~wwwdev">
+The Unit Template version 0.2.</a>
+</font>
+<hr />
+
+<a href="http://www.une.edu.au/">
+        <img border="0" align="left" src="/images/unehomepage.gif"
+        alt="unehomepage.gif"/></a>
+
+<a href="http://maths.une.edu.au/">
+        <img border="0" align="right" src="/images/dpt_home.gif"
+        alt="departmenthome.gif"/></a>
+<br />
+<br />
+<hr />
+</body>
+</html>
+
